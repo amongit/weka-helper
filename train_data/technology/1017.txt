@@ -1,0 +1,27 @@
+http://www.zdnet.com/article/freak-another-day-another-serious-ssl-security-hole/#ftag=RSSbaffb68
+​FREAK: Another day, another serious SSL security hole
+It seemed like such a good idea in the early 90s. Secure-Socket Layer (SSL) encryption was brand new and the National Security Agency (NSA) wanted to make sure that they could read "secured" web traffic by foreign nationals. So, the NSA got Netscape to agree to deploy 40-bit cryptography in its International Edition while saving the more secure 128-bit version for the US version. By 2000, the rules changed and any browser could use higher security SSL. But that old insecure code was still being used and, fifteen years later, it's come back to bite us.
+
+The Washington Post reported today that cryptographers from IMDEA, a European Union research group; INRIA, a French research company; and Microsoft Research have found out that "They could force browsers to use the old export-grade encryption then crack it over the course of just a few hours. Once cracked, hackers could steal passwords and other personal information and potentially launch a broader attack on the Websites themselves by taking over elements on a page, such as a Facebook 'Like' button."
+Great.
+Specifically, the group, which calls itself SMACK, for State Machine AttCKS, discovered that support for the weaker "export-grade" encryption was still baked in to numerous Web servers, browsers and other SSL implementations. Among the millions of sites that were, or still are, vulnerable to "FREAK" (Factoring attack on RSA-EXPORT Keys) attacks are American Express, Whitehouse.gov, FBI.gov, and -- oh the irony! -- the NSA Website.
+
+
+The Washington Post reported that Karthikeyan Bhargavan, an INRIA researcher, said "We thought, of course, people stopped using it." They were wrong.
+Nadia Heninger, a University of Pennsylvania cryptographer, told the Post, "This is basically a zombie from the '90s... I don't think anybody really realized anybody was still supporting these export suites."
+The branded bug: Meet the people who name vulnerabilities
+Bugs are increasingly disclosed with catchy names and logos. Is making a bug 'cool' frivolous or essential?
+Heninger, who has been working on cracking the obsolete 40 to 512-bit RSA encryption keys, found that "she could crack the export-grade encryption key in about seven hours, using computers on Amazon Web services." Once done, this enables hackers to easily make "man-in-the-middle" attacks on the cracked websites.
+Guess what? Over a third of "encrypted" websites, according to tests made by University of Michigan researchers J. Alex Halderman and Zakir Durumeric, are open to FREAK attacks. Specifically, OpenSSL and Apple TLS/SSL clients such as the Safari Web browser are vulnerable to FREAK. When using these programs, it's relatively simple to downgrade their "secure" connections from "strong" RSA to the easy-to-break "export-grade" RSA.
+All of this has happened because as Matthew Green, a cryptographer and research professor at Johns Hopkins University, succinctly put it, the NSA made sure that the early "SSL protocol itself was deliberately designed to be broken."
+And, now, it has been. It's just that it's now open to being broken by anyone with basic code-breaking smarts and easily available computer resources. The key problem is that OpenSSL and Safari both contain bugs that cause them to accept "RSA export-grade keys even when the client didn't ask for export-grade RSA."
+Websites, generally speaking only create a single export-grade RSA key per session. They, like Apache with mod_ssl, will then re-use that key until the web server is rebooted. Thus, if you break a site once, chances are you've broken into it for days, weeks, even months.
+Many of the websites that are "FREAKable" seem to be on Content Delivery Networks (CDN)s such as Akamai. That's the reason why, for example, the NSA site is vulnerable. Akamai is working on fixing its web servers.
+The OpenSSL problem, CVE-2015-0204, has already been patched in the latest OpenSSL release. 1.02. If you haven't patched OpenSSL lately, do it. Do it now. Check with your operating system distributor or compile the code yourself.
+Apple is reported to be working on the problem, but no patch has been released yet for Safari. For now, use the Chrome or Firefox browser instead. If you're using Android on your device, you should use Chrome instead of the Android browser until a patch for it has been released.
+The SMACK group has had a website available to see if your browser or SSL clients are vulnerable to FREAK but it's currently off-line. You can, however, use openssl from a shell prompt to check to see if a Web server can be attacked. The command line reads:
+openssl s_client -connect www.Fill-In-The-Blank.com:443 -cipher EXPORT
+using the real site name in place of www.Fill-In-The-Blank.com
+If you get an error message, with the phrase "handshake failure." in it, the site is safe.
+Web server fixes are still being deployed at this time and I have no further information on how to fix it at this time.
+Related Stories:
