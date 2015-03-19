@@ -102,14 +102,15 @@ def open_weka():
 
 politics_data = Divider(os.getcwd() + '/indexPolitics.txt', 60)
 #print politics_data.divide_set_by_percentage(politics_data.count)
-politics_data.make_input_file('indexPoliticsNew.txt')
+#politics_data.make_input_file('indexPoliticsNew.txt')
 
 technology_data = Divider(os.getcwd() + '/indexTechnology.txt', 60)
 #print technology_data.divide_set_by_percentage(technology_data.count)
+technology_data.make_input_file('indexTechnologyNew.txt')
 
 #sport_data = Divider(os.getcwd() + '/indexSport.txt', 60)
 #print sport_data.divide_set_by_percentage(sport_data.count)
-
+#sport_data.make_input_file('indexSportNew.txt')
 #make_arff_files('train_data', 'train_data.arff')
 # string_to_vector('train_data.arff', 'train_data1.arff', 'test_data.arff', 'test_data1.arff')
 #string_to_vector()
@@ -118,3 +119,7 @@ technology_data = Divider(os.getcwd() + '/indexTechnology.txt', 60)
 #open_weka()
 #export CLASSPATH="/home/mia/master/weka-3-6-12/weka.jar:/home/mia/master/weka-3-6-12/libsvm-3.20/java/*"
 #export CLASSPATH="/home/mia/master/weka-3-6-12/weka.jar:/home/mia/master/weka-3-6-12/libsvm-3.20/java/*"
+
+#java -cp "*" -Xmx2g edu.stanford.nlp.pipeline.StanfordCoreNLP -annotators tokenize,ssplit,pos,lemma,ner -filelist indexPoliticsNew.txt -outputDirectory '/home/dynamic/Desktop/best/git/politics_parsed'
+
+#http://nlp.stanford.edu/software/pos-tagger-faq.shtml
