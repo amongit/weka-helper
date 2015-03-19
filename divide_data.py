@@ -62,15 +62,24 @@ class Divider:
 		 		or os.path.exists(os.getcwd() + '/train_data/' + self.topic + '/' + file_name) \
 		 		or not os.path.exists(os.getcwd() + '/test_data/' + self.topic + '/' + file_name)
 
-def make_arff_files(path_to_weka_jar):
-	os.system("java -cp " + path_to_weka_jar + " weka.core.converters.TextDirectoryLoader -dir train_data > train_data.arff")
-	os.system("java -cp " + path_to_weka_jar + " weka.core.converters.TextDirectoryLoader -dir test_data > test_data.arff")
+def make_arff_files(folder_src, arff_file_name):
+	os.system('java -cp ' + find('weka.jar', '/') + ' weka.core.converters.TextDirectoryLoader -dir ' + folder_src + ' > ' + arff_file_name)
 
-def string_to_vector(path_to_weka_jar):
-	os.system('java -cp ' + path_to_weka_jar + ' weka.filters.unsupervised.attribute.StringToWordVector -b -i train_data.arff -o train_data1.arff -c last -r test_data.arff -s test_data1.arff -R first-last -W 1000 -prune-rate -1.0 -N 0 -stemmer weka.core.stemmers.NullStemmer -M 1')
+def string_to_vector():
+	# os.system('java -cp ' + find('weka.jar', '/') + ' weka.filters.unsupervised.attribute.StringToWordVector -b -i ' + arff_train + \
+	# 		 ' -o ' + arff_train_dst + ' -c last -r ' + arff_test + ' -s ' + arff_test_dst + \
+	# 		 ' -R first-last -W 1000 -prune-rate -1.0 -N 0 -stemmer weka.core.stemmers.NullStemmer -M 1')
+	# os.system('java -cp ' + find('weka.jar', '/') + ' weka.filters.unsupervised.attribute.StringToWordVector -b -i ' + arff_train + ' -o ' + arff_train_dst + ' -c last -r ' + arff_test + ' -s ' + arff_test_dst + \
+	# 		' -R first-last -W 1000 -prune-rate -1.0 -N 0 -stemmer weka.core.stemmers.NullStemmer -M 1')
+	os.system('java -cp ' + find('weka.jar', '/') + ' weka.filters.unsupervised.attribute.StringToWordVector -b -i train_data.arff -o train_data1.arff -c last -r test_data.arff -s test_data1.arff -R first-last -W 1000 -prune-rate -1.0 -N 0 -stemmer weka.core.stemmers.NullStemmer -M 1')
 
 def get_name_of_file(path):
 	return os.path.basename(path)
+
+def find(name, path):
+    for root, dirs, files in os.walk(path):
+        if name in files:
+            return os.path.join(root, name)
 
 def get_number_of_files(path):
 	list_dir = []
@@ -81,20 +90,24 @@ def get_number_of_files(path):
 			count += 1
 	return count
 
+def open_weka():
+	os.system('java -Xmx512m -classpath /home/dynamic/weka/weka-3-6-11/weka.jar:/home/dynamic/weka/libsvm-3.20/java/libsvm.jar weka.gui.GUIChooser')
+
 politics_data = Divider(os.getcwd() + '/indexPolitics.txt', 60)
-print politics_data.divide_set_by_percentage(politics_data.count)
+#print politics_data.divide_set_by_percentage(politics_data.count)
 
 
 technology_data = Divider(os.getcwd() + '/indexTechnology.txt', 60)
-print technology_data.divide_set_by_percentage(technology_data.count)
+#print technology_data.divide_set_by_percentage(technology_data.count)
 
 sport_data = Divider(os.getcwd() + '/indexSport.txt', 60)
-print sport_data.divide_set_by_percentage(sport_data.count)
+#print sport_data.divide_set_by_percentage(sport_data.count)
 
-make_arff_files('/home/mia/master/weka-3-6-12/weka.jar')
-string_to_vector('/home/mia/master/weka-3-6-12/weka.jar')
+make_arff_files('train_data', 'train_data.arff')
+# string_to_vector('train_data.arff', 'train_data1.arff', 'test_data.arff', 'test_data1.arff')
+#string_to_vector()
+#$ java -Xmx512m -classpath //home/dynamic/weka/weka-3-6-11/weka.jar:/home/dynamic/weka/libsvm-3.20/java/libsvm.jar weka.gui.GUIChooser
 
-#$ java -Xmx512m -classpath /home/mia/master/weka-3-6-12/weka.jar:/home/mia/master/weka-3-6-12/libsvm-3.20/java/libsvm.jar weka.gui.GUIChooser
-
-
+open_weka()
+#export CLASSPATH="/home/mia/master/weka-3-6-12/weka.jar:/home/mia/master/weka-3-6-12/libsvm-3.20/java/*"
 #export CLASSPATH="/home/mia/master/weka-3-6-12/weka.jar:/home/mia/master/weka-3-6-12/libsvm-3.20/java/*"
