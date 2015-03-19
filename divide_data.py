@@ -62,6 +62,13 @@ class Divider:
 		 		or os.path.exists(os.getcwd() + '/train_data/' + self.topic + '/' + file_name) \
 		 		or not os.path.exists(os.getcwd() + '/test_data/' + self.topic + '/' + file_name)
 
+	def make_input_file(self, file_name):
+		with open(file_name, 'w') as f:
+			for file_path in self.file_name:
+				f.write(file_path)
+				f.write('\n')
+
+
 def make_arff_files(folder_src, arff_file_name):
 	os.system('java -cp ' + find('weka.jar', '/') + ' weka.core.converters.TextDirectoryLoader -dir ' + folder_src + ' > ' + arff_file_name)
 
@@ -95,19 +102,19 @@ def open_weka():
 
 politics_data = Divider(os.getcwd() + '/indexPolitics.txt', 60)
 #print politics_data.divide_set_by_percentage(politics_data.count)
-
+politics_data.make_input_file('indexPoliticsNew.txt')
 
 technology_data = Divider(os.getcwd() + '/indexTechnology.txt', 60)
 #print technology_data.divide_set_by_percentage(technology_data.count)
 
-sport_data = Divider(os.getcwd() + '/indexSport.txt', 60)
+#sport_data = Divider(os.getcwd() + '/indexSport.txt', 60)
 #print sport_data.divide_set_by_percentage(sport_data.count)
 
-make_arff_files('train_data', 'train_data.arff')
+#make_arff_files('train_data', 'train_data.arff')
 # string_to_vector('train_data.arff', 'train_data1.arff', 'test_data.arff', 'test_data1.arff')
 #string_to_vector()
 #$ java -Xmx512m -classpath //home/dynamic/weka/weka-3-6-11/weka.jar:/home/dynamic/weka/libsvm-3.20/java/libsvm.jar weka.gui.GUIChooser
 
-open_weka()
+#open_weka()
 #export CLASSPATH="/home/mia/master/weka-3-6-12/weka.jar:/home/mia/master/weka-3-6-12/libsvm-3.20/java/*"
 #export CLASSPATH="/home/mia/master/weka-3-6-12/weka.jar:/home/mia/master/weka-3-6-12/libsvm-3.20/java/*"
