@@ -11,9 +11,7 @@ def scrape(topic, c = 0):
 	### TO DO ###
 	#Include reading from list of rss feeds and maintain acurate count number
 	#Read that number from the given filelist.txt
-	rss_list = ['http://www.huffingtonpost.com/news/nba-draft-2012/feed/',
-				'http://www.huffingtonpost.com/news/2012-nba-playoffs/feed/',
-				'http://www.huffingtonpost.com/news/nfl-draft-2012/feed/'
+	rss_list = ['http://www.huffingtonpost.com/news/nba-finals-2013/feed/'
 				]
 			
 	for rss_url in rss_list:
@@ -93,7 +91,7 @@ def scrape(topic, c = 0):
 							text += article_body
 							print text
 							if(article_body):
-								add_to_index_file(os.getcwd() + '/' + topic + '/' + str(c) + '.txt', 'indexSport.txt', link, date, topic)
+								add_to_index_file(os.getcwd() + '/' + topic + '/' + str(c) + '.txt', 'indexSport-work.txt', link, date, topic)
 								with open(topic + '/' + str(c) + '.txt', 'w') as myfile: 
 									myfile.write(text.encode("utf-8")) 
 									myfile.close()
@@ -117,4 +115,4 @@ def remove_new_line(text):
 	return ' '.join(text.split())
 
 
-scrape('sport',1966)
+scrape('sport',1967)
