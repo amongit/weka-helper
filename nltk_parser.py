@@ -17,4 +17,4 @@ for line in politics:
 	text_tagged = nltk.pos_tag(text)
 	#print text_tagged
 	tag_fd = nltk.FreqDist(tag for (word, tag) in text_tagged)
-	print tag_fd.most_common()
+	print tag_fd.plot(cumulative=True)
