@@ -1,9 +1,26 @@
 import nltk
 from nltk import pos_tag, word_tokenize
 
-with open('politics_train_set.txt', 'r') as myfile: 
+with open('politics_train_set_home.txt', 'r') as myfile: 
 	politics = [line.decode('utf-8').strip() for line in myfile.readlines()]
 	myfile.close()
+nnp = 0
+nns = 0
+nn = 0
+inn = 0
+jj = 0
+rb = 0
+rbr = 0
+rbs = 0
+prp = 0
+cc = 0
+cd  = 0
+pos_words_total = 0
+count_pos_words_per_file = 0
+minimum_words_per_file = 0
+min_file = ''
+max_file = ''
+maximum_words_per_file = 0
 
 text = []
 tagged_text = []
@@ -17,12 +34,47 @@ for i, line in enumerate(politics):
 	''' najcesca vrsta reci pre imenice 
 	word_tag_pairs = nltk.bigrams(text_pos_tagged)
 	noun_preceders = [a[1] for (a, b) in word_tag_pairs if b[1] == 'NN'] 
-	fdist = nltk.FreqDist(noun_preceders)
-	print [tag for (tag, _) in fdist.most_common()]
-	'''
 
-	'''' glagoli poredjani po ucestalosti u tekstu'''
-	[wt[0] for (wt, _) in tag_fd.most_common() if wt[1] == 'VBD']
-	#vraca najcestiji pos
-	#print tag_fd.most_common()[0][1]
-	break
+	'''
+# odredi broj ukupni pos tagova
+# 	for tag in  tag_fd.most_common():
+# 		if tag[0] == 'NN':
+# 			nn += 1
+# 		elif tag[0] == 'NNS':
+# 			nns += 1
+# 		elif tag[0] == 'NNP':
+# 			nnp += 1
+# 		elif tag[0] == 'IN':
+# 			inn += 1
+# 		elif tag[0] == 'JJ':
+# 			jj += 1
+# 		elif tag[0] == 'RB':
+# 			rb += 1
+# 		elif tag[0] == 'RBR':
+# 			rbr += 1
+# 		elif tag[0] == 'RBS':
+# 			rbs += 1
+# 		elif tag[0] == 'PRP':
+# 			prp += 1
+# 		elif tag[0] == 'CC':
+# 			cc += 1
+# 		elif tag[0] == 'CD':
+# 			cd += 1
+# 		else: 
+# 			pos_words_total += 1
+# 	print i
+# print nn
+# print pos_words_total
+
+#TO DO 
+#naci najmanji i najveci broj tokena u tekstu, izracunati prosecnu duzinu tekstova u vidu broja pos tagova
+	for ind, tag in  enumerate(tag_fd.most_common()):
+		count_pos_words_per_file += 1
+	if count_pos_words_per_file > maximum_words_per_file:
+		maximum_words_per_file = count_pos_words_per_file
+		max_file = i
+	elif count_pos_words_per_file < minimum_words_per_file:
+		minimum_words_per_file = count_pos_words_per_file
+		min_file = i
+print minimum_words_per_file
+pein
