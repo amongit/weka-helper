@@ -100,4 +100,5 @@ print large_list_count
 print large_list_count
 print large_list
 
+
 #razdvojiti u 3 kategorije od 0 do 38692

@@ -109,7 +109,7 @@ def stanford_parse(input_file, output_directory):
 	# os.system('java -cp ' + find('stanford-corenlp-3.5.0.jar', '/') + ' -Xmx2g edu.stanford.nlp.pipeline.StanfordCoreNLP -annotators tokenize,pos,lemma,ner -filelist ' + input_file + ' -outputDirectory ' + output_directory + '')
 
 def open_weka():
-	os.system('java -Xmx512m -classpath' + self.find('weka.jar', '/') + ':' + self.find('libsvm.jar', '/') + ' weka.gui.GUIChooser')
+	os.system('java -Xmx512m -classpath' + find('weka.jar', '/') + ':' + find('libsvm.jar', '/') + ' weka.gui.GUIChooser')
 
 #politics_data = Divider(os.getcwd() + '/indexPolitics-work.txt', 60)
 #print politics_data.divide_set_by_percentage(politics_data.count)
@@ -127,11 +127,11 @@ def open_weka():
 #make_arff_files('test_data', 'test_data_unparsed.arff')
 #string_to_vector('train_data_unparsed.arff', 'train_data_unparsed_string_to_word_vector.arff', 'test_data_unparsed.arff', 'test_data_string_to_word_vector.arff')
 
-stanford_parse('sport_train_set.txt', '/home/dynamic/Desktop/best/git/weka-helper/sport_train_parsed')
+#stanford_parse('sport_train_set.txt', '/home/dynamic/Desktop/best/git/weka-helper/sport_train_parsed')
 
 #$ java -Xmx512m -classpath //home/dynamic/weka/weka-3-6-11/weka.jar:/home/dynamic/weka/libsvm-3.20/java/libsvm.jar weka.gui.GUIChooser
 
-#open_weka()
+open_weka()
 #export CLASSPATH="/home/mia/master/weka-3-6-12/weka.jar:/home/mia/master/weka-3-6-12/libsvm-3.20/java/*"
 #export CLASSPATH="/home/mia/master/weka-3-6-12/weka.jar:/home/mia/master/weka-3-6-12/libsvm-3.20/java/*"
 
