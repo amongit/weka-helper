@@ -21,7 +21,12 @@ minimum_words_per_file = 0
 min_file = ''
 max_file = ''
 maximum_words_per_file = 0
-
+small_list = []
+medium_list = []
+large_list = []
+smal_list_count = 0
+medium_list_count = 0
+large_list_count = 0
 text = []
 tagged_text = []
 for i, line in enumerate(politics):
@@ -72,9 +77,27 @@ for i, line in enumerate(politics):
 		count_pos_words_per_file += 1
 	if count_pos_words_per_file > maximum_words_per_file:
 		maximum_words_per_file = count_pos_words_per_file
-		max_file = i
+		max_file = line
 	elif count_pos_words_per_file < minimum_words_per_file:
 		minimum_words_per_file = count_pos_words_per_file
-		min_file = i
+		min_file = line
+	if count_pos_words_per_file < 13000:
+		smal_list_count += 1
+		small_list.append(line)
+	elif count_pos_words_per_file < 26000:
+		medium_list_count += 1
+		medium_list.append(line)
+	else:
+		large_list_count += 1
+		large_list.append(line)
 print minimum_words_per_file
-pein
+print min_file
+print maximum_words_per_file
+print max_file
+print 'sl'
+print smal_list_count
+print large_list_count
+print large_list_count
+print large_list
+
+#razdvojiti u 3 kategorije od 0 do 38692
