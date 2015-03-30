@@ -1,6 +1,13 @@
 import nltk, json
 from nltk import pos_tag, word_tokenize
 
+
+def read_list_of_files(input_text):
+	with open(input_text, 'r') as myfile: 
+		path_list = [line.decode('utf-8').strip() for line in myfile.readlines()]
+		myfile.close()
+	return path_list
+
 def get_file_list(input_file):
 	with open(input_file, 'r') as myfile: 
 		file_list = [line.decode('utf-8').strip() for line in myfile.readlines()]
@@ -187,8 +194,6 @@ def pos_tag_analysis(file_list, report_file):
 		outfile.write('WRB: ' + str(wrb) + '\t Percentage ' + str(wrb / float(pos_tags_total) * 100) + '\n')
 
 
-#TO DO 
-#naci najmanji i najveci broj tokena u tekstu, izracunati prosecnu duzinu tekstova u vidu broja pos tagova
 def min_max_tokens(file_list, report_file):
 	pos_words_total = 0
 	number_of_all_pos_tags_corpus = 0
@@ -237,13 +242,13 @@ def min_max_tokens(file_list, report_file):
 		print minimum_words_per_file	
 		if count_pos_words_per_file < minimum_words_per_file + third:
 			small_list_count += 1
-			small_list.append(line)
+			small_list.append(line + '\t' + str(count_pos_words_per_file))
 		elif count_pos_words_per_file < minimum_words_per_file + 2 * third:
 			medium_list_count += 1
-			medium_list.append(line)
+			medium_list.append(line + '\t' + str(count_pos_words_per_file))
 		else:
 			large_list_count += 1
-			large_list.append(line)
+			large_list.append(line + '\t' + str(count_pos_words_per_file))
 	with open(report_file, 'w') as outfile:
 		outfile.write('Minimum words per file: ' + str(minimum_words_per_file) + '\n')
 		outfile.write('Minimum file: ' + min_file + '\n')
@@ -258,9 +263,21 @@ def min_max_tokens(file_list, report_file):
 		outfile.write('Average pos tags per file: ' + str(number_of_all_pos_tags_corpus/(li + 1)) + '\n')
 
 
+def get_most_common_verbs(file_list, report_file):
+	for li, line in enumerate(file_list):
+		count_pos_words_per_file = 0
+		with open(line, 'r') as myfile: 
+			whole_text = myfile.read().decode('utf-8')
+			myfile.close()
+		text_tokenized = word_tokenize(whole_text)
+		text_pos_tagged = nltk.pos_tag(text_tokenized)
+		tag_fd = nltk.FreqDist(text_pos_tagged)
+		print [wt[0] for (wt, _) in tag_fd.most_common() if wt[1] == 'VB']
+		print line
 
 
+get_most_common_verbs(get_file_list('sport_train_set.txt'), 'sport_most_common_verbs.txt')
 #razdvojiti u 3 kategorije od 0 do 38692
 
 #pos_tag_analysis(get_file_list('sport_train_set_home.txt'), 'report_sport.txt')
-min_max_tokens(get_file_list('sport_train_set_home.txt'), 'min_max_sport.txt')
+#min_max_tokens(get_file_list('sport_train_set.txt'), 'min_max_sport.txt')
