@@ -138,7 +138,7 @@ def open_weka():
 # make_arff_files('70:30/train_70', '70:30/train_70_unparsed.arff')
 # make_arff_files('70:30/test_80', '70:30/test_70_unparsed.arff')
 
-string_to_vector('/80:20/train_80_unparsed.arff', '80:20/train_80_unparsed_string_to_word_vector.arff', '80:20/test_data_unparsed.arff', '80:20/test_80_unparsed_string_to_word_vector.arff')
+string_to_vector('80:20/train_80_unparsed.arff', 'train_80_unparsed_string_to_word_vector.arff', '80:20/test_data_unparsed.arff', 'test_80_unparsed_string_to_word_vector.arff')
 
 #stanford_parse('sport_train_set.txt', '/home/dynamic/Desktop/best/git/weka-helper/sport_train_parsed')
 
