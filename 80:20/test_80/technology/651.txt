@@ -1,0 +1,44 @@
+http://www.zdnet.com/pictures/how-to-build-an-sms-text-auto-responder-using-google-voice-and-gmail/#ftag=RSSbaffb68
+How to build an SMS text auto-responder using Google Voice and Gmail
+| Image 1 of 6
+
+I get a lot of letters from readers about our Google Voice series. While it would be physically impossible to answer all the questions I get, some readers send in questions that inspire taking the series a step or two further.
+I recently got a letter from Carolyn Robinson from MassLegalHelp.org that contained just such a question.
+I have been following your articles on Google Voice since 2009. Google Voice has been a fantastic technology for the work I do. I run MassLegalHelp.org, Massachusetts' legal aid programs' information website. And my husband lives in England so I often work very remotely.
+My newest project is to set up different language lines that people who are illegally denied an interpreter by agencies in Massachusetts can text. Because we are only little we do not have someone who can text right back. I have seen there is at least one solution to creating an automatic canned response to texts to Google Voice accounts but I am not truly a techie - just a power user - and I am looking for someone who might be able to either come up with a solution for us or implement the complex, intimidating API solution I found online. Do you have any ideas?
+As it turns out, I do. There are no guarantees, since I didn't want to set my phone to auto-respond to texts, but the steps detailed on the following pages should at least get you going in the right direction.
+Before we get started, let's understand the logic of this project. We want to send an automatic response, which is not normally something texting does well, but is something email can do quite easily with rules or filters.
+So what we're going to do is configure Google Voice to send an email to Gmail when it gets a text. When Gmail gets that email, based on matching filter selection rules, it will automatically reply with a canned response. Because Google Voice passes along the texting details in the address of the email, when Gmail's filter does its automatic reply, that reply will actually be texted to the the sender.
+It's a little bit of magic, but that's the best kind of hack.
+Let's get started...
+(Image: GraphicStock.com)
+
+This little project requires a number of different steps. Let's start by going into your Google Voice account, going to Settings, then Voicemail & Text, and forwarding your messages to a Gmail account.
+Technically, this hack could probably work using something like Outlook and Outlook filters, but we'll keep it all Gmail and you can tinker around with this concept if you're using a different email platform.
+You should test this. Make sure when you get a text at the number you want to set up for your auto-responder (which should be the Google Voice account you're using), you get an email in your inbox. We'll come back to your inbox in a minute.
+
+Next, go into your Gmail account and install the Canned Responses Labs project.
+You get to this by clicking on Settings, then Labs, and enabling it. Make a canned response (you do this from a new email message). Your response should be short because it will be what you text back to correspondents.
+
+If you set up your email forwarding correctly, you should see a copy of the incoming text in your inbox. You should try to reply to that text using Gmail. If everything works, the originator of the text should get a reply.
+If everything doesn't work, then double-check how you set stuff up. It's possible that some phone carriers won't send enough information with their text to enable a reply, but this hack should work with most major carriers.
+Be sure to note what the message looks like, the subject, the headers, and so forth. We're going to try to build a filter that fires only ... only-only-only ... when you get a text with just the right pattern. That's next.
+
+This is where you need to be the most careful. Create a new filter. What you want to do is create a selection statement that matches only the kinds of messages you want to reply to.
+Fortunately, Gmail will show what the filter will select, so test and tinker until you have a solid, reliable filter condition.
+
+Finally, we'll put it all together. Next up is the actions pane, where you decide what to do with the incoming messages.
+For the purpose of this project, all that really matters is what is in the red rectangle. We enabled this feature when we added the Canned Response lab to Gmail.
+Go ahead and select your canned response from the menu and enable the action.
+That's it. It should work.
+
+I get a lot of letters from readers about our Google Voice series. While it would be physically impossible to answer all the questions I get, some readers send in questions that inspire taking the series a step or two further.
+I recently got a letter from Carolyn Robinson from MassLegalHelp.org that contained just such a question.
+I have been following your articles on Google Voice since 2009. Google Voice has been a fantastic technology for the work I do. I run MassLegalHelp.org, Massachusetts' legal aid programs' information website. And my husband lives in England so I often work very remotely.
+My newest project is to set up different language lines that people who are illegally denied an interpreter by agencies in Massachusetts can text. Because we are only little we do not have someone who can text right back. I have seen there is at least one solution to creating an automatic canned response to texts to Google Voice accounts but I am not truly a techie - just a power user - and I am looking for someone who might be able to either come up with a solution for us or implement the complex, intimidating API solution I found online. Do you have any ideas?
+As it turns out, I do. There are no guarantees, since I didn't want to set my phone to auto-respond to texts, but the steps detailed on the following pages should at least get you going in the right direction.
+Before we get started, let's understand the logic of this project. We want to send an automatic response, which is not normally something texting does well, but is something email can do quite easily with rules or filters.
+So what we're going to do is configure Google Voice to send an email to Gmail when it gets a text. When Gmail gets that email, based on matching filter selection rules, it will automatically reply with a canned response. Because Google Voice passes along the texting details in the address of the email, when Gmail's filter does its automatic reply, that reply will actually be texted to the the sender.
+It's a little bit of magic, but that's the best kind of hack.
+Let's get started...
+(Image: GraphicStock.com)

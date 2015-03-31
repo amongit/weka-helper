@@ -1,0 +1,24 @@
+http://www.zdnet.com/article/windows-8-developers-are-shunning-winjs/#ftag=RSSbaffb68
+Windows 8 developers are shunning WinJS
+One of the stranger decisions that Microsoft made when developing Windows 8 was that the new model of building apps was to be based not on .NET, but rather on a new development technology called Windows Runtime (WinRT).
+The real reason why this decision was made has never been officially confirmed. A theory held by common folk is that Steven Sinofsky had an axe to grind against .NET having blamed it for "that whole Vista thing". Personally, that's a theory I subscribe to .
+.NET is a wonderful set of technologies and one of the best things Microsoft has ever come up with. Why they would ditch a decade's worth of refinement and replace it with something new is baffling at best.
+Anyway, the very much perceived advantage that WinRT gives the world over .NET is that it make it possible to build native Windows Store apps in HTML and JavaScript, rather than insisting that developers know .NET.
+The apparent rationale of this is that it was easier to poach non-Microsoft developers if you based the native tooling on open standards, rather than a proprietary technology. (Never mind that iOS or Android don't have this problem. If there's money in it, developers will learn how to use your tooling regardless how bizarre.)
+"Hey, come and build apps for Windows 8. You know HTML, right? You can build apps with it over here!"
+One question that newcomers to Windows Store apps have is whether to use XAML or WinJS. My advice would be to go with the flow and go with what everyone else uses. So what does everyone else use?
+Some time ago I wrote a little tool that would scan the apps installed on a Windows 8 machine and report back on whether they were written in C#/XAML.
+If you're new to XAML, that is Microsoft's proprietary native app tooling. Based on Windows Presentation Framework from the Longhorn days, it's also used by Silverlight and hence Windows Phone 7's API. With Windows 8 and Windows Phone 8, XAML was rewritten, although to developers it's transparent whether you're using the old .NET WPF/Silverlight or the new Windows 8 XAML.
+Windows Store apps do not declare which technology they are written in. The tool I wrote (which you can find here) looks at what's installed and analyses each app. Apps are reported as being written in XAML, WinJS, or C++. (C++ is the final way of building apps, but it's essentially the preserve of games developers.)
+Running this tool against the top 25 apps available from the UK Windows Store, you get some rather startling results.
+Or...
+In other words, the world plus dog is not that interested in WinJS. If you're building apps for Windows 8, you're most likely doing so in XAML.
+Where this gets more bizarre is if you look at Microsoft's own apps, the results are completely flipped around.
+Or...
+You can imagine here a diktat coming down from Sinofsky's executive office insisting that the built-in stuff for Windows 8 must be based on this new fangled WinJS. Talk about eating your own dog food...
+Remember how bad the first version of Mail was for Windows 8? I'm not saying this had anything to do with the decision to base it on WinJS, but you do have to wonder.
+Note as well that in the top 25 apps, the two WinJS examples are Microsoft Solitaire Collection, and Cut The Rope. Cut The Rope's developers were a sort of "launch partner" for IE10, so the decision to go with WinJS may have been informed from that.
+In conclusion, if someone was asking me as an advisor as to whether I'd build Windows Store apps in WinJS, I'd have to say "uh, no".
+When .NET was introduced it was possible to build apps in C# or Visual Basic .NET. The world plus dog decided C# was the way to go right from the start, and VB.NET has always been the bastard stepchild of the .NET development world. It now looks like WinJS is the bastard stepchild of the Windows Store app development world.
+Never try and go against the flow. If most of your development peers are choosing XAML, you should too.
+What do you think? Post a comment, or talk to me on Twitter: .

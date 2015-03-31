@@ -1,0 +1,22 @@
+http://www.zdnet.com/article/learning-and-remembering-complex-passwords/#ftag=RSSbaffb68
+Learning and remembering complex passwords
+Passwords look to be the most common authentication tool for years to come. Even Apple, famed for UI innovation, has implemented two-factor authentication that I find unusable (although I do like Duo Security).
+Unbreakable passwords may seem like a dream, but they are entirely possible. The problem is human learning and memory, not technology.
+Recent research offers two promising strategies for improving password design and retention: spaced repetition; and Person-Action-Object (PAO) stories.
+While not a new technique, spaced repetition hasn't been used for password learning. In the paper Towards reliable storage of 56-bit secrets in human memory, researchers Joseph Bonneau and Stuart Schechter — of Princeton and Microsoft Research respectively, — looked at how it could be applied to the problem of complex — 56 bit — passwords.
+They broke complex passwords into pieces that users were trained on at each login.
+We asked remote research participants to perform a distractor task that required logging into a website 90 times, over up to two weeks, with a password of their choosing. After they entered their chosen password correctly we displayed a short code (four letters or two words, 18.8 bits) that we required them to type. For subsequent logins we added an increasing delay prior to displaying the code, which participants could avoid by typing the code from memory. As participants learned, we added two more codes to comprise a 56.4- bit secret.
+In summary, they found:
+Overall, 94 percent of participants eventually typed their entire secret from memory, learning it after a median of 36 logins. The learning component of our system added a median delay of just 6.9 s per login and a total of less than 12 minutes over an average of ten days. 88 percent were able to recall their codes exactly when asked at least three days later, with only 21 percent reporting having written their secret down.
+The paper Spaced Repetition and Mnemonics Enable Recall of Multiple Strong Passwords by Carnegie Mellon University researchers Jeremiah Blocki, Saranga Komanduri, Lorrie Cranor, and Anupam Datta, takes spaced repetition a step further with PAO.
+This is a graphically based security system. You are shown a scene. You are then asked to choose a person from a drop-down list and given a machine-generated random action-object pair.
+Next you imagine a story inside the scene using the action and the object. The computer discards the action and object pictures and retains the person and the scene pictures to cue you to remember the PAO story you have made up.
+Here's an example of the process where the user:
+. . . chose a famous person from a drop-down list and were given machine-generated random action-object pairs. Users were also shown a photo of a scene and asked to imagine the PAO story taking place in the scene (e.g., Bill Gate — swallowing — bike on a beach). Subsequently, they were asked to recall the action-object pairs (e.g., swallowing — bike) when prompted with the associated scene-person pairs (e.g., Bill Gates — beach) following a spaced repetition schedule over a period of 100+ days.
+The result: 77.1 percent of the participants successfully recalled all four stories in nine tests over a period of 102 days.
+Hands on with the AOC E1759fwu portable USB 3 monitor
+We test AOC's 17-inch USB portable monitor - a second screen for your laptop that's light enough to carry around with you. But is it worth the extra weight?
+Security researchers tend to believe that people are idiots who can't be trusted — and looking at common passwords you can see why. But people are capable or tremendous feats of memory if they get some help.
+That help is what these papers are exploring. People can memorize hard-to-crack passwords if their cognitive skills are properly enlisted.
+The next cognitive barrier is likely to be IT organizations themselves where openness to new ideas and respect for users is often in short supply. We all can do better. And we must.
+Comments welcome, of course. Would you be willing to do a little extra work to have a truly secure password for your job or bank?

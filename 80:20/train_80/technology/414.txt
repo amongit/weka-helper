@@ -1,0 +1,13 @@
+http://www.zdnet.com/article/beware-of-the-cloudburst/#ftag=RSSbaffb68
+Beware of the cloudburst
+A big selling point for cloud computing is what's become known as cloud bursting. What this means is the ability to move spikes in demand for computing resources into the cloud, rather than having to build infrastructure to cope with peak loads. You only pay for what you need, in other words.
+It's a bit like having an alternative supplier for commuter trains in the rush hour although -- if the analogy will stretch this far -- having to go to an alternative station to catch one.
+This of course lies at the heart of the promise of cloud computing: enabling the agile enterprise, bringing flexibility and so on. But what does it actually mean? And is it really as simple as it sounds?
+This train of thought was triggered by a lunchtime conversation with Marten Mickos, CEO of Eucalyptus, which builds cloud software.
+The first thing that springs to mind is that applications don't work without data, and moving data around is expensive in terms of time and money, especially if you're paying a cloud provider for storage and bandwidth.
+The time element is critical. Imagine: your demand spikes, so you need to shift that excess computing load into a cloud provider's facilities. But the database behind the application is huge and certainly won't be moved in the time available.
+Instead, you move that database into the cloud ahead of time. Now you have the problem that you're paying for that storage even when you don't need it, and you need to find a robust mechanism to keep that database in sync with the live data in your private cloud.
+What's more, that data is now potentially at risk if it's sensitive, such as credit card details. Is the cloud provider certified under PCI-DSS guidelines to hold such data? And can you recreate the applications' environment in the public cloud such that it can attach to that data in a seamless manner? If not, are the tools available to make it so?
+But hold on! I thought that cloud was supposed to reduce costs not start running up a bill for capacity I don't actually need right now.
+You would hope that cloud platforms such as Eucalyptus could take some or all of the pain out of this scenario. If so, all well and good. But before you start swallowing the hype about the cloud's instant flexibility, it would be worth taking a closer look at a real world scenario.
+I'd be interested to hear real world examples of cloud bursting.

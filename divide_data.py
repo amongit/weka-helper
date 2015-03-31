@@ -1,4 +1,4 @@
-import os, random, shutil
+import os, random, shutil, sys
 
 class Divider:
 	"""   Class which divides input set into train and test set based on the percentage assigned. """
@@ -12,40 +12,48 @@ class Divider:
 
 		with open(index_file, 'r') as f:
 			for index, line in enumerate(f.readlines()):
+				# print index
+				# print line
 				chunks = line.split('\t')
+				if len(chunks) != 4:
+					print index
+					print line
+					break
 				if chunks:
 					self.file_name.append(chunks[0])
 					self.url.append(chunks[1])
 					self.date.append(chunks[2])
 					self.topic = ''.join(chunks[3].split())
 				else:
-					self.file_name.append(line) 
+					print 'ovde'
+					#self.file_name.append('madafaka')
+
 
 		self.count = len(self.file_name)
 		print len(self.file_name)
 
-	def divide_set_by_percentage(self, count):
+	def divide_set_by_percentage(self, count, train_data_folder, test_data_folder, parent_folder):
 		if self.percentage >= 0 and self.percentage <= 100:
 			num = int(round(self.percentage / float(100) * self.count))
 			train_set_list = random.sample(self.file_name, num)
 			train_set = set(train_set_list)
 			whole_set = set(self.file_name)
 			test_set = whole_set.difference(train_set)
-			self.copy_to_folder(train_set, 'train_data')
-			self.make_index_file(self.topic + '_train_set.txt', train_set)
-			self.copy_to_folder(test_set, 'test_data')
-			self.make_index_file(self.topic + '_test_set.txt', test_set)
-			return self.check_data_split()
+			self.copy_to_folder(train_set, parent_folder + '/' + train_data_folder)
+			self.make_index_file(parent_folder + '/' + self.topic + '_' + train_data_folder + '.txt', train_set)
+			self.copy_to_folder(test_set,parent_folder +'/' + test_data_folder)
+			self.make_index_file(parent_folder + '/' + self.topic + '_' + test_data_folder + '.txt', test_set)
+			return self.check_data_split(train_data_folder, test_data_folder, parent_folder)
 		else:
 			raise Exception("Percentage must be between 0 and 100")
 
-	def check_data_split(self):
-		if not get_number_of_files(os.getcwd() + '/test_data/' + self.topic) + get_number_of_files(os.getcwd() \
-				+ '/train_data/' + self.topic) == get_number_of_files(os.getcwd() + '/' + self.topic):
+	def check_data_split(self, train_data_folder, test_data_folder, parent_folder):
+		if not get_number_of_files(os.getcwd() + '/' + parent_folder + '/' + train_data_folder + '/' + self.topic) + get_number_of_files(os.getcwd() \
+				+ '/' + parent_folder + '/' + test_data_folder +'/' + self.topic) == get_number_of_files(os.getcwd() + '/' + self.topic):
 			return False
 		else:
 			for f_name in self.file_name:
-				if self.check_file_divided(get_name_of_file(f_name)) == False:
+				if self.check_file_divided(get_name_of_file(f_name), train_data_folder, test_data_folder) == False:
 					return False
 			return True		
 
@@ -55,15 +63,17 @@ class Divider:
 		if not os.path.exists(os.getcwd() + '/' + folder_dst + '/' + self.topic): 
 			os.makedirs(os.getcwd() + '/' + folder_dst + '/' + self.topic)
 		for i, l in enumerate(list_of_files):
-			shutil.copyfile(l, os.getcwd() + '/' + folder_dst + '/' + self.topic + '/' + get_name_of_file(l))
-		return i
+			# print os.path.realpath(l)
+			# with open(l, 'r+') as f:
+			# 	fgs = f.readlines()
+			# 	print fgs
+			shutil.copyfile(os.path.realpath(l), os.getcwd() + '/' + folder_dst + '/' + self.topic + '/' + get_name_of_file(l))
 
-
-	def check_file_divided(self, file_name):
-		return os.path.exists(os.getcwd() + '/test_data/' + self.topic + '/' + file_name) \
-		 		and not os.path.exists(os.getcwd() + '/train_data/' + self.topic + '/' + file_name) \
-		 		or os.path.exists(os.getcwd() + '/train_data/' + self.topic + '/' + file_name) \
-		 		or not os.path.exists(os.getcwd() + '/test_data/' + self.topic + '/' + file_name)
+	def check_file_divided(self, file_name, train_data_folder, test_data_folder):
+		return os.path.exists(os.getcwd() + '/' + test_data_folder + '/' + self.topic + '/' + file_name) \
+		 		and not os.path.exists(os.getcwd() + '/' + train_data_folder +'/' + self.topic + '/' + file_name) \
+		 		or os.path.exists(os.getcwd() + '/' + train_data_folder +'/' + self.topic + '/' + file_name) \
+		 		or not os.path.exists(os.getcwd() + '/' + test_data_folder + '/' + self.topic + '/' + file_name)
 
 	def make_index_file(self, file_name, content):
 		with open(file_name, 'w') as f:
@@ -111,27 +121,30 @@ def stanford_parse(input_file, output_directory):
 def open_weka():
 	os.system('java -Xmx512m -classpath' + find('weka.jar', '/') + ':' + find('libsvm.jar', '/') + ' weka.gui.GUIChooser')
 
-#politics_data = Divider(os.getcwd() + '/indexPolitics-work.txt', 60)
-#print politics_data.divide_set_by_percentage(politics_data.count)
+# politics_data = Divider(os.getcwd() + '/indexPolitics-home.txt', 80)
+# print politics_data.divide_set_by_percentage(politics_data.count, 'train_80', 'test_80', '80:20')
 #politics_data.make_index_file('indexPoliticsNew.txt', politics_data.file_name)
 
-#technology_data = Divider(os.getcwd() + '/indexTechnology-work.txt', 60)
-#print technology_data.divide_set_by_percentage(technology_data.count)
+# technology_data = Divider(os.getcwd() + '/indexTechnology-home.txt', 80)
+# print technology_data.divide_set_by_percentage(technology_data.count, 'train_80', 'test_80', '80:20')
 #technology_data.make_index_file('indexTechnologyNew.txt', technology_data.file_name)
 
-#sport_data = Divider(os.getcwd() + '/indexSport-work.txt', 60)
-#print sport_data.divide_set_by_percentage(sport_data.count)
+# sport_data = Divider(os.getcwd() + '/indexSport-home.txt', 80)
+# print sport_data.divide_set_by_percentage(sport_data.count, 'train_80', 'test_80' , '80:20')
 
 
-#make_arff_files('train_data', 'train_data_unparsed.arff')
-#make_arff_files('test_data', 'test_data_unparsed.arff')
-#string_to_vector('train_data_unparsed.arff', 'train_data_unparsed_string_to_word_vector.arff', 'test_data_unparsed.arff', 'test_data_string_to_word_vector.arff')
+#make_arff_files('80:20/train_80', '80:20/train_80_unparsed.arff')
+#make_arff_files('80:20/test_80', '80:20/test_80_unparsed.arff')
+# make_arff_files('70:30/train_70', '70:30/train_70_unparsed.arff')
+# make_arff_files('70:30/test_80', '70:30/test_70_unparsed.arff')
+
+string_to_vector('/80:20/train_80_unparsed.arff', '80:20/train_80_unparsed_string_to_word_vector.arff', '80:20/test_data_unparsed.arff', '80:20/test_80_unparsed_string_to_word_vector.arff')
 
 #stanford_parse('sport_train_set.txt', '/home/dynamic/Desktop/best/git/weka-helper/sport_train_parsed')
 
 #$ java -Xmx512m -classpath //home/dynamic/weka/weka-3-6-11/weka.jar:/home/dynamic/weka/libsvm-3.20/java/libsvm.jar weka.gui.GUIChooser
 
-open_weka()
+#open_weka()
 #export CLASSPATH="/home/mia/master/weka-3-6-12/weka.jar:/home/mia/master/weka-3-6-12/libsvm-3.20/java/*"
 #export CLASSPATH="/home/mia/master/weka-3-6-12/weka.jar:/home/mia/master/weka-3-6-12/libsvm-3.20/java/*"
 
