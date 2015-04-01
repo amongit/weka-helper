@@ -86,11 +86,13 @@ def make_arff_files(folder_src, arff_file_name):
 	os.system('java -cp ' + find('weka.jar', '/') + ' weka.core.converters.TextDirectoryLoader -dir ' + folder_src + ' > ' + arff_file_name)
 
 def string_to_vector(arff_train, arff_train_dst, arff_test, arff_test_dst):
-	os.system('java -Xmx1280M -cp ' + find('weka.jar', '/') + ' weka.filters.unsupervised.attribute.StringToWordVector -b -i ' + arff_train + \
-			 ' -o ' + arff_train_dst + ' -c last -r ' + arff_test + ' -s ' + arff_test_dst + \
-			 ' -R first-last -W 1000 -prune-rate -1.0 -N 0 -stemmer weka.core.stemmers.NullStemmer -M 1')
+	# os.system('java -cp ' + find('weka.jar', '/') + ' weka.filters.unsupervised.attribute.StringToWordVector -b -i ' + arff_train + \
+	# 		 ' -o ' + arff_train_dst + ' -c last -r ' + arff_test + ' -s ' + arff_test_dst + \
+	# 		 ' -R first-last -W 1000 -prune-rate -1.0 -N 0 -stemmer weka.core.stemmers.NullStemmer -M 1')
 	
-	#os.system('java -cp ' + find('weka.jar', '/') + ' weka.filters.unsupervised.attribute.StringToWordVector -b -i train_data.arff -o train_data1.arff -c last -r test_data.arff -s test_data1.arff -R first-last -W 1000 -prune-rate -1.0 -N 0 -stemmer weka.core.stemmers.NullStemmer -M 1')
+	os.system('java -cp ' + find('weka.jar', '/') + ' weka.filters.unsupervised.attribute.StringToWordVector -b -i ' + str(arff_train) + '.arff -o \
+	'+ str(arff_train_dst) + '.arff -c last -r ' + str(arff_test) + '.arff -s ' + str(arff_test_dst) + '.arff -R first-last -W 1000 -prune-rate -1.0 -N 0 \
+	-stemmer weka.core.stemmers.NullStemmer -M 1')
 
 def get_name_of_file(path):
 	return os.path.basename(path)
@@ -121,16 +123,16 @@ def stanford_parse(input_file, output_directory):
 def open_weka():
 	os.system('java -Xmx1280M -classpath ' + find('weka.jar', '/') + ':' + find('libsvm.jar', '/') + ' weka.gui.GUIChooser')
 
-# politics_data = Divider(os.getcwd() + '/indexPolitics-work.txt', 60)
-# print politics_data.divide_set_by_percentage(politics_data.count, 'train_60', 'test_60', '60:40')
+# politics_data = Divider(os.getcwd() + '/indexPolitics-work.txt', 70)
+# print politics_data.divide_set_by_percentage(politics_data.count, 'train_70', 'test_70', '70:30')
 #politics_data.make_index_file('indexPoliticsNew.txt', politics_data.file_name)
 
-# technology_data = Divider(os.getcwd() + '/indexTechnology-work.txt', 60)
-# print technology_data.divide_set_by_percentage(technology_data.count, 'train_60', 'test_60', '60:40')
+# technology_data = Divider(os.getcwd() + '/indexTechnology-work.txt', 70)
+# print technology_data.divide_set_by_percentage(technology_data.count, 'train_70', 'test_70', '70:30')
 #technology_data.make_index_file('indexTechnologyNew.txt', technology_data.file_name)
 
-# sport_data = Divider(os.getcwd() + '/indexSport-work.txt', 60)
-# print sport_data.divide_set_by_percentage(sport_data.count, 'train_60', 'test_60' , '60:40')
+# sport_data = Divider(os.getcwd() + '/indexSport-work.txt', 70)
+# print sport_data.divide_set_by_percentage(sport_data.count, 'train_70', 'test_70' , '70:30')
 
 # TODO konverzijaaaaa 70:30!!!
 #make_arff_files('80:20/train_80', '80:20/train_80_unparsed.arff')
@@ -140,17 +142,17 @@ def open_weka():
 # make_arff_files('60:40/train_60', '60:40/train_60_unparsed.arff')
 # make_arff_files('60:40/test_60', '60:40/test_60_unparsed.arff')
 
-<<<<<<< HEAD
-string_to_vector('80:20/train_80_unparsed.arff', 'train_80_unparsed_string_to_word_vector.arff', '80:20/test_data_unparsed.arff', 'test_80_unparsed_string_to_word_vector.arff')
-=======
-# string_to_vector(find('train_60_unparsed.arff', '/'), '60:40/train_60_unparsed_string_to_word_vector.arff', find('test_60_unparsed.arff', '/'), '60:40/test_60_unparsed_string_to_word_vector.arff')
->>>>>>> ad90bf5c8e3462b3a629768e7e3d88274c3d652f
+
+# print find('train_70_unparsed.arff', '/')
+# print find('test_70_unparsed.arff', '/')
+string_to_vector(find('train_80_unparsed', '/'), 'yo', find('test_80_unparsed', '/'), 'y02')
+
 
 #stanford_parse('sport_train_set.txt', '/home/dynamic/Desktop/best/git/weka-helper/sport_train_parsed')
 
 #$ java -Xmx512m -classpath //home/dynamic/weka/weka-3-6-11/weka.jar:/home/dynamic/weka/libsvm-3.20/java/libsvm.jar weka.gui.GUIChooser
 
-open_weka()
+# open_weka()
 #export CLASSPATH="/home/mia/master/weka-3-6-12/weka.jar:/home/mia/master/weka-3-6-12/libsvm-3.20/java/*"
 #export CLASSPATH="/home/mia/master/weka-3-6-12/weka.jar:/home/mia/master/weka-3-6-12/libsvm-3.20/java/*"
 
