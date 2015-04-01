@@ -1,0 +1,21 @@
+http://www.zdnet.com/article/one-finger-doesnt-begin-to-define-windows-10-multifactor-authentication/#ftag=RSSbaffb68
+One finger doesn't begin to define Windows 10 authentication, FIDO
+Updated Feb. 23, 6pm PST
+Microsoft's plan for authentication technology in Windows 10 has been widely mis-characterized this week in the media as limited to biometrics when in fact the company is lining up a standards effort around a rich palette of strong authentication options secured by public key cryptography.
+Key to that plan is the eventual support for a strong authentication protocol under development by the Fast Identity Online (FIDO) Alliance, which has just begun work on a 2.0 version.
+In addition, biometrics are just one form of authentication FIDO supports. FIDO will give the Windows operating system a rich lineup of strong authentication modalities including biometrics, phone-based, USB-based, NFC, Bluetoothand TPM.
+Microsoft groups those options under the term "user gestures," which include anything from a password, a button press, a PIN, a fingerprint, a face scan or a combination of those.
+Confining Microsoft's intentions to biometrics drastically understates the flexibility and depth of the features Windows, and any other platform will gain via FIDO support.
+Also, media reports this week of FIDO 2.0 support in Windows 10 are inaccurate as the spec is merely in a draft stage.
+
+Microsoft is a FIDO board member and Dustin Ingalls, group program manager for security and identity on the Windows team, was voted in as Alliance president during annual elections and introduced in January.
+Biometrics are nothing new for Microsoft (and other OSs) as they are supported in Windows via a framework and other tools baked into current versions of the operating system.
+But FIDO presents Microsoft, and other adopters of FIDO, with a significant improvement over traditional biometric and authentication schemes - namely simple public key cryptography.
+For example, most biometric solutions achieve authentication using a scan that is compared to a previously captured image. In general, FIDO uses a similar biometric matching scheme (with the captured image never leaving the user's device). But that matching is used only to validate a user's identity or presence. Once that action is completed, FIDO's public key cryptography is unlocked and secures a user authentication.
+FIDO protocols support either replacing passwords altogether or augmenting the use of passwords with another, and stronger, authenticator.
+In Windows 10, Microsoft seems committed to a number of strong authentication choices. some coupled with a password and others as standalone authenticators. Microsoft committed its IPR to FIDO and will ship strong authentication features in its new OS based on that technology. In addition, the work is available for FIDO's 2.0 working group to include in its protocol development.
+A future version of Windows is expected to support FIDO 2.0, which is evolutionary with the current FIDO 1.0 spec.
+Windows won't necessarily eliminate passwords by default for a number of reasons, but a major one is cost and training of introducing an entirely new authentication flow. (Remember the outcry after Windows 8 eliminated the Start button).
+Of course, the other important messages here are that Microsoft is adopting what is emerging as a viable standard, that the company has engaged with FIDO members that include Google/financial services/service providers in helping build a standard designed to thwart phishing scams and reuse of stolen passwords, that the company also will act as a relying party allowing users to "bring their own" non-Microsoft credential, and that Microsoft seems bent on giving users strong authentication options to securely log-in to applications accessed locally or in the cloud.
+Now all that is needed is the bits and the required vetting.
+(Disclosure: My employer is a member of the FIDO Alliance)

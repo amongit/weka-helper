@@ -1,0 +1,26 @@
+http://www.zdnet.com/article/protect-yourself-from-flash-attacks-in-internet-explorer/#ftag=RSSbaffb68
+Protect yourself from Flash attacks in Internet Explorer
+[Note: This article was originally published in 2012 and has been revised to incorporate information about Windows 10 and Windows 7. Last update 6-Feb-2015.]
+Beginning with Internet Explorer 10 in Windows 8 and continuing with Internet Explorer 11 in Windows 8.1 and now in Windows 10, Microsoft has built Adobe's Flash Player directly into the browser.
+
+10 best privacy tools for staying secure online
+A number of free and open-source projects exist solely to protect your identity and online activity. Here are just a few to make you more secure in the new year.
+But that convenience also means that Internet Explorer users are vulnerable to in-the-wild exploits aimed at unpatched Flash vulnerabilities. And those are no longer just theoretical. In the past two weeks, Adobe has been forced to release three emergency patches for Flash zero-day exploits. But for days at a time, you were vulnerable to drive-by attacks just for visiting a web page.
+Even if you're fully up to date with all the just-released patches, you're still at risk for the next zero-day, which could appear any day.
+So do what I do and disable Flash except on sites where you explicitly grant permission.
+All of the instructions in this post are based on Internet Explorer 11 in the Windows 10 Technical Preview, but the identical techniques work in Internet Explorer versions 10 and 11 on Windows 7 and Windows 8.x as well.
+
+The most extreme option is to disable Flash completely. Click the gear icon in the upper right corner of the IE 11 window and then click Manage add-ons from the menu, as shown here.
+That opens the Manage Add-ons dialog box, shown below. Select the Shockwave Flash Object add-on and note that it is identified as a Microsoft Windows Third Party Application Component. The file date and current version number appear in the details box below the list, allowing you to check whether you're up to date.
+Click Disable, and then click Close. You are now safe from any exploits that rely on vulnerabilities in Flash. Any Flash-based code, legitimate or otherwise, will not run in Internet Explorer 10 or 11 when this add-on is disabled.
+
+But what if you prefer to use Internet Explorer, or if your evaluation requires you to test IE using real-world web sites? In that case, you can take advantage of an extremely effective security tool that's built into every modern version of Internet Explorer.
+The feature, called ActiveX Filtering, blocks all ActiveX controls on all domains in Internet Explorer. Because the built-in Flash Player in IE 10 and 11 is implemented as an ActiveX control, this feature disables it completely while still allowing you to decide, on a case-by-case basis, when you want to allow a trusted site to display Flash-based content.
+To turn on ActiveX Filtering, click the gear icon, click Safety, and then click ActiveX Filtering. The check mark to the left of this setting means it is enabled.
+
+When ActiveX Filtering is enabled, you'll see a blue icon in the Internet Explorer address bar when you visit any site that uses the ActiveX-based Flash control. For sites that use Flash to deliver ads or other non-essential content, you can go about your business securely. If you encounter a site that uses Flash to do something meaningful and you trust that site, click the blue icon to display this box.
+
+Click Turn off ActiveX Filtering to allow Flash to work on the current domain. Note that this setting applies to the entire domain and is persistent. If you turn off ActiveX Filtering for example.com, you'll be able to use Flash-based content on all pages on that domain, in the current session and in future sessions. For sites you don't anticipate visiting again, you can click the blue icon in the address bar again to re-enable ActiveX Filtering for that domain.
+(Of course, ActiveX Filtering blocks all ActiveX controls, not just Flash. That's a benefit, for the most part, but it might be an issue if you use a corporate server that has proprietary ActiveX controls, or if you use Office 365 or other web services that use Office ActiveX controls.)
+If you're comfortable exploring the registry, you can inspect (and edit) the list of sites that are subject to ActiveX Filtering. Open Registry Editor (Regedit.exe) and look in HKCU\Software\Microsoft\Internet Explorer\Safety\ActiveXFilterExceptions.
+This doesn't have to be a short-term workaround. Given the steady stream of security issues associated with Flash, I consider it a prudent strategy for everyday browsing.
