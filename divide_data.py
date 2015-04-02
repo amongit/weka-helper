@@ -115,9 +115,11 @@ def stanford_parse(input_file, output_directory):
 	# os.system('java -cp ' + find('stanford-corenlp-3.5.0.jar', '/') + ':' + find('stanford-corenlp-3.5.0-models.jar', '/') + ':' + find('xom.jar', '/') + \
 	# 	':' + find('joda-time.jar', '/') + ':' + find('jollyday.jar', '/') + ':' + find('ejml-0.23.jar', '/') + ' -Xmx2g edu.stanford.nlp.pipeline.StanfordCoreNLP ' + \
 	# 	' -annotators tokenize,ssplit,pos,lemma,ner -filelist ' + input_file + ' -outputDirectory ' + output_directory + '')
-	os.system('cd ' + find('stanford-corenlp-3.5.0.jar', '/'))
-	os.system('java -cp "*" -Xmx2g edu.stanford.nlp.pipeline.StanfordCoreNLP -annotators tokenize,ssplit,pos,lemma,ner -filelist '+ input_file + ' -outputDirectory ' + output_directory + '')
-	os.system('cd ' + find('divide_data.py', '/'))
+	
+	# os.system('cd ' + find('stanford-corenlp-3.5.0.jar', '/'))
+	# os.system('java -cp "*" -Xmx2g edu.stanford.nlp.pipeline.StanfordCoreNLP -annotators tokenize,ssplit,pos,lemma,ner -filelist '+ input_file + ' -outputDirectory ' + output_directory + '')
+	# os.system('cd ' + find('divide_data.py', '/'))
+	
 	# os.system('java -cp ' + find('stanford-corenlp-3.5.0.jar', '/') + ' -Xmx2g edu.stanford.nlp.pipeline.StanfordCoreNLP -annotators tokenize,pos,lemma,ner -filelist ' + input_file + ' -outputDirectory ' + output_directory + '')
 
 def open_weka():
@@ -144,13 +146,13 @@ def open_weka():
 
 # print find('train_70_unparsed.arff', '/')
 # print find('test_70_unparsed.arff', '/')
-string_to_vector(find('train_80_unparsed', '/'), 'yo', find('test_80_unparsed', '/'), 'y02')
+#string_to_vector(find('train_80_unparsed', '/'), 'yo', find('test_80_unparsed', '/'), 'y02')
 
 #stanford_parse('sport_train_set.txt', '/home/dynamic/Desktop/best/git/weka-helper/sport_train_parsed')
 
 #$ java -Xmx512m -classpath //home/dynamic/weka/weka-3-6-11/weka.jar:/home/dynamic/weka/libsvm-3.20/java/libsvm.jar weka.gui.GUIChooser
 
-# open_weka()
+open_weka()
 #export CLASSPATH="/home/mia/master/weka-3-6-12/weka.jar:/home/mia/master/weka-3-6-12/libsvm-3.20/java/*"
 #export CLASSPATH="/home/mia/master/weka-3-6-12/weka.jar:/home/mia/master/weka-3-6-12/libsvm-3.20/java/*"
 
