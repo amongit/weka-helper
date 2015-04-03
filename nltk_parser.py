@@ -14,6 +14,19 @@ def get_file_list(input_file):
 		myfile.close()
 	return file_list
 
+def delete_first_line(file_list):
+	for li, line in enumerate(file_list):
+		with open(line, 'r+') as myfile: 
+			whole_text = myfile.read().decode('utf-8')
+			text_splited = whole_text.split('\n')
+			text_without_first_line = text_splited[0]
+			print text_without_first_line
+			myfile.close()
+		with open(line, 'w') as myfile: 
+			myfile.write(str(text_without_first_line))
+			myfile.close()
+
+
 def pos_tag_analysis(file_list, report_file):
 	#TO DO napraviti algorithmia input lista sa nizom fajlova output json sa tagovima i statistikama
 	cc = cd = dt = ex = fw = inn = jj = jjr = jjs\
@@ -276,8 +289,8 @@ def get_most_common_verbs(file_list, report_file):
 		print line
 
 
-get_most_common_verbs(get_file_list('sport_train_set.txt'), 'sport_most_common_verbs.txt')
+# get_most_common_verbs(get_file_list('sport_train_set.txt'), 'sport_most_common_verbs.txt')
 #razdvojiti u 3 kategorije od 0 do 38692
-
+delete_first_line(get_file_list('sport_train_set.txt'))
 #pos_tag_analysis(get_file_list('sport_train_set_home.txt'), 'report_sport.txt')
 #min_max_tokens(get_file_list('sport_train_set.txt'), 'min_max_sport.txt')

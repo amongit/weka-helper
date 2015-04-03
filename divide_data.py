@@ -112,9 +112,9 @@ def get_number_of_files(path):
 	return count
 
 def stanford_parse(input_file, output_directory):
-	# os.system('java -cp ' + find('stanford-corenlp-3.5.0.jar', '/') + ':' + find('stanford-corenlp-3.5.0-models.jar', '/') + ':' + find('xom.jar', '/') + \
-	# 	':' + find('joda-time.jar', '/') + ':' + find('jollyday.jar', '/') + ':' + find('ejml-0.23.jar', '/') + ' -Xmx2g edu.stanford.nlp.pipeline.StanfordCoreNLP ' + \
-	# 	' -annotators tokenize,ssplit,pos,lemma,ner -filelist ' + input_file + ' -outputDirectory ' + output_directory + '')
+	os.system('java -cp ' + find('stanford-corenlp-3.5.0.jar', '/') + ':' + find('stanford-corenlp-3.5.0-models.jar', '/') + ':' + find('xom.jar', '/') + \
+		':' + find('joda-time.jar', '/') + ':' + find('jollyday.jar', '/') + ':' + find('ejml-0.23.jar', '/') + ' -Xmx2g edu.stanford.nlp.pipeline.StanfordCoreNLP ' + \
+		' -annotators tokenize,ssplit,pos,lemma,ner -filelist ' + input_file + ' -outputDirectory ' + output_directory + '')
 	
 	# os.system('cd ' + find('stanford-corenlp-3.5.0.jar', '/'))
 	# os.system('java -cp "*" -Xmx2g edu.stanford.nlp.pipeline.StanfordCoreNLP -annotators tokenize,ssplit,pos,lemma,ner -filelist '+ input_file + ' -outputDirectory ' + output_directory + '')
@@ -143,15 +143,17 @@ def open_weka():
 # make_arff_files('70:30/test_70', '70:30/test_70_unparsed.arff')
 # make_arff_files('60:40/train_60', '60:40/train_60_unparsed.arff')
 # make_arff_files('60:40/test_60', '60:40/test_60_unparsed.arff')
-
+#os.system('java -cp ' + find('weka.jar', '/') + ' weka.core.converters.TextDirectoryLoader -dir 60:40/test_60')
 # print find('train_70_unparsed.arff', '/')
 # print find('test_70_unparsed.arff', '/')
 #string_to_vector(find('train_80_unparsed', '/'), 'yo', find('test_80_unparsed', '/'), 'y02')
 
+# string to word vector kad je broj atributa smanjen na 100 i primenjeni tf idf i normalizacija:
+# weka.filters.unsupervised.attribute.StringToWordVector -R first-last -W 100 -prune-rate -1.0 -T -I -N 1 -S -stemmer weka.core.stemmers.NullStemmer -M 1 -tokenizer "weka.core.tokenizers.WordTokenizer -delimiters \" \\r\\n\\t.,;:\\\'\\\"()?!\""
+
 #stanford_parse('sport_train_set.txt', '/home/dynamic/Desktop/best/git/weka-helper/sport_train_parsed')
 
 #$ java -Xmx512m -classpath //home/dynamic/weka/weka-3-6-11/weka.jar:/home/dynamic/weka/libsvm-3.20/java/libsvm.jar weka.gui.GUIChooser
-
 open_weka()
 #export CLASSPATH="/home/mia/master/weka-3-6-12/weka.jar:/home/mia/master/weka-3-6-12/libsvm-3.20/java/*"
 #export CLASSPATH="/home/mia/master/weka-3-6-12/weka.jar:/home/mia/master/weka-3-6-12/libsvm-3.20/java/*"
