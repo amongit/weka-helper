@@ -1,0 +1,14 @@
+http://www.zdnet.com/article/google-retires-spdy-in-favour-of-http2/#ftag=RSSbaffb68
+Google retires SPDY in favour of HTTP/2
+Google is planning to retire its support for its SPDY open networking protocol in early 2016, in favour of supporting HTTP/2 in Chrome.
+A blog post by Google multiplexing manager Chris Bentzel and HTTP/2 enabler Bence Béky on February 9 said that the internet giant would begin rolling out support for HTTP/2 in Chrome 40 in the upcoming weeks.
+Google began working on its SPDY (pronounced "speedy") protocol in 2009, with the aim of developing a web protocol that would be faster than HTTP.
+Like fine wine, BlackBerry Passport gets better with age
+After using the BlackBerry Passport for five months, Matthew is more impressed with it than with any other phone in his collection.
+Google has supported SPDY since the release of Chrome 6 in 2010, and other web browsers and services have enabled support, with Mozilla switching to the faster protocol for its release of Firefox 13, along with Twitter, which enabled SPDY on its servers in 2012, and Facebook doing the same in 2013.
+However, Bentzel and Béky said in the blog post on Monday that the next planned version of hypertext transfer protocol, HTTP/2, is "well on the road to standardisation", and most of the benefits are present in HTTP/2.
+This is not surprising, as HTTP/2, which is being developed by the HTTP working group, is partly based on the SPDY protocol.
+Google said that some of HTTP/2's key features, such as multiplexing, header compression, prioritisation, and protocol negotiation, evolved from work that was previously carried out in its non-standard open protocol.
+"We're happy to have contributed to the open standards process that led to HTTP/2, and hope to see wide adoption given the broad industry engagement on standardization and implementation," said Bentzel and Béky in their blog post. "We also look forward to further advancements in fundamental Internet protocols that lead to a faster and more secure internet for everyone."
+Google is also set to remove support for Transport Layer Security extension NPN in favour of the ALPN extension in Chrome at the same time that it retires its support for SPDY.
+The company said that server developers are strongly encouraged to move to HTTP/2 and ALPN.
