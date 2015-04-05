@@ -1,0 +1,15 @@
+http://www.zdnet.com/article/uk-intelligence-agency-stores-passwords-in-plain-text/#ftag=RSSbaffb68
+UK intelligence agency stores passwords in plain text
+There are some government agencies that most would expect to have a fair grasp of security, even for those systems that are not core to their operations. That's what we thought with the Australian Tax Office's Publication Ordering System , but sadly, we were proven wrong.
+University student Dan Farrall discovered that his UK government's communication headquarters (GCHQ) careers site has been sending back passwords in complete plain text. For those of us outside of the UK, GCHQ is one of Britain's intelligence agencies, dealing primarily with signals intelligence and charged with "safeguarding Britain's electronic communications and digital space".
+It works with the nation's security services and secret intelligence services MI5 and MI6, and is thought of as the counterpart to the US National Security Agency or Australia's Defence Signals Directorate.
+As Farrall pointed out on his blog, apart from the harm to its reputation, the sort of information that would be held within these systems would be significant.
+We double-checked Farrall's claim and confirmed that the passwords were in fact being sent in plain text, and while we were at it, we started an application for a malware reverse engineer.
+Aside from the usual residential information, the applications required passport numbers, reasons for wanting to apply, the relevant skills for the position being applied to, education history, and qualifications.
+I imagine that such information would be especially interesting to foreign nations that would like to narrow down and possibly turn tomorrow's government penetration testers, or tap those that work on discovering and patching vulnerabilities for the UK government.
+Farrall claimed to have contacted GCHQ about the issue at the end of February, but received no response.
+GCHQ responded to ZDNet's queries about the issue, stating that "the current applicant tracking system used by GCHQ is a legacy system" and that is already in the process of replacing it.
+Although the main issue with plain text passwords lies with the entire username and password database being unprotected and accessible in the event of a breach, GCHQ appeared to believe that the problem was simply a matter of passwords being sent over email.
+It told ZDNet that "only the very small percentage of applicants (who need their accounts reset) are sent a new password. This comes with clear instructions of how to protect their data."
+From the email in the screenshot above, these clear instructions involve not writing down the password or giving it to anyone else.
+Updated on 27 March, 2012 at 10.45am AEDST: Included response from GCHQ.

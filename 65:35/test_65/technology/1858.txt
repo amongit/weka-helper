@@ -1,0 +1,13 @@
+http://www.zdnet.com/article/backblaze-releases-drive-reliability-data/#ftag=RSSbaffb68
+Backblaze releases drive reliability data
+The good folks at Backblaze, the online backup service with over 100PB of capacity, released their full drive reliability data set this morning. Covering 41,000 drives with over 500 million data points, this is the largest drive reliability data set publicly available.
+Storage: Fear, Loss, and Innovation
+The rise of big data and the demand for real-time information is putting more pressure than ever on enterprise storage. We look at the technologies that enterprises are using to keep up, from SSDs to storage virtualization to network and data center transformation.
+Each day, Backblaze servers take a snapshot of every drive's condition. The data includes date, drive serial number, model, capacity, failure and all the drive's SMART data.
+This gets swept into a daily stats file, with one row for each drive. The files now cover 2013 and 2014 data. They have a fresh blog about the dataset here.
+Storage Bits has covered Backblaze for more than five years (see Build an 180TB storage array for $1,943*, The hard drive drought is over, Trust Backblaze's drive reliability data? and How reliable are 4TB drives?). In an industry that obsessively tracks the quality of every component - and drives are a major cost factor in any array or data center - they are the first to release a large data set for public consumption.
+Their idea is that smart people with a statistical bent - I'm sure several PhD theses could be written - will use the data to tease out even more useful insights than the Backblaze team has.
+What is the value of this data to the average consumer? Because consumers buy relatively few drives, your impression of a drive or a vendor is based more on randomness - i.e. luck - than statistical significance. But I stick by what I said over a year ago:
+For people buying significant numbers of drives, this data can help you make informed choices about cost and reliability given your particular needs. That's a lot more than you could do yesterday.
+The bottom line is that almost all storage fails (except M-disc), so data needs to be maintained on multiple devices and in, perhaps, multiple locations. Whether by backup or special coding, redundancy is the surest strategy for data preservation.
+Comments welcome, as always. I haven't had any commercial dealings with Backblaze, but their CEO is a nice guy.
