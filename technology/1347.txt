@@ -1,4 +1,3 @@
-http://www.zdnet.com/article/over-99-percent-of-about-com-links-vulnerable-to-xss-xfs-iframe-attack/#ftag=RSSbaffb68
 Over 99 percent of About.com links vulnerable to XSS, XFS iframe attack
 
 About.com has a huge security problem, but it's likely worse for the over 98 million monthly visitors to the About Group's various topic-specific subdomains.
@@ -30,4 +29,5 @@ XFS also sometimes is used to describe an XSS attack which uses an HTML frame in
 In the first of ComputerWeekly's excellent series on application-layer attacks, Michael Cobb writes, "XSS attacks work even if the site is viewed over an SSL connection, because the script is run in the context of the "secured" site, and browsers cannot distinguish between legitimate and malicious content served up by a Web application."
 User defenses against XSS and XFS attacks are little outside of avoiding the vulnerable websites, and practicing good privacy hygiene such as not allowing your browser to 'remember' your logins and passwords, blocking as many tracking cookies as possible, keeping sensitive data in encrypted storage, and frequent login/password changes (especially with critical accounts, such as banking and medical sites).
 ZDNet has reached out to About.com for comment and will update this post accordingly.
+
 

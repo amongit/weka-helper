@@ -132,9 +132,10 @@ def open_weka():
 # technology_data = Divider(os.getcwd() + '/indexTechnology-work.txt', 70)
 # print technology_data.divide_set_by_percentage(technology_data.count, 'train_70', 'test_70', '70:30')
 #technology_data.make_index_file('indexTechnologyNew.txt', technology_data.file_name)
-
+ 
 # sport_data = Divider(os.getcwd() + '/indexSport-work.txt', 70)
 # print sport_data.divide_set_by_percentage(sport_data.count, 'train_70', 'test_70' , '70:30')
+# sport_data.make_index_file('indexSportListOfNames.txt', sport_data.file_name)
 
 # TODO konverzijaaaaa 70:30!!!
 #make_arff_files('80:20/train_80', '80:20/train_80_unparsed.arff')

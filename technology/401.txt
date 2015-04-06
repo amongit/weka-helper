@@ -1,4 +1,3 @@
-http://www.zdnet.com/article/cloud-archives-start-to-melt/#ftag=RSSbaffb68
 Cloud archives start to melt
 As Jack Clark highlights in his blog , Amazon's new Glacier service allows you to archive data to its datacentres for a measly $0.01 per GB per month. He also shows how it costs 10 times as much to use Glacier as it would if instead you used your own tape library, and other associated hardware and software.
 Quantum supplied the figures for the cost of hardware rather than a service and, of course, Quantum has a large footprint in the tape library market.
@@ -7,3 +6,4 @@ I could ask Quantum to do the maths for me for this volume of data but I see tha
 Q-Cloud's pricing is identical to that of Amazon Glacier when storing above 72TB but, instead of sending your archived data directly to the datacentre, you stage it using a Quantum DXi deduplicating disk-based device, which then deduplicates and synchronises to a Quantum datacentre in the background. This has the advantage of allowing local retrieves, as long as the data remains recent.
 This is brave stuff. You do need some more software and hardware components — available from Quantum — but you can also get your data back more quickly. Amazon is quoting several hours, while Quantum reckons you can have your data back much faster. Looks like Quantum is hedging its bets.
 This won't be the last cloud archiving initiatives we see. With Amazon's entry, the bar has been raised, and it remains only to wait and see who else tries to leap over it.
+

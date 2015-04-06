@@ -16,15 +16,21 @@ def get_file_list(input_file):
 
 def delete_first_line(file_list):
 	for li, line in enumerate(file_list):
-		with open(line, 'r+') as myfile: 
-			whole_text = myfile.read().decode('utf-8')
+		text_without_first_line = ''
+		with open(line, 'r') as myfile: 
+			whole_text = myfile.read()
+			print line
 			text_splited = whole_text.split('\n')
-			text_without_first_line = text_splited[0]
-			print text_without_first_line
+			for i, txt in enumerate(text_splited):
+				if i > 0 and not txt.startswith('http'):
+					print txt
+					text_without_first_line += txt
+					text_without_first_line += '\n'
+			#print text_without_first_line
 			myfile.close()
-		with open(line, 'w') as myfile: 
-			myfile.write(str(text_without_first_line))
-			myfile.close()
+		with open(line, 'w') as f: 
+			f.write(str(text_without_first_line))
+			f.close()
 
 
 def pos_tag_analysis(file_list, report_file):
@@ -291,6 +297,6 @@ def get_most_common_verbs(file_list, report_file):
 
 # get_most_common_verbs(get_file_list('sport_train_set.txt'), 'sport_most_common_verbs.txt')
 #razdvojiti u 3 kategorije od 0 do 38692
-delete_first_line(get_file_list('sport_train_set.txt'))
+delete_first_line(get_file_list('indexSportListOfNames-work.txt'))
 #pos_tag_analysis(get_file_list('sport_train_set_home.txt'), 'report_sport.txt')
 #min_max_tokens(get_file_list('sport_train_set.txt'), 'min_max_sport.txt')
