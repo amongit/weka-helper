@@ -86,13 +86,13 @@ def make_arff_files(folder_src, arff_file_name):
 	os.system('java -cp ' + find('weka.jar', '/') + ' weka.core.converters.TextDirectoryLoader -dir ' + folder_src + ' > ' + arff_file_name)
 
 def string_to_vector(arff_train, arff_train_dst, arff_test, arff_test_dst):
-	# os.system('java -cp ' + find('weka.jar', '/') + ' weka.filters.unsupervised.attribute.StringToWordVector -b -i ' + arff_train + \
-	# 		 ' -o ' + arff_train_dst + ' -c last -r ' + arff_test + ' -s ' + arff_test_dst + \
-	# 		 ' -R first-last -W 1000 -prune-rate -1.0 -N 0 -stemmer weka.core.stemmers.NullStemmer -M 1')
-	
-	os.system('java -cp ' + find('weka.jar', '/') + ' weka.filters.unsupervised.attribute.StringToWordVector -b -i ' + str(arff_train) + '.arff -o \
-	'+ str(arff_train_dst) + '.arff -c last -r ' + str(arff_test) + '.arff -s ' + str(arff_test_dst) + '.arff -R first-last -W 1000 -prune-rate -1.0 -N 0 \
-	-stemmer weka.core.stemmers.NullStemmer -M 1')
+	os.system('java -cp ' + find('weka.jar', '/') + ' weka.filters.unsupervised.attribute.StringToWordVector -b -i ' + arff_train + \
+			 ' -o ' + arff_train_dst + ' -c last -r ' + arff_test + ' -s ' + arff_test_dst + \
+			 ' -R first-last -W 1000 -prune-rate -1.0 -N 0 -stemmer weka.core.stemmers.NullStemmer -M 1')
+
+
+	# string to word vector kad je broj atributa smanjen na 100 i primenjeni tf idf i normalizacija:
+	# weka.filters.unsupervised.attribute.StringToWordVector -R first-last -W 100 -prune-rate -1.0 -T -I -N 1 -S -stemmer weka.core.stemmers.NullStemmer -M 1 -tokenizer "weka.core.tokenizers.WordTokenizer -delimiters \" \\r\\n\\t.,;:\\\'\\\"()?!\""
 
 def get_name_of_file(path):
 	return os.path.basename(path)
@@ -123,39 +123,28 @@ def stanford_parse(input_file, output_directory):
 	# os.system('java -cp ' + find('stanford-corenlp-3.5.0.jar', '/') + ' -Xmx2g edu.stanford.nlp.pipeline.StanfordCoreNLP -annotators tokenize,pos,lemma,ner -filelist ' + input_file + ' -outputDirectory ' + output_directory + '')
 
 def open_weka():
+	#java -Xmx512m -classpath //home/dynamic/weka/weka-3-6-11/weka.jar:/home/dynamic/weka/libsvm-3.20/java/libsvm.jar weka.gui.GUIChooser
 	os.system('java -Xmx1280M -classpath ' + find('weka.jar', '/') + ':' + find('libsvm.jar', '/') + ' weka.gui.GUIChooser')
 
-# politics_data = Divider(os.getcwd() + '/indexPolitics-work.txt', 70)
-# print politics_data.divide_set_by_percentage(politics_data.count, 'train_70', 'test_70', '70:30')
+politics_data = Divider(os.getcwd() + '/indexPolitics-work.txt', 70)
+print politics_data.divide_set_by_percentage(politics_data.count, 'train_70', 'test_70', '70:30')
 #politics_data.make_index_file('indexPoliticsNew.txt', politics_data.file_name)
 
-# technology_data = Divider(os.getcwd() + '/indexTechnology-work.txt', 70)
-# print technology_data.divide_set_by_percentage(technology_data.count, 'train_70', 'test_70', '70:30')
-#technology_data.make_index_file('indexTechnologyNew.txt', technology_data.file_name)
+technology_data = Divider(os.getcwd() + '/indexTechnology-work.txt', 70)
+print technology_data.divide_set_by_percentage(technology_data.count, 'train_70', 'test_70', '70:30')
  
-# sport_data = Divider(os.getcwd() + '/indexSport-work.txt', 70)
-# print sport_data.divide_set_by_percentage(sport_data.count, 'train_70', 'test_70' , '70:30')
-# sport_data.make_index_file('indexSportListOfNames.txt', sport_data.file_name)
+sport_data = Divider(os.getcwd() + '/indexSport-work.txt', 70)
+print sport_data.divide_set_by_percentage(sport_data.count, 'train_70', 'test_70' , '70:30')
 
-# TODO konverzijaaaaa 70:30!!!
-#make_arff_files('80:20/train_80', '80:20/train_80_unparsed.arff')
-#make_arff_files('80:20/test_80', '80:20/test_80_unparsed.arff')
-# make_arff_files('70:30/train_70', '70:30/train_70_unparsed.arff')
-# make_arff_files('70:30/test_70', '70:30/test_70_unparsed.arff')
-# make_arff_files('60:40/train_60', '60:40/train_60_unparsed.arff')
-# make_arff_files('60:40/test_60', '60:40/test_60_unparsed.arff')
-#os.system('java -cp ' + find('weka.jar', '/') + ' weka.core.converters.TextDirectoryLoader -dir 60:40/test_60')
-# print find('train_70_unparsed.arff', '/')
-# print find('test_70_unparsed.arff', '/')
-#string_to_vector(find('train_80_unparsed', '/'), 'yo', find('test_80_unparsed', '/'), 'y02')
+make_arff_files('70:30/train_70', '70:30/train_70_unparsed.arff')
+make_arff_files('70:30/test_70', '70:30/test_70_unparsed.arff')
 
-# string to word vector kad je broj atributa smanjen na 100 i primenjeni tf idf i normalizacija:
-# weka.filters.unsupervised.attribute.StringToWordVector -R first-last -W 100 -prune-rate -1.0 -T -I -N 1 -S -stemmer weka.core.stemmers.NullStemmer -M 1 -tokenizer "weka.core.tokenizers.WordTokenizer -delimiters \" \\r\\n\\t.,;:\\\'\\\"()?!\""
+string_to_vector(find('train_70_unparsed.arff', '/'), '/home/dynamic/Desktop/weka-helper/70:30/train_70_unparsed_stwv.arff', find('test_70_unparsed.arff', '/'), '/home/dynamic/Desktop/weka-helper/70:30/test_70_unparsed_stwv.arff')
 
-#stanford_parse('sport_train_set.txt', '/home/dynamic/Desktop/best/git/weka-helper/sport_train_parsed')
 
-#$ java -Xmx512m -classpath //home/dynamic/weka/weka-3-6-11/weka.jar:/home/dynamic/weka/libsvm-3.20/java/libsvm.jar weka.gui.GUIChooser
-open_weka()
+# stanford_parse('sport_train_set.txt', '/home/dynamic/Desktop/best/git/weka-helper/sport_train_parsed')
+
+
 #export CLASSPATH="/home/mia/master/weka-3-6-12/weka.jar:/home/mia/master/weka-3-6-12/libsvm-3.20/java/*"
 #export CLASSPATH="/home/mia/master/weka-3-6-12/weka.jar:/home/mia/master/weka-3-6-12/libsvm-3.20/java/*"
 
