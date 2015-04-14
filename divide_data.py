@@ -208,7 +208,6 @@ open_weka()
 #string_to_vector(find('train_75_unparsed.arff', '/'), '/home/dynamic/Desktop/weka-helper/75:25/train_75_stwv_pruned_to_100.arff', find('test_75_unparsed.arff', '/'), '/home/dynamic/Desktop/weka-helper/75:25/test_75_stwv_pruned_to_100.arff')
 
 
-
 # stanford_parse('sport_train_set.txt', '/home/dynamic/Desktop/best/git/weka-helper/sport_train_parsed')
 
 

@@ -50,6 +50,26 @@ def delete_first_line(file_list):
 			f.close()
 >>>>>>> fedf15d74203d164d5e4d7805234bc435782b65d
 
+def first_and_last_paragraph(folder_name, topic, file_list):
+	for li, line in enumerate(file_list):
+		text_without_first_line = ''
+		with open(line, 'r') as myfile: 
+			whole_text = myfile.read()
+			print line
+			text_splited = whole_text.split('\n')
+			for i, txt in enumerate(text_splited):
+				if i > 0 and not txt.startswith('http'):
+					print txt
+					text_without_first_line += txt
+					text_without_first_line += '\n'
+			#print text_without_first_line
+			myfile.close()
+		if not os.path.exists(os.getcwd() + '/' + folder_name + '/' + topic): 
+			os.makedirs(os.getcwd() + '/' + folder_name + '/' + topic)
+		with open(line, 'w') as f: 
+			f.write(str(text_without_first_line))
+			f.close()
+
 
 def pos_tag_analysis(file_list, report_file):
 	#TO DO napraviti algorithmia input lista sa nizom fajlova output json sa tagovima i statistikama
