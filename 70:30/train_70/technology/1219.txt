@@ -1,4 +1,3 @@
-http://www.zdnet.com/article/when-should-services-be-split-into-even-smaller-services/#ftag=RSSbaffb68
 Have services become the new monoliths? A case for microservices
 The goal of services -- be they RESTful, SOAP, web, cloud, data, and anything else -- is to break out vital pieces of the monolithic applications or systems that take up data center space. They are intended to both lighten and enlighten IT environments, abstracting away the heavy-duty plumbing and infrastructures that are in the systems underneath. For example, a large monolithic system built on Ruby may be too unwieldy, and better off broken down into services that can be accessed and reused as the business changes.
 What happens when the service becomes a monolith in itself? What if it becomes difficult to make changes without having to ensure that all upstream and downstream dependencies are not broken, and that its myriad of consumers do not get cut off?
@@ -11,3 +10,4 @@ Consider the security implications: A company, for example, may have all its sen
 Untangle tangled dependencies: Here's where packaged modeling tools can help, Newman says. "If you can view the various seams you have found as a directed a cyclical graph of dependencies, this can help you spot the seams that are likely going to be harder to disentangle." Beware the database he adds -- it's "often the mother of all tangled dependencies."
 Of course, it's always about the business. Devoting time and effort to splitting services -- which may or may not be noticed by the business -- needs to be have a solid business case. Is the business going to be able to move on new opportunities faster because it can assemble or reassemble more fine-grained services? Or is it doing fine with the coarse-grained services now out there? That's the question that needs to be asked before anything is begun.
 A complimentary copy of the chapter from Newman's book addressing this is available at the ThoughtWorks site.
+

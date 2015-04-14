@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 http://www.zdnet.com/article/architecting-for-high-performance/#ftag=RSSbaffb68
+=======
+>>>>>>> fedf15d74203d164d5e4d7805234bc435782b65d
 Architecting for High Performance
 When you have a cup of steaming hot coffee, you generally don’t chug it all down at once. Sipping not only avoids scalding your insides, but it also gives you time to do other things while you enjoy your coffee, such as driving or checking email, or driving and checking email (not recommended!).
 Virtualizing small workloads is kind of like sipping coffee. Small workloads don’t use the full capacity of a single physical machine most of the time, so resource pooling can lead directly to higher utilization and lower overall costs. Small virtual workloads also tend to run well on commodity hardware which makes them a great match for cloud deployment.
@@ -7,3 +10,7 @@ To do it right, the first challenge is to scale the hardware and ensure the hype
 Another area to consider is the memory, both in terms of its speed and the ability to allocate it efficiently. One technique that helps to optimize memory is application awareness of Non-Uniform Memory Access (NUMA) in multiprocessor systems. NUMA was developed to address some of the scalability issues of symmetrical multiprocessing. Modern operating systems and high-performance applications have developed optimizations to recognize the system’s NUMA topology and consider NUMA when they schedule threads or allocate memory. This greatly increases performance. The trick is just to make sure that the infrastructure has the capability and that the applications are taking advantage of it.
 It is also important to allocate memory efficiently when multiple virtual machines are running on the same physical systems. Typically, each virtual machine allocates its peak amount of memory when it is started and retains that memory until it is shutdown. However, it frequently uses only a fraction of this peak amount during the bulk of its lifecycle. By reclaiming unused memory from the idle virtual machines, something that is easily done with Hyper-V Dynamic Memory, it becomes possible to reduce the allocation and therefore run more virtual machines on the host.
 We tend to think of virtualization in terms of small workloads running on medium-scale hardware. That is an easy place to start with workload virtualization, and it offers compelling advantages. However, with the right kind of resource management, large workloads in high-end physical systems can benefit greatly from cloud-oriented optimization.
+<<<<<<< HEAD
+=======
+
+>>>>>>> fedf15d74203d164d5e4d7805234bc435782b65d

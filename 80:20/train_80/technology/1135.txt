@@ -1,4 +1,3 @@
-http://www.zdnet.com/article/plain-text-lesson-from-evernote-hack/#ftag=RSSbaffb68
 Plain text lesson from Evernote hack
 Last weekend, Evernote sent out an e-mail detailing how its operations and security team had discovered and blocked suspicious activities on its network. Apparently, the cloud services organization was the target of a "coordinated attempt to access security areas" pertaining to its popular Evernote Service.
 The company admitted that the unidentified hackers were able to gain access to Evernote user information which includes usernames, e-mail addresses, and encrypted passwords. While there was no evidence content stored in Evernote was accessed, it was evident the hackers had that in mind given that they targeted the password file.
@@ -8,4 +7,5 @@ On the other hand, the fact is that organizations have been previously caught wi
 In general, it is not possible for outsiders to know if passwords are stored in plaintext. However, the key point to understand here is that properly hashed passwords preclude the ability for the original password to be recovered. So if the "Forgot password" function of a Web service sends you the original password, you can be sure that the password is not salted.
 And yes, I encountered this with a popular Singapore-based florist company a while back. I clicked on the "Forget password" link and keyed in some basic identifying information. Imagine my surprise when my original password was e-mailed to me... It obviously wasn't hashed.
 Ultimately, users should not rely on Web services to protect their passwords, but instead avoid reusing their passwords.
+
 

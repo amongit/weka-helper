@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 http://www.zdnet.com/article/dealing-with-disaster/#ftag=RSSbaffb68
+=======
+>>>>>>> fedf15d74203d164d5e4d7805234bc435782b65d
 Dealing with Disaster
 Hurricane Sandy took many by surprise in the Northeast last year. The disaster caused approximately $75 billion in damages. Severe flooding destroyed the equipment in many datacenters and led to power and communications outages that made infrastructure temporarily unusable.
 Disasters aren’t new. They’ve been around for about as long as the earth has been in existence. We can’t avoid them. But we can make businesses resilient to them, particularly when it comes to IT. Perhaps in the wake of Hurricane Sandy, we can learn from some of our mistakes.
@@ -9,3 +12,7 @@ There are different ways we can integrate data distribution services to help wit
 The most basic and cheapest solution to disaster recovery is a cold site. It involves little more than installing and testing the application in a secondary facility. In the event of a failure in the primary datacenter, it would be necessary to package and transport the data to the secondary site. While this may be sufficient for very low-priority services, a more common – and pricier – approach is a warm site, which differs in having periodic backups onsite to accelerate the recovery.
 A hot site involves continuously replicated data, for example using Hyper-V Replica. Clearly this is more complex to implement, and it involves the additional expense of operating duplicate infrastructure. However, in the event of a failure and subsequent data loss, hot sites have the compelling benefit of allowing you to return to the duplicate infrastructure.
 There is no reason that all services in the datacenter need to adopt the same approach. It is possible – and advantageous – to mix all three, setting up a hot site for mission critical applications, while relying on warm or cold options for less important systems. The key is to ensure that there is sufficient redundancy for the business to continue even when there is a disaster. There will be more disasters. However, we are in a better position than ever to minimize the damage these disasters create, and to get things back to normal shortly thereafter.
+<<<<<<< HEAD
+=======
+
+>>>>>>> fedf15d74203d164d5e4d7805234bc435782b65d

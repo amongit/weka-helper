@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 http://www.zdnet.com/article/high-performance-storage-architecture/#ftag=RSSbaffb68
+=======
+>>>>>>> fedf15d74203d164d5e4d7805234bc435782b65d
 High-Performance Storage Architecture
 There is a reason why so many demands are being placed on today’s datacenters. This is because we are all living in a digital world. Businesses win when they tap data in ways that enable them to perform complex business processes more efficiently, such as engaging with connected customers, managing supply chains in real time, and simplifying an increasingly complex world. To do that successfully, businesses must have a high-performance information infrastructures.
 Let’s face it – no matter how much money you’re willing to throw at the problem, getting the most out of your data often requires a fundamental change in datacenter architecture. Just being able to store all the information is of limited value if applications cannot efficiently and reliably use it. As data requirements grow, the need to revisit the entire infrastructure becomes more compelling.
@@ -8,3 +11,7 @@ For example, the bottleneck for a high-performance session may be a NIC that is 
 On the other hand, the limiting factor may not be in the NIC at all. The bottleneck may be the file share holding files. In this case, using a cluster can provide simultaneous access through all nodes in a clustered file server, thereby offering better network bandwidth utilization.
 Another place to look for bottlenecks is the server CPU. If it needs to perform significant network processing in addition to its compute load, it will quickly reach its capacity. Many of today’s network adapters have Remote Direct Memory Access (RDMA) capability, which can offload network computation from the main CPU. That removes the bottleneck while simultaneously improving throughput and latency.
 The key take-away from a planning perspective is to recognize that there are many ways to create high-performance infrastructure. There is no universal cookbook because every application will have different characteristics and dependencies on different system components. If high capacity and scalability are required, choose hardware and software that enable you to manage the wide variety of potential bottlenecks you may encounter under operational conditions.
+<<<<<<< HEAD
+=======
+
+>>>>>>> fedf15d74203d164d5e4d7805234bc435782b65d

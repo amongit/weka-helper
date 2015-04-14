@@ -1,4 +1,3 @@
-http://www.zdnet.com/article/ibm-uncovers-severe-vulnerability-in-dropbox-sdk-for-android/#ftag=RSSbaffb68
 IBM uncovers severe vulnerability in Dropbox SDK for Android
 
 IBM's X-Force Application Security Reseach Team revealed the existence of a severe vulnerability in the Dropbox SDK for Android.
@@ -14,3 +13,4 @@ IBM explains that the vulnerability could have allowed an attacker to insert an 
 While adding the nonce parameter should have mitigated the threat of a successful attack, the vulnerability left a crack in the SDK that could have allowed attackers to leak the nonce to their own server, making it useless.
 IBM and Dropbox are urging developers to update their SDK to the latest patched version, v1.6.3 or Sync/Datastore Android SDK v3.1.2. But a simpler fix for end users is to install the actual Dropbox app, which makes exploitation of the vulnerability impossible.
 More:
+
