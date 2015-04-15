@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+http://www.zdnet.com/article/slow-clap-internal-certificates-can-hijack-gtlds/#ftag=RSSbaffb68
+=======
+>>>>>>> fedf15d74203d164d5e4d7805234bc435782b65d
 Slow clap: Internal certificates can hijack gTLDs
 Domain name squatting could become more than an inconvenience due to an oversight on how internal site certificates can be used on generic top level domains (gTLDs) without necessarily being the owner of the gTLD.
 As discussed in an advisory (PDF) issued by the Internet Corporation for Assigned Names and Numbers' (ICANN) Security and Stability Advisory Committee (SSAC) on Friday, a common practice by certificate authorities (CAs) is to issue digital certificates, even when the organisation requesting them provides a non-fully qualified domain name.
@@ -9,4 +13,7 @@ The problem is not confined to new domains, and is potentially already a problem
 Looking through the Electronic Frontiers Foundation's SSL (Secure Sockets Layer) Observatory project data from 2010, there are at least 157 CAs that have issued internal name certificates. As internal name certificates are not always publicly visible (as they are for internal systems only), SSAC noted that "there is no way of knowing how many of those certificates exist unless certificate authorities voluntarily disclose them".
 SSAC has been working with a number of affected parties, including the CA/Browser forum. The latter industry forum has requested that its member CAs stop issuing internal name certificates by November 1, 2015, and inform any further applicants that the practice of issuing certificates for internal systems has been deprecated. Members are also requested to revoke any unexpired and affected certificates on October 1, 2016.
 While SSAC commended the CA/Browser forum for this initiative, it wrote in its advisory that this still represents a problem, as gTLDs will still be vulnerable over the next three years until October 1, 2016.
+<<<<<<< HEAD
+=======
 
+>>>>>>> fedf15d74203d164d5e4d7805234bc435782b65d

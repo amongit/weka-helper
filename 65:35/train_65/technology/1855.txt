@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+http://www.zdnet.com/article/why-ssds-are-obsolete/#ftag=RSSbaffb68
+=======
+>>>>>>> fedf15d74203d164d5e4d7805234bc435782b65d
 Why SSDs are obsolete
 SSDs were built because there are billions of SATA and SAS disk ports available. Filling some of those ports with SSDs promised to be quite profitable - a promise fulfilled in the last 5 years.
 But now that non-volatile memory technology - flash today, plus RRAM tomorrow - has been widely accepted, it is time to build systems that use flash directly instead of through our antique storage stacks. The various efforts to decrease latency - SATA 3, NVMe, and others - still add layers of software between our applications and our data, creating complexity and wasting CPU cycles. A recent PhD thesis got me to thinking about this.
@@ -12,4 +16,7 @@ SSDs are obsolete in an architectural, not functional, sense. They offer many ad
 We need to incorporate flash and, soon, byte-addressable NVM memory, as they are, rather than making them seem like disks. This is no small effort, but with the slowing of processor performance increases, systems need to find performance elsewhere. The storage stack is ripe for disruptive improvement.
 Comments welcome, of course. While this post was inspired by Yiying Zhang's excellent PhD thesis, I'm responsible for any over-simplifications and errors.
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> fedf15d74203d164d5e4d7805234bc435782b65d

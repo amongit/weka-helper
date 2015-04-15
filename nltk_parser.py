@@ -32,6 +32,7 @@ def delete_first_line(file_list):
 			f.write(str(text_without_first_line))
 			f.close()
 
+
 def get_paragraph(file_list, folder_name, topic, number):
 	if not os.path.exists(os.getcwd() + '/' + folder_name + '/' + topic): 
 		os.makedirs(os.getcwd() + '/' + folder_name + '/' + topic)
@@ -381,6 +382,7 @@ def get_most_common_verbs(file_list, report_file):
 
 # get_most_common_verbs(get_file_list('sport_train_set.txt'), 'sport_most_common_verbs.txt')
 #razdvojiti u 3 kategorije od 0 do 38692
+<<<<<<< HEAD
 
 #first_and_last_paragraph(get_file_list('indexSportListOfNames-work.txt'), 'first_last', 'sport')
 
@@ -388,5 +390,12 @@ def get_most_common_verbs(file_list, report_file):
 #1376 technology 
 #get_paragraph(get_file_list('indexPoliticsListOfNames-work.txt'), 'title', 'politics', 0)
 delete_first_line(get_file_list('indexTechnology2-work.txt'))
+=======
+<<<<<<< HEAD
+delete_first_line(get_file_list('technology_test_set_home.txt'))
+=======
+delete_first_line(get_file_list('indexSportListOfNames-work.txt'))
+>>>>>>> fedf15d74203d164d5e4d7805234bc435782b65d
+>>>>>>> 77d9621ff3ed9beacb13dadde361676d343cad3a
 #pos_tag_analysis(get_file_list('sport_train_set_home.txt'), 'report_sport.txt')
 #min_max_tokens(get_file_list('sport_train_set.txt'), 'min_max_sport.txt')

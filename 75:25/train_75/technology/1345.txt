@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+http://www.zdnet.com/article/protect-yourself-from-flash-attacks-in-internet-explorer/#ftag=RSSbaffb68
+=======
+>>>>>>> fedf15d74203d164d5e4d7805234bc435782b65d
 Protect yourself from Flash attacks in Internet Explorer
 [Note: This article was originally published in 2012 and has been revised to incorporate information about Windows 10 and Windows 7. Last update 6-Feb-2015.]
 Beginning with Internet Explorer 10 in Windows 8 and continuing with Internet Explorer 11 in Windows 8.1 and now in Windows 10, Microsoft has built Adobe's Flash Player directly into the browser.
@@ -23,4 +27,7 @@ Click Turn off ActiveX Filtering to allow Flash to work on the current domain. N
 (Of course, ActiveX Filtering blocks all ActiveX controls, not just Flash. That's a benefit, for the most part, but it might be an issue if you use a corporate server that has proprietary ActiveX controls, or if you use Office 365 or other web services that use Office ActiveX controls.)
 If you're comfortable exploring the registry, you can inspect (and edit) the list of sites that are subject to ActiveX Filtering. Open Registry Editor (Regedit.exe) and look in HKCU\Software\Microsoft\Internet Explorer\Safety\ActiveXFilterExceptions.
 This doesn't have to be a short-term workaround. Given the steady stream of security issues associated with Flash, I consider it a prudent strategy for everyday browsing.
+<<<<<<< HEAD
+=======
 
+>>>>>>> fedf15d74203d164d5e4d7805234bc435782b65d

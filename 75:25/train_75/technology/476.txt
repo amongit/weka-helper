@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+http://www.zdnet.com/article/vertica-7-to-nosql-dbs-drop-dead/#ftag=RSSbaffb68
+=======
+>>>>>>> fedf15d74203d164d5e4d7805234bc435782b65d
 Vertica 7 to NoSQL DBs: Drop dead
 It's no secret that Big Data, NoSQL and relational products are becoming increasingly inter-operable; that trend's been in motion for a while. But the game changer now is that products in each of these categories are assuming attributes of products in the others, in an effort to become one-stop shops, and not just part of customers' best-of-breed line-ups.
 As examples, most Hadoop distributions now include some kind of interactive SQL layer and operational and data warehouse RDBMS products like IBM's DB2 and Teradata now accommodate semi-structured JSON (JavaScript object notation) data. And now, with the latest release of the Vertica MPP (massively parallel processing) data warehouse, the trend continues, in a very interesting way.
@@ -9,4 +13,7 @@ Of course, the premise of explicitly-defined columns in unstructured and semi-st
 And moreHP takes Flex Zone one step further, by flipping its features on their head: the key-value view of data can also be retroactively applied to tables that are fully structured and relational. This application of the feature isn't implemented for data browsing, but rather for optimizing simple key-based lookups, thereby, says HP, providing the same kind of read access scalability that NoSQL databases tout.
 The Vertica 7 wave brings in more than just Flex Zone. For example, it adds optimization to query parallelization, both between nodes in the cluster and amongst cores within a single node. The product also has improvements to tuning and enhancements to Kerberos-based Enterprise security. And just to add to the category convergence, Vertica now ships a connector to Apache HCatalog, which provides a unified repository view of Pig, Hive and raw HDFS data.
 I haven't been hands-on with Flex Zone, and I suppose it's possible that HP's claims of the product's data structure versatility are exaggerated. But even if that were the case, the product would still shine a light on an important trend in the data world: the way we have taxonomized database products is becoming outdated. The categories are becoming features. And, ultimately, the NoSQL and Big Data revolutions' biggest win may be getting relational DBMS vendors off their butts and into the realm of innovation. Really, the whole industry has just entered the Flex Zone.
+<<<<<<< HEAD
+=======
 
+>>>>>>> fedf15d74203d164d5e4d7805234bc435782b65d

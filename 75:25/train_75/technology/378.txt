@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+http://www.zdnet.com/article/windows-server-2016-leaks-reveal-nano-server-protected-vm-role-plans/#ftag=RSSbaffb68
+=======
+>>>>>>> fedf15d74203d164d5e4d7805234bc435782b65d
 Windows Server 2016 leaks reveal Nano Server, protected VM role plans
 Microsoft's decision against releasing an expected January test build of its next version of Windows Server hasn't stopped the bits or information about the coming release from leaking.
 Over the weekend, both the January build of Windows Server 2016 and a slide deck about some of the plans for the coming server release leaked to the Web thanks to WZor.
@@ -18,4 +22,7 @@ Harden the Fabric: Protecting Tenant Secrets in Hyper-V
 In today's environments, hosters need to provide security assurance to their tenants. "Harden the fabric" is a Windows Server and Microsoft System Center vNext scenario, which includes enhancements in Hyper-V, Virtual Machine Manager, and a new Guardian Server role that enables shielded VMs. Technologies which ensure that host resources do not have access to the Virtual Machine or data.
 One of my contacts said this new Guardian Server role is an implementation of the Host Guardian Service, which ensures that a protected VM only runs on trusted hosts. In other words, the service will verify that the host is truly trusted.
 This Guardian Service will be a new feature of Microsoft's hosting fabric, which I'd bet has to do with the company's increasing hybrid-cloud push, as possibly also the ongoing blurring of the lines between Windows Server and Azure.
+<<<<<<< HEAD
+=======
 
+>>>>>>> fedf15d74203d164d5e4d7805234bc435782b65d

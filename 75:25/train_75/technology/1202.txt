@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+http://www.zdnet.com/article/a-good-password-can-still-trump-sketchy-security/#ftag=RSSbaffb68
+=======
+>>>>>>> fedf15d74203d164d5e4d7805234bc435782b65d
 A good password can still trump sketchy security
 WatchGuard has been caught doing what a lot of first-timers to access control have done — simply hashing passwords as a means of implementing security — but perhaps all isn't that bad in the world.
 Information security researcher Jérôme Nokin, who runs a blog on all the fun things you can do over IP, found that WatchGuard's firewall appliances are taking a bit of a shortcut when it comes to storing passwords.
@@ -14,4 +18,7 @@ Nachreiner also argued that although NTLM is showing its age, sufficiently stron
 A strong password is the critical factor here, because as recently as December last year, Stricture Consulting Group CEO and security researcher Jeremi Gosney demonstrated that a specialised hash-cracking rig (PDF) could churn through 348 billion NTLM hashes per second. If only lower-case characters were used (thus breaking the complexity requirement), a password of up to 12 characters in length could take a few days to brute force. Granted, not everyone has a 25 GPU setup like Gosney, but Nokin claims he was able to run through 12.7 billion hashes per second on his own dual-GPU setup. A poorly constructed password susceptible to a dictionary attack will be easily broken.
 Yes, the use of NTLM was a pretty dumb move, but, lucky for WatchGuard, I'd argue that the level of protection matches the risk. Nachreiner put it best when he said, "If an attacker already has enough access to the administrator machine you use to manage your network security appliance, you already have bigger problems." And that lastly, had an administrator picked good passwords to begin with, this would still be a non-issue.
 Nevertheless, WatchGuard's engineers are now looking at implementing Dobbertin's advice from 1995 and Microsoft's recommendation by getting rid of NTLM/MD4 and replacing it with something more suitable.
+<<<<<<< HEAD
+=======
 
+>>>>>>> fedf15d74203d164d5e4d7805234bc435782b65d

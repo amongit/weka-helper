@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+http://www.zdnet.com/article/big-data-invades-the-datacenter/#ftag=RSSbaffb68
+=======
+>>>>>>> fedf15d74203d164d5e4d7805234bc435782b65d
 Big Data Invades the Datacenter
 I recently ran across an old press release of a study by IDC which stated that at that time (June 2011), there were 1.8 zettabytes of data in the world. I don’t know what a zettabyte is, but the press release helped put this in perspective by saying it was equivalent to 200 billion feature length HD movies.
 Oh yes, and there was one more thing. The press release said that the amount of data in the world is doubling every 2 years. That means that there must be about 3.6 zettabytes out there now. That’s seriously big data.
@@ -8,4 +12,7 @@ The tendency today is to retain all data rather than summarizing or discarding a
 To take full advantage of all this data, organizations need highly scalable storage and servers as well as the applications and frameworks to process all of the incoming data. Traditional databases are based on SQL, which lends itself well for transactional processing but is not optimized as well for high-performance analysis. Nonetheless, SQL databases have the advantage that they already hold a very large part of the relevant information. Extending them is therefore the quickest and easiest way to add more data processing capacity.
 Most Big Data activity is now focused on Hadoop, an open-source software framework that supports data-intensive distributed applications. Hadoop implements a scale-out computational paradigm named map/reduce, which splits the data into many small fragments and distributes processing of the application logic to all the nodes in a given cluster. Some applications combine Hadoop and in-memory computing for ultra-fast, real-time analytics based on high volumes of data.
 There are many implementations of Hadoop including Microsoft’s HDInsight, which is available both on Windows Server 2012 and as a Windows Azure service. This ability to process data on internal infrastructure as well as in a public cloud is fundamental to the discussion. There are advantages to running Big Data applications in the public cloud, especially as a proof-of-concept or for one-off analyses. At the same time, latency and security considerations may require an on-premises process. It is valuable to develop a strategy that supports both delivery models.
+<<<<<<< HEAD
+=======
 
+>>>>>>> fedf15d74203d164d5e4d7805234bc435782b65d

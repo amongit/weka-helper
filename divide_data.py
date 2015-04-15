@@ -129,26 +129,92 @@ def open_weka():
 	#java -Xmx512m -classpath //home/dynamic/weka/weka-3-6-11/weka.jar:/home/dynamic/weka/libsvm-3.20/java/libsvm.jar weka.gui.GUIChooser
 	os.system('java -Xmx1280M -classpath ' + find('weka.jar', '/') + ':' + find('libsvm.jar', '/') + ' weka.gui.GUIChooser')
 
-# politics_data = Divider(os.getcwd() + '/indexPolitics-work.txt', 70)
+# politics_data = Divider(os.getcwd() + '/indexPolitics-home.txt', 75)
+# print politics_data.divide_set_by_percentage(politics_data.count, 'train_75', 'test_75', '75:25')
+
+# technology_data = Divider(os.getcwd() + '/indexTechnology-home.txt', 75)
+# print technology_data.divide_set_by_percentage(technology_data.count, 'train_75', 'test_75', '75:25')
+# # #technology_data.make_index_file('indexTechnologyNew.txt', technology_data.file_name)
+
+# sport_data = Divider(os.getcwd() + '/indexSport-home.txt', 75)
+# print sport_data.divide_set_by_percentage(sport_data.count, 'train_75', 'test_75' , '75:25')
+
+# make_arff_files('75:25/train_75', '75:25/train_75_unparsed.arff')
+# make_arff_files('75:25/test_75', '75:25/test_75_unparsed.arff')
+
+# politics_data = Divider(os.getcwd() + '/indexPolitics-home.txt', 70)
 # print politics_data.divide_set_by_percentage(politics_data.count, 'train_70', 'test_70', '70:30')
 # #politics_data.make_index_file('indexPoliticsNew.txt', politics_data.file_name)
 
-# technology_data = Divider(os.getcwd() + '/indexTechnology-work.txt', 70)
+
+# technology_data = Divider(os.getcwd() + '/indexTechnology-home.txt', 70)
 # print technology_data.divide_set_by_percentage(technology_data.count, 'train_70', 'test_70', '70:30')
- 
-# sport_data = Divider(os.getcwd() + '/indexSport-work.txt', 70)
+# technology_data.make_index_file('indexTechnologyNew.txt', technology_data.file_name)
+
+# sport_data = Divider(os.getcwd() + '/indexSport-home.txt', 70)
 # print sport_data.divide_set_by_percentage(sport_data.count, 'train_70', 'test_70' , '70:30')
 
 # make_arff_files('70:30/train_70', '70:30/train_70_unparsed.arff')
 # make_arff_files('70:30/test_70', '70:30/test_70_unparsed.arff')
 
-#string_to_vector(find('train_80_unparsed.arff', '/'), '/home/dynamic/Desktop/weka-helper/80:20/train_80_stwv_pruned_to_100.arff', find('test_80_unparsed.arff', '/'), '/home/dynamic/Desktop/weka-helper/80:20/test_80_stwv_pruned_to_100.arff')
+
+# politics_data = Divider(os.getcwd() + '/indexPolitics-home.txt', 65)
+# print politics_data.divide_set_by_percentage(politics_data.count, 'train_65', 'test_65', '65:35')
+
+# technology_data = Divider(os.getcwd() + '/indexTechnology-home.txt', 65)
+# print technology_data.divide_set_by_percentage(technology_data.count, 'train_65', 'test_65', '65:35')
+
+# sport_data = Divider(os.getcwd() + '/indexSport-home.txt', 65)
+# print sport_data.divide_set_by_percentage(sport_data.count, 'train_65', 'test_65' , '65:35')
+
+# make_arff_files('65:35/train_65', '65:35/train_65_unparsed.arff')
+# make_arff_files('65:35/test_65', '65:35/test_65_unparsed.arff')
+
+# politics_data = Divider(os.getcwd() + '/indexPolitics-home.txt', 60)
+# print politics_data.divide_set_by_percentage(politics_data.count, 'train_60', 'test_60', '60:40')
+
+# technology_data = Divider(os.getcwd() + '/indexTechnology-home.txt', 60)
+# print technology_data.divide_set_by_percentage(technology_data.count, 'train_60', 'test_60', '60:40')
+
+# sport_data = Divider(os.getcwd() + '/indexSport-home.txt', 60)
+# print sport_data.divide_set_by_percentage(sport_data.count, 'train_60', 'test_60' , '60:40')
+
+# make_arff_files('60:40/train_60', '60:40/train_60_unparsed.arff')
+# make_arff_files('60:40/test_60', '60:40/test_60_unparsed.arff')
+
+# politics_data = Divider(os.getcwd() + '/indexPolitics-home.txt', 80)
+# print politics_data.divide_set_by_percentage(politics_data.count, 'train_80', 'test_80', '80:20')
+
+# technology_data = Divider(os.getcwd() + '/indexTechnology-home.txt', 80)
+# print technology_data.divide_set_by_percentage(technology_data.count, 'train_80', 'test_80', '80:20')
+
+# sport_data = Divider(os.getcwd() + '/indexSport-home.txt', 80)
+# print sport_data.divide_set_by_percentage(sport_data.count, 'train_80', 'test_80' , '80:20')
+
+# make_arff_files('80:20/train_80', '80:20/train_80_unparsed.arff')
+# make_arff_files('80:20/test_80', '80:20/test_80_unparsed.arff')
 
 open_weka()
+
+
+#java -cp /home/mia/Desktop/weka-3-6-12/weka.jar weka.filters.unsupervised.attribute.StringToWordVector -b -i 70:30/train_70_unparsed.arff -o test1.arff -c last -r 70:30/test_70_unparsed.arff -s test2.arff -R first-last -W 1000 -prune-rate -1.0 -N 0 -stemmer weka.core.stemmers.NullStemmer -M 1
+
+# string_to_vector(find('train_75_unparsed.arff', '/'), '75:25/train_75_unparsed_stwv.arff', find('test_75_unparsed.arff', '/'), '75:25/test_75_unparsed_stwv.arff')
+#os.system('java -cp ' + find('weka.jar', '/') + ' weka.core.converters.TextDirectoryLoader -dir 60:40/test_60')
+# print find('train_70_unparsed.arff', '/')
+# print find('test_70_unparsed.arff', '/')
+#string_to_vector(find('train_80_unparsed', '/'), 'yo', find('test_80_unparsed', '/'), 'y02')
+
+#string_to_vector(find('train_75_unparsed.arff', '/'), '/home/dynamic/Desktop/weka-helper/75:25/train_75_stwv_pruned_to_100.arff', find('test_75_unparsed.arff', '/'), '/home/dynamic/Desktop/weka-helper/75:25/test_75_stwv_pruned_to_100.arff')
+
 
 # stanford_parse('sport_train_set.txt', '/home/dynamic/Desktop/best/git/weka-helper/sport_train_parsed')
 
 
+
+#stanford_parse('sport_train_set.txt', '/home/dynamic/Desktop/best/git/weka-helper/sport_train_parsed')
+
+# java -Xmx512m -classpath //home/dynamic/weka/weka-3-6-11/weka.jar:/home/dynamic/weka/libsvm-3.20/java/libsvm.jar weka.gui.GUIChooser
 #export CLASSPATH="/home/mia/master/weka-3-6-12/weka.jar:/home/mia/master/weka-3-6-12/libsvm-3.20/java/*"
 #export CLASSPATH="/home/mia/master/weka-3-6-12/weka.jar:/home/mia/master/weka-3-6-12/libsvm-3.20/java/*"
 

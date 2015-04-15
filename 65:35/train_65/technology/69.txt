@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+http://www.zdnet.com/article/storage-where-you-need-it-when-you-need-it/#ftag=RSSbaffb68
+=======
+>>>>>>> fedf15d74203d164d5e4d7805234bc435782b65d
 Storage Where You Need It, When You Need It
 According to industry analysts, the amount of data being directly managed in enterprise datacenters will grow 14 fold over the next eight years. That’s a lot of information. It also implies a lot of infrastructure. But there is an irony here.
 As most CIOs understand, the business value of the IT department is only loosely correlated to the infrastructure they manage. The real value is the information contained in the datacenter. And that data is not worth much if the data is not safe and accessible. Therefore the datacenter needs to be architected in a way that stored information is highly available and applications consuming it have efficient and reliable access. How do you do that?
@@ -9,4 +13,7 @@ SANs are an excellent option for corporations with stringent needs for performan
 The technology works at two levels. Storage pools aggregate physical disk units into virtualized administration units. There is complete flexibility in the combination of disks, which can employ different technologies (e.g. SATA or SAS), operate at different speeds, and provide different capacity, but are combined to form a single homogenous pool. Within these pools, it is possible to allocate virtual hard drive images, called Storage Spaces. In addition to the desired capacity (which may be thinly provisioned), the configuration can specify a desired level of resiliency and administrative control.
 Pools allow some degree of reshuffling within the pools, but sometimes it is necessary to transfer data to other targets. This transfer of data should occur without disrupting the services that are using them. A technology that minimizes the impact on the host computer is Offloaded Data Transfer (ODX). ODX is a technique that enables intelligent storage arrays to transfer data between compatible storage devices directly, without transiting the server. It makes it possible to move large chunks of data, such as virtual machines, at very high speeds with minimal latency, while freeing up the server’s CPU and network interface for other operations. Note that with Cloud-integrated Storage (CiS), these functions become totally automated across a hybrid cloud.
 Moveable storage is essential for high performance, mission-critical applications that cannot afford any downtime. It enables seamless operation and ensures that server performance does not degrade while data is on the move. By selecting the right storage technologies, it becomes possible to manage more effective use of higher volumes of data.
+<<<<<<< HEAD
+=======
 
+>>>>>>> fedf15d74203d164d5e4d7805234bc435782b65d
