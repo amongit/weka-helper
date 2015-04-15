@@ -1,4 +1,4 @@
-import nltk, json
+import nltk, json, os
 from nltk import pos_tag, word_tokenize
 
 
@@ -32,7 +32,7 @@ def delete_first_line(file_list):
 			f.write(str(text_without_first_line))
 			f.close()
 
-def first_and_last_paragraph(folder_name, topic, file_list):
+def first_and_last_paragraph(file_list, folder_name, topic):
 	for li, line in enumerate(file_list):
 		text_without_first_line = ''
 		with open(line, 'r') as myfile: 
@@ -41,16 +41,16 @@ def first_and_last_paragraph(folder_name, topic, file_list):
 			text_splited = whole_text.split('\n')
 			for i, txt in enumerate(text_splited):
 				if i > 0 and not txt.startswith('http'):
-					print txt
+					print len(txt)
 					text_without_first_line += txt
 					text_without_first_line += '\n'
 			#print text_without_first_line
 			myfile.close()
 		if not os.path.exists(os.getcwd() + '/' + folder_name + '/' + topic): 
 			os.makedirs(os.getcwd() + '/' + folder_name + '/' + topic)
-		with open(line, 'w') as f: 
-			f.write(str(text_without_first_line))
-			f.close()
+		# with open(line, 'w') as f: 
+		# 	f.write(str(text_without_first_line))
+		# 	f.close()
 
 
 def pos_tag_analysis(file_list, report_file):
@@ -317,6 +317,6 @@ def get_most_common_verbs(file_list, report_file):
 
 # get_most_common_verbs(get_file_list('sport_train_set.txt'), 'sport_most_common_verbs.txt')
 #razdvojiti u 3 kategorije od 0 do 38692
-delete_first_line(get_file_list('indexSportListOfNames-work.txt'))
+first_and_last_paragraph(get_file_list('indexSportListOfNames-work.txt'), 'first_last', 'sport')
 #pos_tag_analysis(get_file_list('sport_train_set_home.txt'), 'report_sport.txt')
 #min_max_tokens(get_file_list('sport_train_set.txt'), 'min_max_sport.txt')
