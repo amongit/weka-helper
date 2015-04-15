@@ -1,0 +1,44 @@
+http://zdnet.com.feedsportal.com/c/35462/f/675834/s/44e4c7e2/sc/15/l/0L0Szdnet0N0Carticle0Cwhich0Eoperating0Esystems0Eand0Ebrowsers0Eare0Emost0Epopular0Ein0Ethe0Eu0Es0C0Tftag0FRSSbaffb68/story01.htm
+Six surprising facts about who's winning the operating system and browser wars in the U.S.
+My ZDNet colleague Steven J. Vaughan-Nichols discovered an amazing resource last week.
+The United States government runs a customized version of Google Analytics that collects information from visitors to 3800 total websites run by government agencies. As part of what it calls the Digital Analytics Program (DAP), the government helpfully publishes snapshots of the data, released to the public domain on the analytics.usa.gov website, which is powered by open source software.
+Steven wrote two interesting articles based on that data, offering a general overview of how people use operating systems and browsers in the United States.
+What I love about this data is that we finally have statistically meaningful details about which technologies people are using in the United States today. The database is enormous, and it should be broadly representative of the U.S. population, with a mix of consumers and businesses represented. (The data reported here is not strictly limited to the United States, of course. People from foreign countries occasionally need information from the United States government. But for the sake of this article one can consider the data to be an accurate snapshot of the U.S.)
+The two most popular independent analytics services, StatCounter and Net Applications, have become increasingly unreliable and error-prone. The U.S. government data offers a much more reliable and consistent sample set, and the Google Analytics platform underlying it is the gold standard for measuring web traffic.
+I decided to download the last three months of data (representing more than 1.4 billion individual visits) and zero in on some questions that I've been following for years. The results apply only to the U.S., of course. Other countries might show very different results, and a global picture would probably differ considerably as well.
+Update: In the comments, a few people have speculated that this data is not representative. The reality is that it includes a broad mix of consumer facing sites.
+The two largest are the Internal Revenue Service (with the "Where's my refund?" page, not surprisingly, being very popular) and the National Weather Service, whose forecast pages, including one optimized for mobile devices, are among the most popular on the web.
+The list of top sites includes the Social Security Administration and the Bureau of Labor Statistics. The National Parks Service is in the top 20 as well, along with Whitehouse.gov and petitions.whitehouse.gov.
+Lots of average citizens use government websites to get their passports and find travel information (visas and airline safety, for example, as well as travel advisories). Also, did I mention that NASA and the Astronomy Picture of the Day (which is one of the most popular sites on the entire Web) are near the top of the list?
+There are also people checking in for work-related activities, just as people in the private sector do. Most consumer-based analytics are based on ads, which means b-to-b sites in the insurance industry or banking or retailing are undercounted.
+This dataset is actually an amazingly broad and diverse sample of content that cuts broadly across categories, including ordinary citizens as well as those doing business with the government. I only wish there were a similarly diverse global resource.
+The first thing to note is that people still turn primarily to desktop PCs when they need information from the government. Here's the breakdown from those 1.4 billion visits:
+
+And among those desktop visitors, the PC is still dominant, with Macs accounting for roughly 1 in every 7 visits. (Sorry, I couldn't resist choosing the very appropriate Pac-Man colors for this pie chart.)
+
+It's certainly a safe assumption that the United States is one of Apple's strongest markets for Macs. A more global breakdown would most likely shift a few points to the Windows slice, which aligns nicely with the consensus that Windows has about a 90 percent share of the global market for conventional PCs.
+(And a side note: Visits from devices running Linux account for a number equal to almost exactly 1 percent of all desktop traffic, although it appears that the government lumps Linux in with the mobile category for some reason.)
+I was surprised at how small the share is for tablets, but that's in line with recent figures showing a slowdown in tablet sales.
+Many of the summary pages at the government's public analytics portal mash those categories together, making it difficult to see some trends. So I separated out the numbers for desktop visits to get a more detailed view.
+The five-year-old Windows 7 is the clear winner on the desktop, with Windows 8.1 a distant second (but still larger than the entire Mac installed base). This chart shows the versions in use on all Windows PCs
+
+The percentage of visitors clinging to the unsupported Windows XP is still higher than I suspect Microsoft would like, at 5.8 percent. Windows Vista is fading faster, with only 3.9 percent of visitors sticking with it.
+Again, a global snapshot would probably look different. In China, for example, the percentage of PCs still running Windows XP (typically in pirated versions) is undoubtedly much higher.
+In the first three months of 2015, there were 138 million visits from PCs running Windows 8.1. That's more than all OS X versions combined, which accounted for 129.2 million visits.
+But the real story is that Windows 8 accounted for a mere 18.4 million visits. That means Windows 8.1 PCs (88.2 percent) outnumber Windows 8 PCs (11.8 percent) by roughly an 8:1 ratio. Some of those PCs were shipped with Windows 8.1, of course, but clearly many more have successfully upgraded via Windows Update.
+That success bodes well for Windows 10, which will arrive as a free upgrade for Windows 7 and Windows 8.1 PCs this summer.
+It took a little extra work to break out which browsers were most popular on the desktop versus mobile platforms.
+The government's analytics site doesn't break out browser usage by platform, instead lumping it into a single category. But it's possible to back out some data reliably and make intelligent estimates for other categories, which is what I've done in this chart.
+
+The government figures show the total number of visits from desktop PCs and Macs. After subtracting the very small number of Windows Phone visits, the remaining number for Internet Explorer is exclusively from desktop PCs running Windows, because IE isn't available on any other platform.
+Likewise, we know that the share of Firefox is, for all intents and purposes, exclusively on the desktop. (Yes, there's a mobile Firefox, but I assume for this analysis that its share is negligible.)
+For this chart, I assumed that Firefox has the same usage on Macs, and I also used a formula that splits Safari and Chrome usage equally on the Mac. All the remaining unaccounted-for visits on the desktop almost certainly belong to Windows users running Chrome.
+I had to do some similar gyrations to come up with accurate numbers for mobile browsing. For strictly mobile browsers (the Android browser, Amazon Silk, Opera Mini), every visit is from a mobile device or a tablet.
+For Safari, I assumed that Apple has roughly the same percentage of use on the desktop that Internet Explorer has on Windows; all remaining visits are, therefore, mobile. For Chrome, which also runs on desktop and mobile platforms, I subtracted the total I calculated for desktop usage and entered the rest as Chrome visits from mobile devices and tablets.
+
+I found it noteworthy that Chrome seems to have about a 1-in-3 share on both desktop PCs and in the mobile/tablet category.
+(And a methodological detail. If I miscounted the mobile share of either Safari or Chrome, the difference needs to be added to or subtracted from the desktop share. The overall numbers are correct; I had to estimate the mobile/desktop breakdown. But I think these numbers are probably very close to accurate.)
+The shares for Windows Phone, Amazon Kindle devices (which run the Silk browser), and BlackBerry are fairly easy to calculate.
+They're also very small.
+That's even worse than it appears, given BlackBerry's historic place as a staple of government-issued mobile devices.
+Both Amazon and Microsoft have higher market shares, as measured by current sales, than the usage figures shown here. But the Apple/Android juggernaut had a head start on both platforms of several years, meaning that the installed base will lag current sales.

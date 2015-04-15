@@ -1,0 +1,20 @@
+http://zdnet.com.feedsportal.com/c/35462/f/675849/s/442ff6df/sc/4/l/0L0Szdnet0N0Carticle0Coracle0Eissues0Ecritical0Epatch0Eupdate0E1690Enew0Esecurity0Efixes0C0Tftag0FRSSbaffb68/story01.htm
+Oracle issues critical patch update: 169 new security fixes
+
+Oracle's quarterly critical patch update includes security updates and patches for 169 problems affecting products including Java, Fusion Middleware, Enterprise Manager and MySQL.
+The California-based company's January 2015 Critical Patch Update includes 8 vulnerability fixes for Oracle Database, such as one severe issue given a CVSS Base Score of 9 -- as it allows a full compromise of the targeted server.
+Additional Database vulnerabilities received high scores in Oracle's severity rating system -- and a number of flaws can be remotely exploited.
+In total, 36 new fixes have been issued for Oracle Fusion Middleware products, and the most severe received a rating of 9.3. Two of the Oracle Fusion Middleware vulnerabilities fixed in this Critical Patch Update can result in a server takeover.
+10 new fixes have been included for Oracle E-Business Suite, 6 for Oracle Supply Chain Suite, 7 for Oracle PeopleSoft Enterprise, one for Oracle JDEdwards EnterpriseOne, 17 for Oracle Siebel CRM, and 2 for Oracle iLearning.
+This CPU also provided 29 fixes for the Oracle Sun Systems Products Suite, and the highest CVSS score reported for this set of vulnerabilities was 10. This particularly nasty flaw affects XCP Firmware versions prior to XCP 2232.
+Java, naturally, appears on the list. The most severe vulnerabilities were high-hitters, gaining a score of 10. Out of 19 vulnerabilities, 15 affect client-only installations, 2 affect client and server installations, and 2 affect JSSE installations. However, considering how many critical updates in the past have predominantly focused on Java, this security fix rate is relatively low.
+Oracle states:
+The full list of affected software is below:
+
+Application security for Java provider Waratek CTO John Matthew Holt commented:
+"Today's Oracle Critical Patch Update (CPU) contains four 'perfect-10' highest risk vulnerabilities in Java SE and is dominated by sandbox bypasses. Four out-of-every five identified CVEs in the CPU can be exploited for full or partial sandbox bypass.
+It is a modern-day paradox that Java technology, which rocketed to prominence on the promise of its "secure sandbox" design, is vulnerable to 16 new sandbox bypasses. That represents one new Java sandbox bypass every 120 hours since the last CPU."
+The executive also noted that threats associated with this update range include everything from reading and writing local data to complete "operating system takeover including arbitrary code execution." Naturally, complete system takeovers are the most severe threats, as this places a user's sensitive data at risk, allows an attacker to install malware, steal an identity or use a compromised system to infect others.
+"Java's security record cannot be attributed to Oracle," Holt says. "Instead, it is a function of legacy flaws in Java's SecurityManager and Security Architecture. Oracle is doing an admirable job addressing Java vulnerabilities. However, until containerization and automatic runtime self-protection is incorporated in Java, its security record is unlikely to improve."
+The next CPU date is 14 April 2015.
+Read on: In the world of security

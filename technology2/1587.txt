@@ -1,0 +1,23 @@
+http://zdnet.com.feedsportal.com/c/35462/f/675826/s/4561231d/sc/15/l/0L0Szdnet0N0Carticle0Cthe0Efive0Ebiggest0Echanges0Ein0Eubuntu0E150E0A40Evivid0Evervet0C0Tftag0FRSSbaffb68/story01.htm
+​The five biggest changes in Ubuntu 15.04, Vivid Vervet
+You can't judge a book by its cover, or a Linux by its interface. If you glance at Ubuntu 15.04, Vivid Vervet, you won't see a lot different from Ubuntu 14.10. Don't let first impressions fool you. Underneath that slick Unity 7.x interface, there's a lot of changes.
+While the new Ubuntu isn't due out until April 23rd, the second beta is more than mature enough to see what we'll be getting in the Vivid Vervet. A vervet, for those of you who are wondering, is an East African monkey.
+Based on my work with the beta over the last few days, here are the most important changes in Ubuntu 15.04. I've been using Ubuntu since the first version, 2004's Ubuntu 4.10. These days, I use it on desktops, servers, and cloud. In other words, I know Ubuntu.
+1) Ubuntu switch init manager from upstart to systemd
+Many people, including Linus Torvalds, hate systemd. Be that as it may, it's become the default init system for almost all Linux distributions. Ubuntu's developers weren't going to make the shift as late as the first Vivid Vervet 15.04 beta.
+Ubuntu's developers decided that, even though they were a few days past the feature release freeze date, they would switch 15.04's default to systemd. The change will affect "Ubuntu desktop/server/cloud and the flavors like Kubuntu, but *NOT* ubuntu-touch." Ubuntu Touch, Canonical's Ubuntu for smartphones and tablets, is sticking with upstart because, "Migration to systemd is blocked on touch (too old kernels, some unported jobs), and was not scheduled for vivid."
+People who really dislike systemd have asked for a choice of init managers. They're not going to get one. As one Ubuntu developer put it, "Ubuntu [has] never offered a choice of init system, and won't start doing that."
+In practice, I haven't noticed any real problem with systemd. My boot times, especially in an Oracle VirtualBox virtual machine (VM), are slower than I'd expected, but otherwise it works fine.
+2) Linux kernel upgrade
+I'd love if Ubuntu 15.04 had been upgraded to the brand new Linux kernel 4.0 with its no reboot patching, but it came out too late.
+Instead, the new Ubuntu will be using the Linux 3.19.3 kernel. This kernel features improved graphics and file system support.
+3) Local menus are now the default
+One change you will notice is that all applications now use local menus rather than the global menu for the application with the focus. If you really like global menu, you can still switch to it.
+Another visual difference is that instead of a variation of Ubuntu orange for the background, the desktop now uses a purplish color.
+4) Still using Unity 7 for the desktop
+You'll see it but you won't notice that Ubuntu is using the last iteration of Unity 7 for its desktop. Canonical, Ubuntu's parent company, has been working on the more touch-friendly Unity 8 desktop using the Mir display technology for years and it's still not ready.
+I think Unity and Mir have a lot of promise, but while you can run them in Ubuntu 15.04, they're still not ready for prime time. Darn it.
+5) Updated applications
+As usual, Ubuntu comes with all its major applications refreshed to their newest versions. These include Firefox 37.0 for the web browser and LibreOffice 4.2.2.2 for the office suite.
+Taken as a whole, easily the biggest change in this latest Ubuntu update is the switch to systemd. All together this is a good, solid upgrade with many improvements. I look forward to switching over my production Ubuntu system to it by month's end.
+Related Stories:

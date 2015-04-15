@@ -1,0 +1,12 @@
+http://zdnet.com.feedsportal.com/c/35462/f/675708/s/442fe6a2/sc/4/l/0L0Szdnet0N0Carticle0Ccheap0Erandomness0Ereal0Esecurity0C0Tftag0FRSSbaffb68/story01.htm
+Cheap randomness delivers real security
+In the wake of the Snowden revelations it's clear that all communications should be encrypted. But how?
+Crypto systems require a public and a private number - and the latter should be totally random. But achieving randomness from a digital system is practically impossible - which is why you see the term "pseudo-random" number generators (p-RNG).
+For convenience and cost p-RNGs are commonly used, despite the fact that they repeat their "random" numbers over time. What's needed is a cheap, simple, RNG based on truly random physical phenomena.
+Expensive versions of such devices are commercially available. But with the need for billions of RNGs for the Internet of Things, we need cheap, simple and open RNGs.
+Which is what researchers Mattia Fabbri and Sergio Callegari of the University of Bologna are proposing in Very Low Cost Entropy Source Based on Chaotic Dynamics Retrofittable on Networked Devices to Prevent RNG Attacks. Think of it as the Raspberry Pi of RNGs - except cheaper.
+The details are complex, but the simple explanation is that operation is based on a loop using an Analog to Digital Converter (ADC) hosted on a standard microcontroller. If a large random number is desired, successive random numbers can be accumulated to build one.
+The authors have built and tested prototypes that cost less than $10 as opposed to the hundreds or thousands current RNGs cost. Volume could improve prices still further.
+Cheap devices need cheap RNGs. The RNGs also need to be open so the security community can determine if they will perform as advertised.
+As microcontrollers continue to improve it should be possible to build RNGs into many more devices. The advantage of Fabbri's and Callegari's device is that it should interface easily to the millions of current devices on today's Internet.
+Comments welcome, of course. Do you have a better idea?

@@ -1,0 +1,54 @@
+http://zdnet.com.feedsportal.com/c/35462/f/675691/s/44300372/sc/4/l/0L0Szdnet0N0Carticle0Chow0Eto0Eprotect0Eyourself0Eagainst0Efreak0C0Tftag0FRSSbaffb68/story01.htm
+FREAK flaw: ​How to protect yourself now
+
+UPDATED. Great, just great. FREAK, the Secure Sockets Layer (SSL) and Transport Layer Security (TLS) security hole, isn't only in programs that use Apple's SSL implementation or old OpenSSL. We now know that FREAK is present in Microsoft's Secure Channel (SChannel) stack too.
+FREAK enables SSL Man-in-the-Middle attacks because of bad security decisions made almost two decades ago. As Andrew Avanessian, Avecto's EVP of consultancy and technology services, told me in an e-mail, "The FREAK attack is clear evidence of how far back the long tail of security stretches. As new technologies emerge, and cryptography hardens, many simply add on new solutions without removing out-dated and vulnerable technologies. This effectively undermines the security model you are trying to build."
+What users can do
+If you're playing the security game at home, here's the current list of current-day programs that can be attacked by FREAK. Any program using Microsoft's SSL/TLS, such as Internet Explorer (IE) on Windows Vista, 7, 8, and 8.1 and Windows Server 2003. While Microsoft doesn't mention earlier, no longer broadly supported operating systems, such as Windows XP, it's safe to presume they're vulnerable as well.
+Windows Server 2008 and 2012, if they're used as desktops instead of servers, can also be attacked. As servers their default configurations are safe because they don't support FREAK's weak spot: obsolete export SSL ciphers. Server 2003, however, does support these weak SSL cryptographic keys and there's no way to turn it off.
+In addition, according to the miTLS Team, which discovered this decrepit FREAK security hole in the first place, the following SSL/TLS client libraries, are vulnerable.
+Web browsers that use these TLS libraries are open to attack. These include:
+To see if your specific client system is vulnerable, run the FREAK Attack Client Check
+Apple and Google have announced that they will release fixes next week. That's the good news. The bad news is that while Google will release its fix for the Android Browser, you'll still need to wait on your telecomm or device OEM to issue the patch to your smartphone or tablet.
+That leaves a lot of programs still open to attack for now. So let's get started fixing them.
+First, if you're using Windows Server 2003 or XP, you're in trouble. XP's no longer being supported without a special contract and Windows Server 2003 support life ends in July. Microsoft may issue a patch for this problem, but I wouldn't count on it. It's well past time to move to a newer version of Windows so get on with it already!
+Next, if you are running Vista or newer versions of Windows, you can take the following Microsoft-recommended steps as the system administrator to protect yourself. However, not all versions of Vista, Windows 7, and Windows 8.x include the critical gpedit.msc program. Vista Home Premium; Windows 7 Home Premium, Home Basic and Starter; and Windows 8.x Home Premium don't include it. There are way to add gpedit to these systems, but I can't recommend any of them. Instead you should just use Firefox or Chrome for your Web browsing until the patch arrives.
+
+The branded bug: Meet the people who name vulnerabilities
+Bugs are increasingly disclosed with catchy names and logos. Is making a bug 'cool' frivolous or essential?
+Moving on, if you want to fundamentally fix Windows before the patch comes out, type gpedit.msc at a command line and press Enter to start the Group Policy Object Editor.
+TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P256,
+TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384,
+TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256,
+TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P384,
+TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA_P256,
+TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA_P384,
+TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA_P256,
+TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA_P384,
+TLS_DHE_RSA_WITH_AES_256_GCM_SHA384,
+TLS_DHE_RSA_WITH_AES_128_GCM_SHA256,
+TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384_P384,
+TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256_P256,
+TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256_P384,
+TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384_P384,
+TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256_P256,
+TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256_P384,
+TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA_P256,
+TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA_P384,
+TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA_P256,
+TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA_P384,
+TLS_DHE_DSS_WITH_AES_256_CBC_SHA256,
+TLS_DHE_DSS_WITH_AES_128_CBC_SHA256,
+TLS_DHE_DSS_WITH_AES_256_CBC_SHA,
+TLS_DHE_DSS_WITH_AES_128_CBC_SHA,
+TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA
+This will keep your applications that use Microsoft's SChannel, such as IE, from connecting with any website using these poor quality SSL/TLS encryption keys.
+Then click OK, close the Group Policy Object Editor and restart your computer.
+For Linux and BSD servers, you should update immediately to the newest version of OpenSSL or LibReSSL.
+That done, I recommend you follow Mozilla's guide on how to set up Server Side TLS. In particular, you should use the Intermediate recommended configuration. If you use the "Modern Configuration," users trying to reach your website with Windows XP or Android 2.3 won't be able to connect securely with your Website.
+Mozilla recommend website administrators use the open-source Ngnix web server. That's because "Nginx provides the best TLS support at the moment. It is the only daemon that provides OCSP Stapling, custom DH parameters, and the full flavor of TLS versions from OpenSSL." I second Mozilla's recommendation.
+The easiest way to set up Apache, Nginx, or HAProxy to battle FREAK properly is to use the Mozilla SSL Configuration Generator. This web program generates the code you need for your web server's configuration file. I cannot recommend it highly enough.
+Once you have your server set up, no matter which operating system or web server you're using, check out your configuration with the Qualys SSL Labs SSL Server Test tool. This program checks for numerous SSL issues.
+What you're looking for today is for the potential to be hit by FREAK attacks. If your web server still supports weak cipher suites you have more work to do. If your server supports TLS_FALLBACK_SCSV, this will also protect you from FREAK assaults.
+As for end-users, the easiest way to stay safe for now is to use the newest version of Chrome or Firefox for your web-browsing for now. There will be fixes for all the browsers in a few days, but really, why take a chance of having your ID and passwords cracked?
+Related Stories:

@@ -1,0 +1,23 @@
+http://zdnet.com.feedsportal.com/c/35462/f/675691/s/44b2d751/sc/4/l/0L0Szdnet0N0Carticle0Cpwn2own0E20A150Ethe0Eyear0Eevery0Ebrowser0Ewent0Edown0C0Tftag0FRSSbaffb68/story01.htm
+Pwn2Own 2015: The year every web browser went down
+Once more the major web browser vendors brought in their latest and best versions of their web browsers to CanSecWest 2015 Conference in Vancouver, British Columbia for HP Security Research and Google Project Zero's Pwn2Own hacking contest. This year, the hackers won.
+In 2015, the defending browsers and the prizes for each successful hack were:
+Windows-based targets:
+Mac OS X-based targets:
+By the rules: "If the contestant achieves SYSTEM-level code execution, the contestant will receive an additional $25,000" for the the Windows-based targets. If a hacker managed to crack the Google Chrome beta, they'd also receive an additional $10,000. All the rewards were in United States dollars.
+The best HDMI operating system sticks
+There's a new kind of computer in town and it's resides on an HDMI stick that's not much bigger than a pack of gum.
+How well did the hackers do? They won every prize for a cool $557,500. That didn't include the value of the laptops winners got to keep (HP gaming Omen Notebooks), Zero Day Initiative (ZDI) points, and other prizes given to winning researchers.
+The top hacker, without any question, was Jung Hoon Lee, aka lokihardt. This South Korean cracker took out IE 11, both the stable and beta versions of Google Chrome, and Apple Safari. Lee flew out of Vancouver with $225,000 in prize money. What makes this even more impressive is that he did all this as an individual competitor rather than a team. Usually the big prizes go to groups such as the French Team Vupen, which won multiple award in 2014's Pwn2Own.
+Two teams, Team509 and KeenTeam, started out the competition by using an Adobe Flash heap overflow remote code execution vulnerability to leverage a local privilege escalation in the Windows kernel through TrueType font. Once done they were able to bypass all security measures. This won them $60,000 for the Flash crack with a bonus of $25,000 for the system escalation.
+It only got worse for Adobe programs from there. Hacker Nicholas Joly zapped Flash as well with an attack using a use-after-free (UAF) memory remote code execution vulnerability. Joly also broke into Windows 8.1.
+After that, Joly also broke Adobe Reader in two different ways but in each case using a stack buffer overflow. Adding insult to Adobe's injury, Joly claimed he worked out the last part of his exploit chain on his flight to the conference. KeenTeam, with the help of Jun Mao, also cracked Reader, using yet another bug. They also exploited it to get access to the Windows 8.1 operating system.
+Then it was Firefox's turn to get hammered. Mariusz Mlynski used a cross-origin vulnerability followed by privilege escalation within the browser, to crack it in just over half-a-second. From there, he used a logical flaw to escalate to a Windows system administrator security level.
+After that, 64-bit IE 11 got zapped by the 360Vulcan Team via an uninitialized memory vulnerability. Still more trouble was to come for IE 11.
+Lee, in the first of his successful hacking runs, "took out 64-bit Internet Explorer 11 with a time-of-check to time-of-use (TOCTOU) vulnerability allowing for read/write privileges." He then escaped from the IE 11 sandbox with privileged JavaScript injection attack.
+The young hacker then turned his attention to Chrome. Here, he used a buffer overflow race condition to crack both the stable and beta versions Chrome. That done, he used an info leak and race condition in two kernel drivers to get Windows system access. Taken all together, this hack won him, as HP put it, "a grand total of $110,000. To put it another way, lokihardt earned roughly $916 a second for his two-minute demonstration."
+Google Chrome can take some solace that Lee said in an interview after his hack that the "Chrome exploit was the hardest one. It was over two-thousand lines of code."
+Lee then completed his day by knocking off Apple Safari using a UAF vulnerability in an uninitialized stack pointer. After that, he jumped out of the sandbox to execute a program in Mac OS X.
+The final cracked bug count came to:
+The moral of this story is that you must always update Windows, web browsers, and Adobe programs as soon as patches become available. Security, as the saying goes, isn't a product, it's a process. And that process is constantly repairing our software.
+Related Stories:

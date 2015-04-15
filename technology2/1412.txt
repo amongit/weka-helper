@@ -1,0 +1,150 @@
+http://www.zdnet.com/article/optimizing-data-center-security-overhaul-or-incremental-changes/#ftag=RSSbaffb68
+Optimizing data center security: Overhaul or incremental changes?
+Ken Hess
+Overhaul
+Bit by bit
+David Chernicoff
+The moderator has delivered a final verdict.
+Ken Hess: Things in IT change in one of two ways: evolution or revolution. One might believe that a logical, methodical, incremental pace is the way to fix data center security, but it isn't. Malevolent hackers, social engineers, and other data criminals don't use those techniques, so why should we do so as defenders?
+But it isn't only 'over the network' attacks that need a revolutionary overhaul, it's also our data center's physical security that requires us to rethink and rebuild. For example, in multitenant data centers, external security is near military grade, but once you're allowed inside the chilly, raised floor server sanctuary, there are no such measures. Company A and Company B share those same spaces with dozens, or even hundreds, of other tenants. Shared data space isn't that uncommon and isn't necessarily a problem. The problem is that you're inside the data center, you have access to physical servers from a variety of customers, whether or not they know it.
+Only a revolutionary overhaul of data center security can fix these two basic problems. An incremental approach is the wrong answer when facing these desperate times.
+David Chernicoff: When security issues in your datacenter are identified the temptation is great to rip out the offending application or system and replace it with the latest and greatest solution from your vendor of choice. But if you’re getting that urge, sit down and have a cup of coffee while you think about it. The nature of the datacenter is one of an intimate ecosystem involving multiple vendors, different classes of hardware and software, and a significant effort to get everything into homeostasis.
+The wholesale replacement of even a single component of that datacenter architecture means that in many ways you are starting from scratch, especially when you are dealing with the issue of security; one that touches on so many different pieces of the environment, and where a small error in configuration can cause cascading problems that shut down users or open up your systems to attack, or potentially both. Effectively dealing with a current security problem means evaluating the impact of your changes not only on addressing existing issues but how it will impact future growth.
+A careful examination of the current problems and how they can be addressed while keeping an eye on the future means not jumping into major upgrades with both feet. A careful, considered approach of well-planned upgrades and efficient modifications to your security model will allow you to maintain a flexible and effective security infrastructure with minimal negative impact on your users.
+
+We'll be starting promptly at 11am ET (8am PT). Welcome, readers: Starting at 11am ET, this page will refresh automatically each time a new question or answer is posted.
+
+
+I am for Overhaul
+
+
+I am for Bit by bit
+
+What's the state of data center security today?
+
+...but they're losing ground quickly. There are two primary areas of data center security: physical and network.
+Physical security is very good to excellent. Typically, there are multiple layers of security that one has to traverse before entering a data center: An external security gate, a secure circle lock (man trap) or badge-in access door, badge-in access to the server floor, retina scanners, and maybe even fingerprint scanners--all related to physical access to the data center facility and to the secure server areas.
+There are loopholes to physical security that are too lengthy to discuss here, but some of the obvious ones are parcel deliveries and janitorial services.
+Network security is a larger problem for data centers, especially in multi-tenant ones. Multi-tenant data centers present the largest problem because there are no enforced security standards from client to client. Single tenant data centers face security problems as well but at least a single client data center can enforce a security strategy across all systems.
+I am for Overhaul
+
+There are so many new technologies and techniques coming at the data center operator that security is pushed down the list of concerns. This, itsel, is a fundamental problem. Security may well be the number one issue that has to be dealt with because of its across the board impact, but dealing with so many new products, technologies, and services is keeping data center IT scrambling just to stay current.
+
+I am for Bit by bit
+
+
+
+Other than viruses, worms, and various types of malware, the biggest threats are DDoS attacks, insider threats, and mobile devices, especially Android-based mobile devices.
+I think that data center security is generally ill-prepared for DDoS attacks. And every data center is susceptible to insider threats, regardless of physical security measures. But the greatest threat is the new onslaught of mobile devices allowed by BYOD scenarios and by the absolute number and diversity of those devices.
+I am for Overhaul
+
+s shown with the recent Joyent crash, it is really easy for a software issue to take down an entire data center. As using SDN et al becomes more common, the potential for a security flaw exposing the data center to malicious attack will grow exponentially.
+I am for Bit by bit
+
+
+
+As I've stated before, physical security is very good to excellent in most data centers. Data center designers, planners, and security personnel take very good care of the physical security of their data centers. However, as I've also stated, there are a few breakdowns in this area.
+Data center planners need to separate delivery areas from the main facilities and to disallow access by anyone other than data center personnel to main facility loading docks. Third party staff members such as janitors, maintenance, and support staff need to have standard background checks and limited access to the various areas of the data center. There should never be any "All Area Access" to facilities, unless those accesses are used under strict supervision by data center staff.
+It's more expensive to provide great physical security for a data center, but you have to compare that cost to the cost of a single breach, which can run into the millions of dollars. It's basically an ounce of prevention vs. a pound of cure mentality.
+I am for Overhaul
+
+For a normal facility, the standard physical security process in place that limit access to the building, control availability to external resources such as generators are usually sufficient. With certain datacenter trends, however, physical security becomes a major issue. The top two are lights-out facilities and micro-datacenters.
+With a lights-out facility, access control and actual physical security measure that prevent smash and grab attacks, such as those that have happened to telco datacenters in the past, are serious significant concerns.
+With micro-datacenters, the nature of the design makes them easy targets for physical theft and physical access that can enable the security compromises the console access can allow , which means that planning to prevent these very different threats needs to be a major concern in the deployment of these units.
+I am for Bit by bit
+
+Where the weakest links in the data center security chain?
+
+...people who ignore, bypass, or defy security. The weakest links are people. Security is a pain. We see it as a necessary evil and, after a period of time, the weaknesses are that the people who enforce policies and those who have to comply with them will relax or bypass the more painful measures. It's human nature and bad guys know this too. And knowing this, I'm surprised that there aren't more major physical security breaches at data center locations.
+After working in several data centers over the years, it's easy to find the loopholes and exploit them. But, it's only those who comply with the security measures that have to deal with the pain of them. Security chains are setup by people who understand security and compliance. The measures are setup to prevent problems, but they don't address sometimes often obvious security holes and the people who allow them to exist.
+I am for Overhaul
+
+This might sound a bit facetious but the reality is that as data center portals are deployed to enable users to do more on their own with less direct assistance from IT, the security problems are more likely to be introduced from a client computer than anywhere else.
+I am for Bit by bit
+
+How does the move to the software defined data center change security planning?
+
+...but certainly not all of them, because underneath all of the software is still all the hardware--hardware that has to be installed, wired, physically maintained, and decommissioned.
+A software defined data center will cut down on some of the traffic to the data center because provisioning new servers, network, and storage will be performed over the network. It will increase the need for better network security, so there will only be a slight shift in security planning, not a major one.
+I am for Overhaul
+
+The SDDC makes everything more complex from the security perspective. The potential of unexpected security problems due to minor changes in the datacenter definition will require significant effort to be expended in testing prior to rollout and monitoring after deployment.
+As different aspects of the data center move to a software defined model (e.g., networking and storage) the potential for security issues increases. As FPGA technologies become more prevalent, the security model will need to be one of the first issues addressed with any change to the datacenter infrastructure.
+I am for Bit by bit
+
+...improve security or make for an easier target?
+
+It won't have any effect. I don't think that converged infrastructure will have any real effect on security, physical or over the network. Converged infrastructure is more of a marketing thing than it is an actual solution for anything. It's an attempt at a new twist on a pre-packaged, modular solution, but you still have all the same components included, so there's no real difference in security.
+I am for Overhaul
+
+...the truth is that there will be both advantages and disadvantages.
+On the plus side there are greater vendor resources dedicated to making sure that the entire infrastructure they provide is secure. On the down side, a higher profile means a greater likelihood that more malicious attacks will be targeted at that infrastructure as it would apply across multiple locations rather that the custom, home-built design of the traditional data center.
+I am for Bit by bit
+
+
+
+Converged infrastructure makes no difference in my case because, as I wrote in the previous question, we're not talking about something new here, it's something old that's repackaged and sold as an integrated solution.
+I am for Overhaul
+
+If you have decided to go with a converged infrastructure offering form a vendor, you’ve gone with the overhaul method by default. Future security modification may be incremental, but that is now out of your hands and the choice of the vendor of your infrastructure.
+I am for Bit by bit
+
+At what point and time frame would a series of upgrades of data center components be considered a security overhaul vs. a slower move?
+
+I'm not so sure that it would be an upgrade as it would be a change in technology and a change in policy. An overhaul would be replacing old technology with newer, smarter technology, such as intelligent intrusion detection devices, smart honeypots, self-healing network hardware (routers/firewalls/load balancers), and better software.
+An incremental change would leave vulnerable areas more vulnerable as you upgrade or replace components. An overhaul (mass replacement) over a period of a few months would fit my definition. Incremental is more of a we'll do this in the first quarter, this other thing in the second quarter, and it extends the project to a period of 18 to 24 months. These days, that sort of slow approach isn't going to work.
+People who attack data centers, websites, and company assets don't typically hire a project manager and methodically plan an attack over a period of months. And the response to those attacks or in their prevention can't be slow either.
+I am for Overhaul
+
+While replacing the security infrastructure wholesale is clearly an overhaul, upgrading that infrastructure as you add new services still fits the incremental model.
+If your data center upgrades are things like switching completely to software defined networking, for example, and updating security of other components to match the new completely redone networking infrastructure, you’ve moved beyond incremental to overhaul.
+There is a point that the data center IT operations management team will realize that their issues are beyond band aids and patches and that a full overhaul of the security infrastructure may be necessary.
+I am for Bit by bit
+
+... and tell everyone to go cloud and forget about it?
+
+...but also not a bad idea for some companies. A lot of people still fear the cloud, however it's a good option. What I think we forget when we talk about these technologies is that under that cloud is infrastructure in a data center. Someone has to maintain it and I've pointed out that multi-tenant data centers have their own problems.
+Unfortunately, there's no single right answer for every business. Sometimes there's no single right answer for every business unit within a single company. One business unit might be able to migrate 100 percent to the cloud, while another might never feel comfortable doing so.
+I am for Overhaul
+
+The cloud is "a" solution, not "the" solution.
+
+I am for Bit by bit
+
+...but how does the cloud change the security equation? And isn't there a good argument that your cloud provider will have better security than you will?
+
+Well, you certainly wouldn't have to perform any overhauls if you used a cloud provider. The provider would be responsible for security--at least for server infrastructure, network, storage, and physical. You'd still be responsible for application, possibly operating system, and services. Some of their network security would help, but not prevent yours apps and services from being vulnerable.
+We would hope that providers would have better security, but it's not necessarily so. They have the same problems that everyone else does with all the security aspects we've discussed here.
+I am for Overhaul
+
+...though they are certainly a big target for hackers and others of ill intent. So at least part of the issue becomes the tradeoff between being a bigger target and that target’s greater investment in assuring that their security is strong. And there is the fact that you will never know exactly how secure their model is. What the vendor doesn’t share can’t be used against them so there is a limit to how much information they can realistically make public about their security infrastructure. So while they may have a better security infrastructure than your own internal operation, they also may be no better at protecting their resources than you are.
+You are also giving up control over the end-to-end data path your information travels, which means that you can only make presumptions of the level of security once that data moves outside of your closed environment. You are also potentially exposing for more information as you transport it from within your data center to the secure confines of your cloud provider.
+I am for Bit by bit
+
+Where does security play in the decision to maintain hybrid data center infrastructure?
+
+In fact, it might be the weakest link in the non-human security chain. The problem is that if your data center is too diverse in its infrastructure, you have a support problem that translates into a security problem.
+For example, if you're trying to maintain multiple vendor server hardware (IBM, HP, Dell, Sun), then you have to also maintain a constant vigilance for each type of system and its security needs. For system administrators, this is a nightmare, but it's also very typical of data centers. Hybrid infrastructure is sort of the norm. It's also highly dysfunctional and the source of a lot of problems--security and otherwise.
+With hybrid infrastructure also comes a horrifying array of operating systems on all that hardware.
+To specifically answer your question: Security should play the ultimate role in every decision we make in the data center. I know that's sweeping and broad but we must have some sort of consistency to maintain a high level of security.
+This is another area of overhaul. To maintain a high level of security, you should (as much as possible) standardize on a hardware vendor for your server infrastructure. Patch often, maintain a high vigilance level, and keep your systems updated. Being behind on patch levels is what system hackers look for.
+And don't assume that new hardware is less vulnerable than your seven year-old clunkers. Patch the new stuff before it goes into production.
+I am for Overhaul
+
+Even in a hybrid data center infrastructure your security requirements don’t go down. You are still responsible for maintaining the security of the data and the infrastructure for the portion of the infrastructure under your direct control. While you may determine that you can trust your provider’s security, you are likely to be monitoring your cloud resources via logging tools as well as any monitoring that the provider offers specific to their service. You need to make sure that security remains a high priority for that monitoring, and that you don’t make unsupported presumptions about the security of your data.
+I am for Bit by bit
+
+And thanks to our readers for following the action. Look for the debaters' closing arguments, delivered tomorrow, and for my final verdict -- issued Thursday at 2pm ET.
+Ken Hess
+David and I agree that data center security is a problem. Where we differ is in the approach to remedy that problem. I believe that any change you can make to a data center should be done incrementally, except for security: only a rip-and-replace overhaul of data center security. Data centers have historically had excellent physical security, but have fallen tragically behind in network security.
+Over-the-network attacks, such as DDOS attacks, are but one area of vulnerability for today's data centers. To mitigate network attacks, data centers need to replace old hardware with new, smart devices and better monitoring and alerting. With individuals and businesses moving to cloud computing and cloud storage, data centers need to move quickly.
+Attackers don't attack incrementally, nor do they plan their attacks over several month's time. They attack in bursts and en masse. Only an overhaul of network security and constant vigilance can combat these attacks. A methodical approach to security will only make the problem worse not better. An overhaul is expensive and labor-intensive, but you have to weigh those costs against the cost of a single data breach. The costs to customers, to a company's brand, and to the data center itself is too great to use any other approach to the problem.
+Unfortunately data center customers are far too vulnerable and are far too important to incrementally protect them from existing and upcoming threats. I've heard the analogy that to eat an elephant, you have to do it one bite at a time. But that analogy doesn't work with outdated security, because attackers have already seized the elephant and have gathered a herd behind it. Only a complete data center security overhaul can stop the stampede from breaking down the door.
+
+David Chernicoff
+One thing that Ken and I agree on, is that the root cause of many security issues is Soylent Green; that is, people. And getting people to change their behavior is almost always an incremental process. People don’t like change and the more significant the change is, the more resistant they tend to be. But this has been an issue for IT as long as there has been an IT department to complain to, and not one limited to data center issues.
+While I firmly believe that careful incremental changes are the safe way to update your data center security model to provide minimal disruption to your primary task of getting business done, there will always be situations, such as a massive breach of your security or the discovery of fundamental flaws in your security protocols that require wholesale changes. But this should be the exception, rather than the rule.
+Security is an ongoing process, which should constantly be under evaluation with proactive changes and adaptations being made to keep your data center ahead of those who wish you harm. Needing to do a sudden, major overhaul to your security means that, in most cases, you have failed to provide the level of security that you should have already been providing, be it IT security or physical security.
+Larry Dignan
+
+Although I happen to think that incremental change is the norm for data centers---you're not going to easily rid yourself of legacy investments---Ken Hess had the better arguments. David Chernicoff fared well, but Ken had a more rounded argument and gets the win.

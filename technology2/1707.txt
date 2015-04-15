@@ -1,0 +1,13 @@
+http://zdnet.com.feedsportal.com/c/35462/f/675849/s/4544453f/sc/15/l/0L0Szdnet0N0Carticle0Cvirtualbox0E50E0A0Ebeta0E10Ereleased0C0Tftag0FRSSbaffb68/story01.htm
+VirtualBox 5.0 Beta 1 released
+Frankly, I'm excited about VirtualBox 5.x and not just because it's been five-ish years since the last major version upgrade, but because this particular version adds some fresh features that I've wanted for as long as I've used desktop virtualization. I downloaded and installed it two days ago and my favorite new feature isn't its paravirtualization support for Windows and Linux guests; it's the ability to separate the virtual machine (VM) from the GUI. Yeah, it's kind of wonderful when you think about it. Now you can run a VM without having the GUI open. The real beauty is that you can reattach it to the GUI later. Awesome.
+
+How to install Oracle VirtualBox and Windows XP on Linux Mint (Gallery)
+VirtualBox is a Type 2 hypervisor, which means that it runs on top of your existing host operating system as an application. You can't install it on "bare metal" as you do a Type 1 hypervisor.
+Most of the 5.0 improvements are related to better performance and "desktop" system enhancements, such as drag and drop between guests and better USB device support.
+The following is a recent list of changes:
+These improvements, fixes, and enhancements are nice, but I'm still waiting for someone to add better wireless NIC support into its hypervisor. It's frustrating not to be able to use a VM when using certain over-the-air utilities. It's frustrating when I'm unable to join a VM to my wireless network. I want the wireless NIC and the wired NIC(s) to work independently of each other and for both to work. You can bridge from your wireless NIC to your VM, but this isn't what I'm talking about. I want real wireless NIC capability on the VM and I think I should be able to have that as long as the host's wireless NIC is enabled and working. Sorry, I digress.
+
+It took hours for me to download VirtualBox 5.0 beta. Either there's a lot of other folks downloading it too or my 21.78Mbps download speed that I tested a la speedtest.net is a total lie.
+It doesn't matter. I downloaded it. I installed it and it's pretty cool, although I wish Oracle had focused a bit more on the wireless thing.
+What do you think? Have you tried VirtualBox 5.0 beta yet? Impressed? Depressed? Talk back and let me know what you think. After I've had more time with it, I'll give you a full post on my experiences.

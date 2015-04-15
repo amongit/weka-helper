@@ -1,0 +1,17 @@
+http://zdnet.com.feedsportal.com/c/35462/f/675691/s/44c9a9c5/sc/28/l/0L0Szdnet0N0Carticle0Cred0Ehat0Esquid0Eweb0Eproxy0Eis0Enot0Edeleting0Efiles0Ewilly0Enilly0C0Tftag0FRSSbaffb68/story01.htm
+Red Hat Squid web-proxy is not deleting files willy-nilly
+Yes, the bug in the Red Hat Enterprise Linux (RHEL) 6.7 Squid web caching proxy is a bad one. As the Red Hat Bugzilla Bug 1202858 reads, "restarting testing build of squid results in deleting all files in hard-drive."
+I think we can all agree that's a bad, bad bug. Soon, people were talking about it at Hacker News, numerous Reddit threads, Twitter, and on and on. Here's the thing though: Yes, it's a big, bad bug, but it was a bug that never came close to even beta testers, never mind Joe and Jane user.
+RHEL 6.7 isn't even in beta yet. In fact, RHEL 6.7 doesn't even have a release date yet. This code is so fresh that if it were seafood it would still be in the ocean, never mind a fishing boat, much less your restaurant plate.
+You see, this alpha version of Squid can't really do damage. Why? Because it's Never Been Released. I've written a lot of awful code in my day that could wreak havoc. Everyone has. None of those programs really matter though unless they're running on at least beta systems.
+The problem first showed up in a patch that was meant to fix a problem with restarting Squid. The problem was that sometimes Squid would leave old processes running so that the new ones wouldn't start cleanly. That patch never made it into the real program because, as Pavel Šimerda, a part-time Red Hat software engineer wrote, "Warning: The patch is horribly wrong, don't use it. According to our tests, it just runs "rm -rf /*".
+As all Unix and Linux users know, "rm -rf" deletes all files. It's the classic worst possible blunder a new user can make.
+Šimerda also observed that the code that this "patch" was meant to fix isn't even from Red Hat's codebase at least as far back as 2004. In other words, this patch was for a problem that actually has never existed in RHEL.
+Unsurprisingly this code never made it even into beta, never mind production code. For some reason though, the news of this alpha bug has become very popular.
+As Adam Miller, a Red Hat senior software engineer, observed on Bugzilla, "This bug has for one reason or another started to become popular on social media so for the sake of personal sanity I would like to post this here so that I can stop replying to posts about it around the internet." He continued:
+# NOTE
+# At the time of this writing, RHEL 6.7 is still pre-beta and
+# this bug was found in an *UNRELEASED* update to squid.
+In other words, relax. Red Hat quality assurance did its job. No one, except programmers working on alpha code, will ever see this disaster of a bug in the real world.
+That's not to say Linux is perfect. It's not. I'd argue Linux's security is better than Windows or Mac OS X, but as security problems such as GHOST, Shellshock, and the most recent OpenSSL bugs show Linux has its fair share of troubled software too. Red Hat Squid problem just isn't one of them.
+Related Stories:

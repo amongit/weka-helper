@@ -1,0 +1,18 @@
+http://zdnet.com.feedsportal.com/c/35462/f/675786/s/4561958a/sc/15/l/0L0Szdnet0N0Carticle0Cdatastaxs0Ecassandra0Ehitches0Ea0Eride0Eon0Ehps0Emoonshot0C0Tftag0FRSSbaffb68/story01.htm
+​DataStax's Cassandra hitches a ride on HP's Moonshot
+
+NoSQL company DataStax says the availability today of its database as a low-power HP Moonshot system will give firms another reason to jump ship from traditional relational platforms.
+HP and DataStax, whose partnership dates back two years, are predicting an average saving in the total cost of ownership in large-scale complex deployments of up to two-thirds with the joint HP Moonshot for DataStax Enterprise database management system.
+The DataStax DSE big-data platform, used by businesses such as eBay and Netflix, is based on the open-source Apache Cassandra distributed database.
+HP's Moonshot range, unveiled in November 2011 and launched in April 2013, is based on Intel Atom and ARM Cortex processors, which are more commonly found in mobiles and tablets.
+DataStax co-founder and CCO Matt Pfeil said Cassandra is designed to allow applications to be scaled up easily, a characteristic that works well with Moonshot's cartridge-based, modular approach.
+Scale-out uses sophisticated software to cluster lower-cost hardware as opposed to scale-up, which involves larger, costlier boxes.
+"Instead of having to buy a bigger piece of hardware as your database needs increase, which is something you would do with a traditional relational system like an Oracle, for example, what you can do now is add more, smaller servers and they will act as one in a clustered fashion," Pfeil said.
+
+​DataStax snaps up Aurelius and its Titan team to build new graph database
+"Cassandra was built for that scale-out approach. That means we're a very natural fit with something like HP's Moonshot, which focuses on smaller servers that save an enormous amount of power without sacrificing quality. It will help more companies utilise our technology. Because our database was built for this, the total cost of ownership of the overall system goes down."
+According to the two companies, HP Moonshot with DSE can offer up to 1.7 times more operations per second than a traditional 2U two-processor rack-mounted server.
+Hosted contracts-management company SpringCM has been using the Moonshot DataStax system before its public availability today. According to Pfeil, SpringCM has moved from an Oracle relational database mainly because of Cassandra's abilities in handling time-series data.
+"If you have four parties looking at one document, you want to preserve the order in which changes were made to that document as they've evolved over time," he said.
+"As SpringCM has evolved even more, they've looked at their hardware and they were able to go from six HP DL360 servers to 12 Moonshots. They've doubled the number of servers but the power savings are something like 80 percent. It's enormous amounts of power reduction, and they've actually increased their performance in terms of the cluster as whole."
+In February, DataStax announced it is building a new graph database using the expertise of the engineering team it acquired when it took over Titan creator Aurelius.

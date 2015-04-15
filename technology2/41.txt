@@ -1,0 +1,30 @@
+http://techrepublic.com.feedsportal.com/c/35463/f/670841/s/455c261e/sc/15/l/0L0Stechrepublic0N0Carticle0Cimprove0Emobile0Esecurity0Ewith0Enew0Euser0Efriendly0Emdm0Eplatform0C0Tftag0FRSS56d97e7/story01.htm
+Improve mobile security with new user-friendly MDM platform
+JAMF Bushel is an easy-to-use cloud-based mobile device management (MDM) platform for independents, SMBs, and even departments in larger organizations. I like to call JAMF Bushel an "MDM for the regular people." JAMF is targeting Bushel at a different segment of the market than their flagship Casper Platform, which was previously reviewed on TechRepublic.
+I wanted to review Bushel, so JAMF Software set me up with a trial account. Onboarding my iPad Air and iPhone 6 didn't require downloading a client app from the App Store. The device onboarding from the device/user side is well crafted and documented enough for novice users and to make onboarding a number of devices for a tradeshow booth or display kiosks to be easy work.
+If you enable open enrollment in Bushel, upon receiving an invite, your users just need to enter your Bushel platform URL in their iOS device browser to get a signup page similar to this screenshot:
+
+The user downloads a configuration file to their device then follows some prompts to complete onboarding their device into Bushel.
+The Devices page is well laid out and easy to follow. I liked how the page broke out device enrollment, apps and settings, and disk encryption.
+Below that information, you can drill down into your enrolled devices to view their settings as well. The Device Settings page is well laid out and informative. In fact, an inquisitive user/admin could learn a lot more about device setting just by poking around on this page. The below image shows an example of the device details:
+
+More importantly, this is the page where you go if you must erase a device remotely, lock/unlock a device, and un-enroll a device. While these features are easy to use, my advice is to do erase a test device to prepare yourself when you may have to erase an employee's device for real.
+You can manage apps via Bushel. However, to manage paid apps from the App Store you have to be signed up for the Apple Volume Purchase Plan.
+When you drill down into the iOS apps, you'll find the interface well thought out and easy to navigate.
+This is an example of the message that appears when you go to deploy an app via Bushel:
+
+Users will receive a prompt on their device about the app to be installed:
+
+Tap Install. Users need to understand that they'll be using their App Store account to download the apps
+The only recommendation I have for Bushel is to include a bit more details about when an app doesn't install. For example, for the Uber app mentioned earlier, I didn't follow through on my iPhone to install it.
+However, the Bushel explanation of why the app didn't install was non-existent, so a descriptive error message is a small but nice detail JAMF could consider working on in a future iteration. When I checked my App Store account, the Uber app showed up as not downloaded. I may have ignored the prompt to install it on my iPhone 6 while writing this article. Later, I was able to go in and complete the install. I was also able to resolve this issue another time by simply redeploying the app.
+Bushel does an incredible job designing a Settings page that even an MDM newbie could navigate effectively. I could see a power user or an employee like a sales operations person or marketing coordinator able to change settings without a major learning curve.
+The Email accounts Settings tab controls email account setup on managed devices. You setup and configure Exchange Mail, Gmail (including Google Apps for Work), Yahoo Mail, and regular IMAP/POP mail.
+The Device Settings tab is sleek and well designed - making the security settings quite accessible - for even novice users. The combination of the page's layout and short text explanations of the features should help non-IT people thrust into setting up Bushel to manage devices for their company, department, or particular project. This shows the Device Security tab:
+
+The Network Settings tab enables you to manage Wi-Fi access for the devices you have under Bushel management.
+I heard from the JAMF PR rep about Bushel right around the time I was thinking about alternative use cases for MDM. I've had the opportunity to speak with some enterprise MDM leaders while writing for TechRepublic. However, I still had thoughts about MDM for smaller enterprises, departments (an MDM for the Shadow IT), or for a special like protecting mobile devices used as store or tradeshow display kiosks. These are the use cases where Bushel excels.
+Another interesting use case for Bushel is to be an MDM for freelancers and independent consultants. With so many businesses and industries depending on freelancers and consultants, the time has come for them to up their mobile security game beyond what's available in the App Store.
+As device management and security concerns grow, we may yet reach a day where even freelancers and independent consultants may have to answer for their device management policies and strategies as part of a proposal to win a contract.
+I call Bushel an MDM platform for the regular guy because the platform is easy to use but not without some feature and security trade offs. A big trade off being you can't disable apps on a Bushel managed device. That's a job for JAMF Casper Suite or another fully featured MDM platform. Because of this, I like JAMF Bushel as an MDM solution for small to medium businesses, and specialized (but limited) use cases in large enterprises. Bushel also has the potential to improve device security for freelancers and consultants standardized on iOS devices and Macs.
+See also:

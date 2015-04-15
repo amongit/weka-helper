@@ -1,0 +1,14 @@
+http://zdnet.com.feedsportal.com/c/35462/f/675832/s/455b3847/sc/15/l/0L0Szdnet0N0Carticle0Csmb0Esecurity0Eflaw0Eaffects0Eevery0Eversion0Eof0Ewindows0C0Tftag0FRSSbaffb68/story01.htm
+Windows security flaw could lead to login theft, researchers claim
+
+Security researchers have discovered a new variation of a flaw that could in theory allow for the theft of usernames and passwords from millions of Windows PCs, servers, and tablets.
+The new vulnerability, discovered by security firm Cylance, affects every version of Windows, including the latest Windows 10 preview, which has yet to be formally released.
+10 best privacy tools for staying secure online
+A number of free and open-source projects exist solely to protect your identity and online activity. Here are just a few to make you more secure in the new year.
+The "Redirect to SMB" vulnerability builds on a flaw first discovered in 1997 by exploiting the Windows Server Message Block (SMB). Researchers say a user can be tricked into clicking a specially crafted link, which can attempt to authenticate with a malicious server. The encrypted username and password combinations used to access the server could be logged, and later cracked by a brute-force attack.
+Cylance warned the flaw could be exploited without necessarily clicking a link, such as through a man-in-the-middle attack by a background Windows program, like a software updater.
+A number of third-party companies' software is affected by the vulnerability, including Adobe, Apple, Box.com, and Oracle -- among others.
+The bug is serious enough for the CERT security advisory team at Carnegie Mellon University, which tracks bugs and security issues, to issue an advisory, warning that it was "unaware of a full solution" to the problem.
+But Microsoft played down fears that it was a new, or even a serious vulnerability.
+"Several factors would need to converge for a 'man-in-the-middle' cyberattack to occur," said Microsoft, in an emailed statement to Reuters. "Our guidance was updated in a Security Research and Defense blog in 2009, to help address potential threats of this nature. There are also features in Windows, such as Extended Protection for Authentication, which enhances existing defenses for handling network connection credentials."
+It's not clear if Microsoft will fix the flaw in a later update. Microsoft did not immediately respond to comment at the time of writing.

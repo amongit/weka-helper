@@ -1,0 +1,18 @@
+http://zdnet.com.feedsportal.com/c/35462/f/675826/s/44888461/sc/21/l/0L0Szdnet0N0Carticle0Clinux0Epre0Erelease0Etestbed0Econtinued0Eadding0Elmde0E20Ebetsy0Ebeta0C0Tftag0FRSSbaffb68/story01.htm
+Linux pre-release Testbed continued, adding LMDE 2 Betsy beta
+Well, I had hardly finished typing the words "Betsy hasn't seen the light of day yet" in my Monday blog post when I saw that the Linux Mint Debian Edition (LMDE) 2 'Betsy' Beta image was starting to appear on the Mint mirrors.
+The best HDMI operating system sticks
+There's a new kind of computer in town and it's resides on an HDMI stick that's not much bigger than a pack of gum.
+So I grabbed a copy, dumped it onto a USB stick, and installed it on the Acer Aspire V5-131 that I have been filling with Linux pre-release distributions. As with my previous post, this is not intended to be a review of these specific releases, so I am not going into much detail right now. I just want to offer a snapshot of how installation and setup went.
+Installation was easy and uneventful, as is almost always the case with Mint distributions. The best news at this point is that this release is still not cursed with the UEFI installation problem that the Ubuntu-derived Linux Mint distribution has - namely that it uses the same EFI boot directory name as Ubuntu.
+LMDE installs its EFI boot data under the name 'linuxmint' (how clever), so there is no problem, and no special provisions or precautions are necessary.
+As with all of the other distributions I have installed during this project, there were no other problems with UEFI installation. LMDE put itself first in the boot sequence, and after booting it and confirming that everything was working, I reset the sequence to put openSuSE first.
+I experienced no further problems. Not one of these seven Linux distributions I've installed has surreptitiously inserted itself at the beginning of the boot list after I have set it the way I want. How nice it is to be dealing with civilized, well-behaved software. (Oh, and none of them have wiped the disk or the partition table.)
+One other thing about UEFI multi-boot configuration: Several people have asked how I set this up, and even whether I use 'Boot Select' (F12, ESC, or whatever) to accomplish it.
+First I say an emphatic, 'No!'
+I would not use Boot Select for normal, routine, every-day startup. In fact, one of the reasons that I got rid of an HP/Compaq laptop a while back was that the HP BIOS was so difficult and insistent in monkeying around with the boot list that it was starting to seem like I had to use Boot Select and then repair the list way too often.
+What I do is use the GRUB 'chainloader' configuration, with the target set to 'grubx64.efi' of whatever distribution I am setting up. This means in real terms that the system always starts by booting the openSuSE EFI GRUB (because I keep it configured that way), and then from there if I select Fedora, it reloads the Fedora EFI GRUB, which then actually boots Fedora.
+The alternative, and what 'grub2-mkconfig' does by default, is to use the 'linuxefi' command to tell GRUB to boot whatever kernel you want. But there are several potential problems and limitations to that, so I only use it when I am loading non-EFI compatible distributions.
+I know that last bit is a very superficial explanation. If there is sufficient interest, I will write a complete post about how I set up EFI multi-boot. But there are some rather gory details in that, and it is probably not of general interest.
+The summary for today is simply that Linux Mint Debian Edition 2 (Betsy) RC installed alongside the other pre-release distributions, and everything works as expected.
+Read more of my blog

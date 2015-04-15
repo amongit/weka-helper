@@ -1,0 +1,20 @@
+http://zdnet.com.feedsportal.com/c/35462/f/675708/s/44860efc/sc/10/l/0L0Szdnet0N0Carticle0Chgst0Egoes0Eall0Ein0Eon0Ehelium0Edrives0C0Tftag0FRSSbaffb68/story01.htm
+HGST goes all in on helium drives
+The why of helium-filled - or, as HGST's marketing styles it, HelioSeal - disk drives is easy. Helium has 1/7th the density of air. That means:
+That is a very persuasive combination for web-scale data centers, who want to jam as much capacity into a storage server as possible since servers cost money. The reduced power consumption is a plus, as it also reduces cooling requirements and allows denser disk packaging.
+HGST is designing no new air-based drives. They expect to be almost 100 percent helium by the end of 2018.
+HGST says there's another benefit: reliability. Helium drives don't need a breather hole to equalize pressure between the interior of a drive and the ambient air pressure. On air-drives the ambient air moves through a filter, but no filter is perfect.
+Helium drives are sealed at the factory so there's no way external contaminants can enter the drive. With lower running temps and a sealed enclosure, HGST expects to see significantly improved reliability.
+HGST will ship a 10TB helium drive in the second half of 2015, which also uses shingled magnetic recording (SMR) to increase capacity. HGST is offering host-managed SMR, which requires changes to file systems. For Linux users, check out this piece on libzbc, the new library that supports SMR drives.
+SMR is very slow at small updates, so file systems need to adapt. Essentially, libzbc focuses on ensuring that disk writes are optimized for sequential writing, ideally with the 256MB band size that HGST SMR drives use.
+The entire drive industry has been researching helium-filled drives for years. Yet only HGST has been able to bring the technology to market. What was the key?
+With industry hard drive production well over 1 million units a day, HGST's problem was more about volume manufacturing than basic science. HGST's Japanese engineers developed high-volume automated laser weld manufacturing equipment that enabled the required helium tight seal.
+Storage: Fear, Loss, and Innovation
+The rise of big data and the demand for real-time information is putting more pressure than ever on enterprise storage. We look at the technologies that enterprises are using to keep up, from SSDs to storage virtualization to network and data center transformation.
+Current disk drives are held together with screws, not welds, and with screws there are always gaps.
+With a rapidly growing fraction of the world's computing in the cloud, the advent of denser, more reliable and power efficient storage is a good thing. Web-scale data centers can easily justify the added cost of helium technology thanks to its lower total cost of ownership.
+For the enterprise the benefits are further out. Major array vendors are currently qualifying helium drives and HGST expects them to start shipping in the second half of this year. Given the requirements of SMR, it will be interesting to see how array vendors position the drives.
+Scale-out object storage is the natural market for SMR drives - helium or not - and we'll have to wait for those vendors to integrate their software with the new Linux library. It will be a win, with the only question, how big a win?
+Consumers, like me, may already be using SMR on some recent external drives without knowing it. But helium drives don't yet make sense for small installations. There are cheaper ways for consumers to get capacity today.
+But helium drives are an important step forward. Now if the industry can only get patterned media and heat-assisted magnetic recording (HAMR) into volume production, we'll have a clear path to 20TB+ drives in the next few years.
+Comments welcome, as always. How much extra would you pay for a helium drive?

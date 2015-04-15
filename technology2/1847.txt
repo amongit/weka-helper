@@ -1,0 +1,20 @@
+http://zdnet.com.feedsportal.com/c/35462/f/675708/s/44ef23ee/sc/23/l/0L0Szdnet0N0Carticle0Cwhy0Emost0Edisk0Edrives0Eneed0Eto0Ebreathe0C0Tftag0FRSSbaffb68/story01.htm
+Why (most) disk drives need to breathe
+Maybe you've seen a disk drive spec: Operating altitude: -1,000 to +10,000 feet (-305 to +3,048 meters). Disk drives - with one notable exception - require air to operate, and the air pressure inside the drive needs to vary with outside altitude.
+Drives need air because read/write heads are carefully engineered to "fly" above the media thanks to the rapid rotation - 120 times a second in 7200RPM drives - of the disks. The disks themselves are very smooth - metal plated and lubricated - to help keep heads stable.
+Storage: Fear, Loss, and Innovation
+The rise of big data and the demand for real-time information is putting more pressure than ever on enterprise storage. We look at the technologies that enterprises are using to keep up, from SSDs to storage virtualization to network and data center transformation.
+The flying heights are tiny. Imagine a 747 flying 6 inches above the ground at 600 miles an hour. That's roughly equivalent to what a disk drive head does all day, for years.
+The head rests on an air bearing whose behavior depends on media velocity, air temperature and air density (humidity can be a factor as well, but let's ignore it today). At sea level average air density is almost 15PSI, but drops by almost a third at 10,000 ft. Careful head design enables reliable drive operation at the specified altitudes, but going beyond them raises the chance of a head crash.
+A head crash is when, thanks to shock or particulates, the head has touches the media surface. The resulting debris almost guarantees that the disk will soon fail. Imagine that 747 hitting an 8 inch log on the ground at 6 inches of altitude. Bang!
+Without a breather hole, the drive's top and bottom plates would have to be much heavier to handle the pressure changes. The trade-off isn't worth it.
+Almost all disk drives have breather holes. Here's a picture of one from an old notebook drive:
+
+Today drive vendors rarely label the breather hole, opting instead for a generic warning to not cover any drive holes. But there's only one that matters.
+Since disk drives are prone to catastrophic failure if foreign particulates - such as hair, dust, smoke - enter the manufactured-in-a-cleanroom drive, how is the ambient air cleansed? With a filter.
+
+The filter is the white material in the corner of the - very dirty! - disk drive above. That's all it takes.
+Disk drives are amazing devices: mass-produced, high-precision, low-cost and relatively long-lived. The new HGST helium drives are the first drives to be completely sealed - no breather hole - to keep the helium inside the drive.
+Because helium is 1/7th the density of air, pressure changes are much less of a problem. The biggest engineering problem was figuring out how to keep the helium sealed inside the drive. Laser welding is the answer.
+Of course SSDs don't have the pressure problem, which made them popular with the military even when they cost $4/MB. Yet the humble disk drive will be with us for decades to come and it's good to know how they work.
+Comments welcome, as always.

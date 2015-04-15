@@ -32,18 +32,82 @@ def delete_first_line(file_list):
 			f.write(str(text_without_first_line))
 			f.close()
 
-def first_and_last_paragraph(file_list, folder_name, topic):
+def get_paragraph(file_list, folder_name, topic, number):
+	if not os.path.exists(os.getcwd() + '/' + folder_name + '/' + topic): 
+		os.makedirs(os.getcwd() + '/' + folder_name + '/' + topic)
 	for li, line in enumerate(file_list):
-		text_without_first_line = ''
+		text = ''
 		with open(line, 'r') as myfile: 
 			whole_text = myfile.read()
 			print line
 			text_splited = whole_text.split('\n')
+			text += text_splited[number]
+			text += '\n'
+			print text
+			myfile.close()
+
+		# with open(os.getcwd() + '/' + folder_name + '/' + topic + '/' + os.path.basename(line), 'w') as f: 
+		# 	#print os.getcwd() + '/' + folder_name + '/' + topic + '/' + os.path.basename(line)
+		# 	f.write(text)
+		# 	f.close()
+
+def first_paragraph(file_list, folder_name, topic):
+	pass	
+
+def first_and_second_paragraph(file_list, folder_name, topic):
+	if not os.path.exists(os.getcwd() + '/' + folder_name + '/' + topic): 
+		os.makedirs(os.getcwd() + '/' + folder_name + '/' + topic)
+	for li, line in enumerate(file_list):
+		text = ''
+		with open(line, 'r') as myfile: 
+			whole_text = myfile.read()
+			print line
+			text_splited = whole_text.split('\n')
+			text += text_splited[1]
+			text += '\n'
+			if text_splited[2] != '' or text_splited[2] != '\n':
+				text += text_splited[2]
+			else:
+				text += text_splited[3]
+			print text
+			myfile.close()
+
+		with open(os.getcwd() + '/' + folder_name + '/' + topic + '/' + os.path.basename(line), 'w') as f: 
+			#print os.getcwd() + '/' + folder_name + '/' + topic + '/' + os.path.basename(line)
+			f.write(text)
+			f.close()
+
+
+def first_and_last_paragraph(file_list, folder_name, topic):
+	for li, line in enumerate(file_list):
+		text_without_first_line = ''
+		#
+		with open('/home/dynamic/Desktop/weka-helper/sport/1968.txt', 'r') as myfile: 
+			whole_text = myfile.read()
+			print line
+			text_splited = whole_text.split('\n')
+			s = len(text_splited)
 			for i, txt in enumerate(text_splited):
-				if i > 0 and not txt.startswith('http'):
-					print len(txt)
-					text_without_first_line += txt
-					text_without_first_line += '\n'
+				words = txt.split(' ')
+				if i == 1 and len(words) > 9 and i != len(text_splited) - 3:
+					print txt
+				# elif i == 2 and len(words) > 9:
+				# 	print txt
+				elif i == len(text_splited) - 3 and len(words) < 9:
+					#print s
+					s -= 1
+				else:
+					print 'sdsd'
+					#print txt
+				if s !=  len(text_splited):
+					print s
+					print text_splited[s]
+
+				# elif i == len(text_splited) - 3 and len(words) > 9:
+				# 	print txt
+				
+				# text_without_first_line += txt
+				# text_without_first_line += '\n'
 			#print text_without_first_line
 			myfile.close()
 		if not os.path.exists(os.getcwd() + '/' + folder_name + '/' + topic): 
@@ -317,6 +381,12 @@ def get_most_common_verbs(file_list, report_file):
 
 # get_most_common_verbs(get_file_list('sport_train_set.txt'), 'sport_most_common_verbs.txt')
 #razdvojiti u 3 kategorije od 0 do 38692
-first_and_last_paragraph(get_file_list('indexSportListOfNames-work.txt'), 'first_last', 'sport')
+
+#first_and_last_paragraph(get_file_list('indexSportListOfNames-work.txt'), 'first_last', 'sport')
+
+#first_and_second_paragraph(get_file_list('indexPoliticsListOfNames-work.txt'), 'first_second', 'politics')
+#1376 technology 
+#get_paragraph(get_file_list('indexPoliticsListOfNames-work.txt'), 'title', 'politics', 0)
+delete_first_line(get_file_list('indexTechnology2-work.txt'))
 #pos_tag_analysis(get_file_list('sport_train_set_home.txt'), 'report_sport.txt')
 #min_max_tokens(get_file_list('sport_train_set.txt'), 'min_max_sport.txt')

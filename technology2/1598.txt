@@ -1,0 +1,60 @@
+http://zdnet.com.feedsportal.com/c/35462/f/675826/s/44d311b8/sc/15/l/0L0Szdnet0N0Carticle0Chands0Eon0Elinux0Euefi0Emulti0Eboot0Epart0E20C0Tftag0FRSSbaffb68/story01.htm
+Hands-On: Linux UEFI multi-boot, part two
+I'm going to start this post by saying something that a lot of people will find surprising.
+There are a lot of things that I like about UEFI firmware and the UEFI boot process.
+I think it is an improvement over the old MBR boot system in some very useful and practical ways. Unfortunately Microsoft has turned it into yet another way to make things significantly more difficult for those who want to boot any non-Microsoft operating system.
+But it hasn't been entirely successful, at least yet, so I am writing these articles to show how I set up multi-boot UEFI systems.
+
+Just to be absolutely clear upfront again, I am not dealing with UEFI Secure Boot in these articles. I am assuming that Secure Boot has been disabled in the BIOS configuration.
+In my previous post I gave some general information about UEFI boot and disk partitioning. If you haven't read that, and you aren't familiar with that information already, it would probably be worthwhile to read it before continuing here, because I am going to use that information as a basis for this discussion.
+Simple Linux-only UEFI boot
+The simplest possible configuration, which I want to look at here to serve as a soft of 'basic reference point', is a single Linux-only system. As I explained in more detail in the previous post, when you install Linux on a system like this it will create a small FAT-format 'EFI Boot' partition in addition to whatever usual Linux partitions you choose (root, boot, home, var, swap and such).
+The exact contents of the EFI Boot partition vary between distributions, but in general it contains a few executables which are needed to perform the EFI boot process, and it may also contain some configuration files and other utility programs intended to support administration of the UEFI boot system. In the absolute minimum case (Debian, for example), it will contain only grubx64.efi, which is an EFI executable of the GRUB bootloader.
+The other thing the Linux installer does is make an entry in the UEFI firmware boot configuration list. This list contains the name and location of each installed bootable system on the disk, and another list that specifies the sequence in which they should be tried.
+When you boot a UEFI system, it checks the boot sequence list to determine what to try first, then it finds the executable file specified for that entry (grubx64 in our case), and tries to boot it. If it succeeds, that program will take control of the startup process, and continues according to the parameters and instructions contained in the GRUB configuration file (grub.cfg).
+The configuration file is used to tell the GRUB program a few simple things:
+Normally that last bit is very simple and obvious, it just loads the Linux kernel and runs it. But it can also be told that the boot object is in fact another boot manager or boot loader, and it should replace itself with that new program and then restart the boot process. This is the part that we are interested in, as you are about to see.
+Stated in simplified pseudo-code, the configuration for the system I am currently writing this on is:
+insmod part_gpt
+insmod ext2
+set root="hd0,gpt3"
+linuxefi /boot/vmlinuz
+initrdefi /boot/initrd
+So to summarize this part, the first two lines tell GRUB how to read the disk and the partition, the third line tells it where to look for the boot target, and the last two lines tell it exactly what files to boot, and what to do with them.
+Multi-boot Linux
+If you set up a Linux multi-boot system, the GRUB configuration utility will add information to the end of the configuration file which is similar to that above:
+
+insmod part_gpt
+insmod btrfs
+set root="hd0,gpt4"
+linuxefi /boot/vmlinuz
+initrdefi /boot/initrd
+The differences here are that the root (or boot) filesystem has been loaded in the next disk partition, and it uses the btrfs filesystem rather than ext as in the first example.
+Multi-boot Linux and Windows
+If you install Linux alongside an existing Windows UEFI system, the installer will notice the Windows installation, and it will set up the GRUB configuration file to include that. The first part of the configuration file (for Linux) will be the same as it was above, then on the end it will add something like this:
+insmod part_gpt
+insmod fat
+set root="hd0,gpt2"
+chainloader /EFI/Windows/Boot/bootmgfw.efi
+Aha, now we are finally getting to the heart of the matter: there are a couple of important differences in this configuration. First the filesystem type is FAT rather than one of the Linux types, but more importantly, the command used to load the operating system is different too. A simple way of looking at this is to say that GRUB knows how to boot a Linux kernel so it just uses an EFI-adapted command to do that, but it doesn't know how to boot Windows, so it replaces itself with another task which presumably should know how to do that.
+Fly in the ointment
+So far this is all still pretty straight forward. A UEFI Linux system uses GRUB as the boot manager and boot loader; when GRUB starts, its config file points it to the Linux kernel, which GRUB then loads and runs. A multi-boot Linux installation adds nothing more than pointers to other Linux filesystems and kernels, the boot process is still the same. When Windows is added to the multiboot setup, GRUB basically says, 'I don't know how to load Windows, so I will back up one step and tell the system to load the Windows bootloader'.
+There are a couple of problems with this. First, some Linux distributions have had trouble with the linuxefi command. This was especially common in the early days of Linux on UEFI systems, and while it is not so common now, it still happens sometimes. Fedora was the best known example of this, because although they were one of the first to get UEFI boot working for their own installation, you couldn't get it to boot any other Linux installation - but it would boot Windows!
+That initially made me mad - multi-booting Windows, but not Linux? Grrr. But then it got me wondering, why can't I use the same mechanism that works for Windows to get it to boot other Linux systems? After a bit of experimentation I found that I could do just that. It's not even very hard, and you'll be glad to hear that this is the reason that I included all that tedious stuff above about disk partitioning, filesystems, and boot loaders.
+Shoo fly, shoo!
+Looking at everything that has been said above, and in the previous post, about how the disk is partitioned and how GRUB works for booting Linux and Windows, what would be needed to get it to boot Linux using the mechanism it normally uses for Windows?
+Well, unless I haven't told you something significant (and I wouldn't do that), you would need to tell it about the different filesystem (FAT instead of ext), point it to the EFI boot partition instead of the Linux root or boot partition, and then tell it exactly which efi executable to load. In fact, we can copy almost everything from the Windows boot configuration, and just change the name of the efi file to be booted:
+insmod part_gpt
+insmod fat
+set root="hd0,gpt2"
+chainloader /debian/grubx64.efi
+Zowie, that's not so hard! And it even works! What happens when you do this is that on initial boot you get the GRUB boot menu for whatever Linux installation is first in the UEFI boot sequence. If you don't do anything, after a short delay the system boots that installation. But if you select some other installation from the list, and the one you select is set up in the GRUB configuration file as shown here, you will actually see GRUB restart, and you will get a new GRUB boot menu from the installation you selected. Cool!
+I know there will be some people who slog through all of this, finally get to this point and say, 'So what?, especially because using linuxefi today generally works, and it will be set up that way automatically during multi-boot installation. Still others will say, 'It's too difficult, too complicated'.
+As I said at the beginning, this is my way of handling multi-boot. It's not the only way, and in some cases it might not even be the best way. But I have been using it for quite some time now (two years or so? time flies when you're having fun...). These are my reasons:
+Preserving the changes
+There's only one more important thing to talk about on this. I promise. So far I have been talking about modifying the grub.cfg file. But that's actually not a particularly good idea, not only because it says in block letters at the top of the file "DO NOT EDIT THIS FILE". I mean, there's no enforcement of that directive, the Linux Police are not going to come around and take away your birthday if you edit it... but the problem is, that file is automatically generated, and whenever something happens (usually during update installation) which might cause something related to that config file to change, the file will be automatically recreated, and all your lovely editing will be lost.
+Of course, you would notice the difference the next time you booted, and you could then go back and re-edit the config file, but that approach is likely to end up with you cursing me for having talked you into all of this. Fortunately, GRUB has a special provision for making additions to its configuration. Once you have a the configuration for a specific Linux installation the way you want it, you can copy that part of the grub.cfg file and add it to the end of /etc/grub.d/40_custom. The contents of that file are automatically added to the end of grub.cfg whenever it is (re-)created, so your changes will survive intact. Hooray!
+Summary
+That's enough for this post. My fingers are getting tired, and most readers' eyes are probably starting to glaze over. This completes the general description of how I set up multi-boot on my UEFI firmware systems.
+There is one more post on this subject still to come, where I will discuss a few special cases, such as Ubuntu/Mint on the same system and handling non-EFI compatible distributions. If there are other specific questions or issues that I haven't covered, get them into the comments and I might be able to add something.
+Read more of my blog

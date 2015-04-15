@@ -1,0 +1,12 @@
+http://zdnet.com.feedsportal.com/c/35462/f/675687/s/442ff49d/sc/21/l/0L0Szdnet0N0Carticle0Cdata0Egravity0Ethe0Ereason0Efor0Ea0Eclouds0Esuccess0C0Tftag0FRSSbaffb68/story01.htm
+Data gravity: The reason for a cloud's success
+As clouds get larger, they gain a greater hold over their customers because of "data gravity", according to researcher Dave McCrory.
+In a packed session at Interop Las Vegas on Monday, McCrory, a senior architect of VMware's Cloud Foundry service, gave a talk on his pet subject of "data gravity". He showed how as a cloud provider like Amazon Web Services brings in more information, it creates a virtuous circle that attracts more and more data to the same cloud.
+"The more data you have in your network, the more likelihood you'll have data that will want to consume it," McCory said. "If more of the data lives in [Amazon's] network, people will be attracted to it."
+This is not a case of lock-in, he said, but more a natural consequence of how data behaves: as applications feed on datasets, they create data in turn, which gets analysed by other applications, which create their own data, and so on.
+From a developer's point of view, it becomes sensible to locate these applications and data within the same network to achieve high-bandwidth and low-latency.
+This then favours whatever cloud system the original data was stored in, as developers can reap a whole host of benefits by staying within the bounds of the provider's network.
+"The closer and closer you get, the more addicted you are to sub-millisecond latencies, the harder it's becoming to move your data away," he said. "You generally only move closer."
+To illustrate how cloud providers can benefit from this, he pointed to the explosive growth of Amazon's S3 storage service, which went from storing 2.9 billion objects in 2006 to 762 billion in 2011. Data has grown on the service because of 'data gravity' he said, and the growth has been spurred by Amazon making its APIs available to developers so it is easier for them to write to the service.
+However, the costs of loading data in and out of Amazon show how data gravity can lead to difficulties; it costs nothing to load a TB of data into AWS, $10 (£6) to process it within Amazon's cloud, but $120 to take the data out.
+"It's incredibly difficult to beat the gravitational pull," he said.

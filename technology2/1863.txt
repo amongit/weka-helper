@@ -1,0 +1,18 @@
+http://zdnet.com.feedsportal.com/c/35462/f/675708/s/442fe70e/sc/46/l/0L0Szdnet0N0Carticle0Cprimary0Edata0Edisrupts0Eenterprise0Estorage0Enon0Edisruptively0C0Tftag0FRSSbaffb68/story01.htm
+Primary Data disrupts enterprise storage — non-disruptively
+The success of massive scale-out storage systems — Amazon is storing over 1 trillion objects — has thrown a harsh light on legacy enterprise storage. Expensive, inflexible, under-utilized data silos from EMC and others are not what data intensive enterprises need or — increasingly — can afford.
+Enterprise scale-out — private cloud — storage exists, but there's a problem: The investment in the hardware, software and operational changes is all upfront. The payback takes years, and C-level execs are right to be skeptical.
+A better solution would enable companies to keep using what they have while enabling them to start using commodity storage servers instead of proprietary systems. Which is what Primary Data intends to do.
+Primary Data's idea is to provide a scale-out metadata service that gives centralized control and management, while staying out of the data path; a single enterprise name space with many data paths for performance.
+As co-founder and CTO David Flynn described the storage management problem Monday:
+Separating the control channel from the data channel — pulling the metadata out from amongst the data — the metadata that describes the files, directories, access control and other things is today commingled with the data objects. Therefore the data object has no identity that is consistent as that data object gets stored on different systems. Move that object and it becomes a different object and you're stuck managing multiple copies...
+The metadata service essentially turns all files into objects whether they are written as blocks, files or objects. Look up the file you want on the metadata service, get its location, and access it directly.
+Centralizing control makes all kinds of sense. Rarely used files — most of them — can be moved to cheap storage. I/O intensive data can be moved to SSDs. Critical data can be replicated multiple times and across geographies.
+Storage: Fear, Loss, and Innovation
+The rise of big data and the demand for real-time information is putting more pressure than ever on enterprise storage. We look at the technologies that enterprises are using to keep up, from SSDs to storage virtualization to network and data center transformation.
+Disaster recovery and backup are simplified because enterprise-wide snapshot policies ensure that data is protected and available. The snapshot layer is not in the data path, so it's fast and painless.
+What if the metadata service blows up? All the data is still there and accessible by individual servers, just as in today's infrastructures. You lose the global namespace, which can be rebuilt by reading object metadata, not your data.
+David Flynn and Rick White — the founders of Fusion-io and Primary Data — are back with another big idea. Primary Data is a much bigger idea than PCI flash cards, and the payback won't be as quick.
+By using existing storage assets though, PD has removed one of the big obstacles to modernizing enterprise storage. Firms can start small, try out the technology, train some people, validate the payback and then extend its use.
+The RAID array has had a great 25-year run. But as Google, Amazon, Microsoft and others have shown, the future belongs to scale-out storage. Primary Data may have the key that unlocks it for the enterprise.
+Courteous comments welcome, of course.

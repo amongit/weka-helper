@@ -1,0 +1,11 @@
+http://zdnet.com.feedsportal.com/c/35462/f/675696/s/44300543/sc/4/l/0L0Szdnet0N0Carticle0Cplain0Etext0Elesson0Efrom0Eevernote0Ehack0C0Tftag0FRSSbaffb68/story01.htm
+Plain text lesson from Evernote hack
+Last weekend, Evernote sent out an e-mail detailing how its operations and security team had discovered and blocked suspicious activities on its network. Apparently, the cloud services organization was the target of a "coordinated attempt to access security areas" pertaining to its popular Evernote Service.
+The company admitted that the unidentified hackers were able to gain access to Evernote user information which includes usernames, e-mail addresses, and encrypted passwords. While there was no evidence content stored in Evernote was accessed, it was evident the hackers had that in mind given that they targeted the password file.
+One plus point was that the passwords in particular were hashed and salted, which means a significant amount of computational resources would have to be expanded to extricate the original plaintext password. As a precaution, Evernote implemented a password reset for its users to render the theft of the password file meaningless.
+That Evernote has hashed their passwords with a salt is commendable, though detractors will argue that it is hardly foolproof.
+On the other hand, the fact is that organizations have been previously caught with storing their passwords in plaintext, which is definitely a far worse situation. Is there a method users can determine if a Web service is protecting their passwords correctly?
+In general, it is not possible for outsiders to know if passwords are stored in plaintext. However, the key point to understand here is that properly hashed passwords preclude the ability for the original password to be recovered. So if the "Forgot password" function of a Web service sends you the original password, you can be sure that the password is not salted.
+And yes, I encountered this with a popular Singapore-based florist company a while back. I clicked on the "Forget password" link and keyed in some basic identifying information. Imagine my surprise when my original password was e-mailed to me... It obviously wasn't hashed.
+Ultimately, users should not rely on Web services to protect their passwords, but instead avoid reusing their passwords.
+

@@ -1,0 +1,22 @@
+http://zdnet.com.feedsportal.com/c/35462/f/675708/s/442fe738/sc/23/l/0L0Szdnet0N0Carticle0Chow0Esmart0Eis0Esmart0Enow0C0Tftag0FRSSbaffb68/story01.htm
+How smart is SMART now?
+SMART (Self-Monitoring, Analysis and Reporting Technology) is a protocol for passing information from a disk or SSD to the CPU. It's part of the ATA and SCSI standards and is based on work by IBM, Seagate and others done in the '90s.
+The best HDMI operating system sticks
+There's a new kind of computer in town and it's resides on an HDMI stick that's not much bigger than a pack of gum.
+The protocol has a consistent data structure able to report over 70 statistics, but what gets measured is up to the vendor. SMART looks at the trends in these and other measures to determine if the drive is headed for failure.
+Backblaze started tracking SMART data earlier this year on almost 40,000 drives to see if and how SMART could help predict drive failure. A drive failure is counted when the drive either won't power up, is bricked, or is showing (SMART) evidence of failing soon.
+SMART stats are inconsistent from drive to drive. But Backblaze found five metrics that were good predictors of drive failures:
+They use these five stats because they've found they are consistent across manufacturers and are good predictors of failure. Backblaze's favorite stat comes from SMART 187 which reports the number of reads that could not be corrected using hardware ECC.
+They've found that drives with 0 uncorrectable errors hardly ever fail, while a drive with even a single uncorrectable read is much more likely to fail. Their experience:
+For SMART 187, the data appears to be consistently reported by the different manufacturers, the definition is well understood, and the reported results are easy to decipher: 0 is good, above 0 is bad.
+Here's the chart:
+
+According to research Storage Bits reviewed seven years ago in a study of 100,000 Google drives, the answer is a qualified no. Google found that enough drives failed without a SMART warning to make SMART useless for predicting drive life. But they also found that if SMART saw a problem the drive was much more likely to fail.
+That study's conclusion: if SMART says you have a problem, you probably do. But if SMART says you don't have a problem, you can't trust it.
+Backblaze came to a different conclusion. Since April 2013 they've found that:
+This isn't definitive because they don’t know how many false positives there were among drives flagged by SMART. They could have replaced some flagged drives that weren’t going to fail, but they guess that number is small.
+The Storage Bits take
+Maybe SMART has gotten smarter in the last seven years. High volume manufacturing is all about reducing variation, so perhaps other failure modes — capacitor failure on drive electronics for example — aren't as common as they once were.
+Backblaze's research would be more conclusive had they had a control group of drives they tracked but let fail, rather than replacing on SMART evidence. Also, Backblaze doesn't use SSDs, so they aren't examined.
+But for everyone professionally responsible for drive health this is an all-too-rare example of real field data. The Backblaze posts are well worth a read.
+Comments welcome, as always. Readers, what say you? SMART, yes or no?

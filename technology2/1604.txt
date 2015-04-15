@@ -1,0 +1,14 @@
+http://zdnet.com.feedsportal.com/c/35462/f/675826/s/448d94cd/sc/15/l/0L0Szdnet0N0Carticle0Cred0Ehat0Edeveloper0Etoolset0E30E10Ebeta0Earrives0C0Tftag0FRSSbaffb68/story01.htm
+​Red Hat Developer Toolset 3.1 beta arrives
+It's one of those eternal problems between developers and operators that even DevOps can't entirely solve. System administrators want the most stable operating system possible, while programmers want the latest and greatest development tools. Red Hat's solution for this dilemma has been to take those brand spanking-new tools, test them out on the latest stable Red Hat Enterprise Linux (RHEL), and then release them to developers.
+So it is that Red Hat has just announced its latest toys for developers, Red Hat Developer Toolset 3.1. This packaging of the hottest new tools is now available in beta.
+This update includes:
+GNUCompiler Collection (GCC) 4.9: the latest stable upstream version of GCC, which provides numerous improvements and bug fixes
+Eclipse 4.4.1: with support for Java 8 and updated versions of Eclipse CDT (8.5), Eclipse Linux Tools (3.1), Eclipse Mylyn (3.14), and Eclipse Egit/Jgit (3.6.1)
+Numerous additional updated packages: These include GDB 7.8.2, elfutils 0.161, memstomp 0.1.5, SystemTap 2.6, Valgrind 3.10.1, Dyninst 8.2.1, and ltrace 0.7.91.
+With these development programs, you'll be able to create applications for RHEL 6 and 7.x. These apps will then run on RHEL regardless of whether you're running it on a physical, virtual or cloud environments. They will also run on Red Hat's OpenShift, its Platform-as-a-Service (PaaS) offering.
+This new set of developer programs includes packages for both RHEL 7 and 7 running on AMD64 and Intel 64 architectures. Although the tools are 64-bit you can use them to create and modify 32-bit binaries.
+Before you try running any of these programs, you should patch RHEL with all the latest updates. To install the beta Toolset, your systems need to be subscribed to the Optional channel to access all the required Red Hat Developer Toolset tool-chain packages.
+In addition, if you've installed earlier Toolkits you may run into some problems while installing Toolkit 3.1. While these difficulties are easy enough to fix, you should go over these possible hiccups before trying to install the new Toolkit.
+Finally, you may notice that some of the most exciting of the new tools, such as Docker, Kubernetes, and other container tools aren't here. That's because they're in the newly released RHEL 7.1 and Red Hat Enterprise Linux 7 Atomic Host (RHELAH). Red Hat has partnered with Docker, but you'll need to move to a Docker-friendly version of RHEL to get at these container-friendly programs.
+Related Stories:

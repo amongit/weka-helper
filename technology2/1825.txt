@@ -1,0 +1,76 @@
+http://zdnet.com.feedsportal.com/c/35462/f/675707/s/442fd41c/sc/10/l/0L0Szdnet0N0Carticle0Cthe0Efuture0Eof0Esearch0Eis0Efinally0Ehere0Eits0Ejust0Enot0Eevenly0Edistributed0C0Tftag0FRSSbaffb68/story01.htm
+The future of search is finally here: It’s just not evenly distributed
+Today, I offer up a guest post from Joe Hughes, a great friend, colleague, and a thinker par excellence when it comes to all things customer-facing. Joe is the Principal Emerging/Cloud Applications Lead at Ernst & Young LLP in their advisory group.
+Before I hand the microphone to Joe, I'm going to place the necessary disclaimer: The views expressed herein are those of the author and not necessarily those of . Neither the author nor EY endorses the products or companies mentioned in this article. (The author mentioned in the disclaimer is Joe Hughes, not me.)
+With that, the microphone is yours, Mr. Hughes...
+A revolution is coming, but you probably don’t know it. Like any great revolution, it has been slowly brewing for years. It has not reached its tipping point. But its time is near.
+What is it? I’ll tell you in a minute. But first, a little history:
+As most of us know, web search introduced people to search that worked. Its success made it a part of everyday life. All of us came to understand the power of search, and we wanted it in our work.
+Companies emerged to bring search inside the enterprise, but they failed to deliver the benefits that they promised. And it is important to understand why.
+Early search technologies indexed documents and counted keywords. The approach did not scale. The technologies produced too many false positives and too many results to the user.
+In response, people created manual taxonomies and then manually categorized content according to an agreed upon — yet difficult-to-change — taxonomy. But each grouping in the taxonomy was difficult to scale because of the manual effort required.
+Another approach involved “best bet” query management, where an answer was predefined to common queries. This approach also did not scale.
+The Evolution of Enterprise Software
+Enterprise software represents the glue that ties together teams and business processes, especially in global organizations. See how enterprise software is simplifying, webifying, mobilizing, and getting a lot more social.
+Some vendors addressed the problem through page ranking, which essentially assumed that, if a lot of people link to a website, that website must be good. So search results depended heavily on the number of links to the content.
+Then, vendors started matching keywords in the links to keywords in the queries to determine which content was most relevant to what the user was searching for. Essentially, the engine relies upon the efforts of everyone with a website; that is, the people who created the links that determined which content was reliable or relevant.
+But this human turk approach does not work on content inside the enterprise, where backlinks simply don’t exist, and where the diversity of data types is very different than text inside of web pages and companies may not have enough people searching to crowdsource relevance ranking.
+So, search inside the enterprise just didn’t work. Ugh.
+SQL databases also furthered the search issue. SQL has only very coarse query abilities, with not even half the techniques mentioned above in document search. And it only works for fixed length columns in the database. Memo fields, such as case notes, are not indexed at all in most COTS packages!
+Open source to the rescue, right? In some ways, the open source movement exacerbated the problem. While there were good search algorithms and approaches in the market, using the wrong subset of search code would actually make your search capability worse. Software product after software product tossed in a little open source search library and claimed their products included advanced search when, in fact, they did not.
+As a result, we all experienced search that simply did not work. And we hated it.
+Making it even worse, search was so consistently bad across organizations that most of us started to believe that search just doesn’t work, and we just have to live with it. People accepted bad search as fate.
+When social media exploded, brands needed to listen to what people were saying in social media. But they didn’t consider that search. It was something new. It was social listening. Totally different, right? Nope, not really.
+I am sure many of you today are sitting at your company intranet unable to find what you want most of the time.
+All the while, many knowledge management practitioners would tell anyone who would listen that real search required real effort. You couldn’t just turn on an index and call it done. But few companies listened. Because every software provider seemed to have bad search, folks gave up. Apathy set in. Instead of putting more effort into search, people put in less effort. It became a vicious circle.
+The revolution begins
+Meanwhile, in academia and military organizations, the bravest souls kept plugging away. Companies such as Attivio took everything they learned from the search providers that came before, then started with a clean slate and set out to create search that works the way we all want it to.
+At the same time, companies such as LucidWorks packaged and curated the best of open source tools in bundles that decreased the risk of many common mistakes found in open source search implementations with only some of the parts.
+Suddenly, search was better. Search could:
+Even more exciting for all of the web developers who built their apps on SQL databases, a few companies — including Attivio — cracked the problem of searching SQL memo fields and unstructured data in place. Data could be analyzed now — without cleansing and without a schema that required humans to predefine the facets (breadcrumbs). Search could be better!
+But these amazing new capabilities were known to very few people within academic and government research organizations. Other new search companies appeared, such as Coveo and ElasticSearch, but they are still unknown to many. Then came social media.
+When social media exploded, brands needed to listen to what people were saying in social media. But they didn’t consider that search. It was something new. It was social listening. Totally different, right? Nope, not really.
+The demand for social listening and analysis of social content exploded, and those search vendors that had spent years making search work seized the opportunity. They aimed their revolutionary search technologies at social-media-furthering innovation.
+But the market doesn’t understand that social listening and search are brothers. Everyone still believes that search has to be terrible. Sadly, most people aren’t even open to the possibility of discussing a new search technology.
+While some well-known brands such as GE, UBS and iHeartRadio understand the power of search that works, most of the market is simply missing a tremendously valuable opportunity that is right under their noses.
+Even for them, the revolution is coming.
+The future of search is here. It’s just not evenly distributed.
+1. Search in eCommerce
+Most web analytics teams will tell you that, in the majority of cases, the customer experience in eCommerce starts — and too often STOPS — with the search box. To be clear, if your business depends on eCommerce, the search box on your website is one of the most critical determinants of whether people buy on your site. It’s a big deal.
+Yet most eCommerce teams invest the least amount of effort into how the search box works.
+Why? Apathy. Jadedness. And technology veterans may still have a bad taste in their mouths from the search engine snake oil they bought so many years ago.
+I understand why any new search technology might be viewed with skepticism, but when you’re talking about a site function with so much influence over the customer experience, I would expect companies to at least invest the manual labor required to hard-code something better; at least fake it!
+But most companies don’t even do that. The search check-box on most eCommerce work plans lies somewhere near the end, while analyses of the experience show it’s the most important part!
+It does you no good to have flawless ordering and payment processing if customers can’t find what they want to buy. What good is a community support site with lousy search where customers can’t find the answers they need? I am a customer too, and I don’t want to call you — just give me great search and I will get my own answers. Win-Win.
+The situation is not sustainable. There is too much value being left on the table, and brands are beginning to realize that they can fix that critical lever in their customers’ experience. The brands that get there first get a competitive advantage. And that means, eventually, more and more brands will take advantage of the newer search technologies that can make search amazing.
+2. Search in CRM
+Consider search within packaged customer relationship management (CRM) applications. It’s in bad shape. For example, most CRMs can’t search the text notes in their tool. If you have a sales team that types notes into your sales force automation tool, your tool probably has no ability to search those notes.
+If your call center agents type notes when they are talking to customers, your CRM tool probably has no ability to search or analyze that rich, specific text. For the SQL fields the CRMs do search, they don’t have advanced text analytics; it is just Boolean keyword based. Many companies tell their agents not to bother taking notes. That’s like throwing bars of gold in the trash, every day.
+I thought we all understood customer experience is key. We are told our “calls are recorded for quality purposes,” but we are not told that because companies don’t know the power of new search, the calls are only sampled, as it is not cost effective to analyze every call.
+Instead, companies create screens full of pull-down menus called “problem codes,” so SQL can generate a report on it, which make the agent’s job harder and never really tells you exactly what is happening.
+To its credit, one CRM vendor tried to address the problem, but it now has three different searches, as follows:
+But there are important problems, such as:
+3. Search in collaboration
+Collaboration search is also in bad shape. Most collaboration packages include an open source search package and call it done. Some bury their search code in a way that you can’t even manually rig it.
+As a result, companies are missing a lot of the potential business value from basic community collaboration.
+The next step is that purpose-driven collaboration. If you want real business value from collaboration, you have to customize your collaboration platform to improve a business process. Collaboration is not just another mailbox.
+SAP JAM calls this “work patterns.” Jive calls this “purposeful places.”
+But faulty search gets in the way. Let’s look at a sales example.
+In order to bring collaboration into the sales process, the new paradigm is to spawn a discussion group right off the opportunity record in the CRM; discuss the opportunity there, not in an email disconnected from the opportunity. You could do this with a Jive “deal room” off a Microsoft CRM Opportunity record to collaborate on the deal.
+There are now search engines that can search it all and can do it faster and better than before, including big data.
+So, now I have my traditional CRM record and all the factors discussed about the deal, as well as the proposal, for the record. Great, but how do I analyze that? I have information together, now what? Try to search across the CRM record and the deal room content from what Microsoft or Jive provide to each other. It isn’t happening.
+Oh wait, I should use Yammer instead of Jive you say? Dynamics CRM and Yammer will commonly search — problem solved, right? But what if my corporate collaboration platform is not Yammer?
+Should I buy Yammer just for CRM collaboration, and then use SAP JAM collaboration because that goes with SAP SuccessFactors in my HR organization? I should have a different collaboration platform for every COTS platform in the organization, just to be able to search? No thank you.
+Be a part of the solution
+It is unrealistic to expect every team within your business to all use the same technologies from the same vendor. SaaS makes it too easy for teams to swipe a credit card and shatter any aspirations toward a single-vendor model in IT.
+There are now search engines that can search it all and can do it faster and better than before, including big data.
+Going Deep on Big Data
+Big data is transitioning from one of the most hyped and anticipated tech trends of recent years into one of the biggest challenges that IT is now trying to wrestle and harness. We examine the technologies and best practices for taking advantage of big data and provide a look at organizations that are putting it to good use.
+And it can be the one common product that everyone in the company uses, while the rest of the IT and CMO application portfolio twists and turns.
+Want better search for your static web pages? Done.
+Want better search for the community website that you deployed so customers can help each other solve problems? Done. And it scales as your customers adopt your community.
+Want to search the product catalog and actually find what you seek? Done. And done far better than anything SQL can do. You can truly build a website that searches the product description, not just the project title — in full detail if you want. I would love that as a consumer myself.
+And we can start tomorrow. The technologies have arrived, not fully, but way better than before.
+Help us get the word out! This post is not meant to critique anyone — it is meant to encourage. If your CRM package has better search and people don’t know about it, tell us! If you have better search, yet it takes some effort and SIs and IT departments refuse to budget effort for it, tell us!
+If you can also crack structured data without ETL, tell us! It is through our social blogs that we can help push this over the tipping point — over the 16 percent adoption mark that the Law of Diffusion of Innovation says we have to get past.
+Search may have been the “tail” in the past, but it is now time for the tail to wag the dog.

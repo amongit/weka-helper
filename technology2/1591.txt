@@ -1,0 +1,18 @@
+http://zdnet.com.feedsportal.com/c/35462/f/675826/s/4529ae0e/sc/28/l/0L0Szdnet0N0Carticle0Clinux0Eaustralia0Ecalls0Efor0Epassword0Echange0Eafter0Eserver0Ebreach0C0Tftag0FRSSbaffb68/story01.htm
+Linux Australia calls for password change after server breach
+The president of open-source software user group Linux Australia has called on registered attendees of the organisation's conferences for the past three years to change their passwords after it was discovered that the server hosting its conference management system had been breached.
+According to Linux Australia president Joshua Hesketh, the breach was discovered after a large number of error reporting emails were sent on March 22 by the server hosting the Zookeepr conference management systems for a number of Linux Australia's conferences.
+The server hosted the conference systems for Linux Australia's 2013, 2014, and 2015 annual national conferences, along with the python programming PyCon Australia 2013 and 2014 conferences.
+In a message to the Linux-aus mailing list, Hesketh encouraged conference attendees who had registered for the events to change their passwords on other web services or use a password service if the same passwords had been used when registering for the conferences.
+"In the interests of improving your online security, it is recommended that a one-time password service be used in the future for any accounts you may create on any web services, including Linux Australia's conference websites," said Hesketh.
+According to Hesketh, it became clear after Linux Australia investigated the source of the error emails that the server had been subject to an attack by a malicious individual.
+"It is the assessment of Linux Australia that the individual utilised a currently unknown vulnerability to trigger a remote buffer overflow and gain root level access to the server," Hesketh said.
+A remote access tool was installed, and the server was rebooted to load this software into memory. A botnet command and control was subsequently installed and started.
+During the period that the attacker had access to the Zookeepr server, a number of Linux Australia's automated backup processes ran, including the dumping of conference databases to a disk, according to Hesketh.
+The database dumps that occurred during the attack included conference registration information, such as first and last names, physical and email addresses, and any phone contact details provided by conference attendees, along with a hashed version of their user passwords.
+However, Hesketh stressed that while the incident resulted in the possible release of personal information, such a release has not been confirmed.
+Additionally, Hesketh said that the database dumps did not contain any credit card or banking details, as Zookeepr uses a third-party credit card payment gateway for credit card processing.
+In a bid to minimise immediate potential damage, Linux Australia decommissioned the compromised host, and has since built a new host, which is enforcing key-based logins only, and has had a number of other security measures applied in a bid to help minimise attack.
+The PyCon Australia 2015 production instance has been redeployed onto the new Zookeepr host, which also has tighter restrictions for services facing the internet, according to Hesketh.
+Additionally, system user accounts on the new server will expire three months after the conference ends, while Linux Australia's annual national conference and PyCon Australia sites will be converted to HTML copies six months after the conclusion of the respective conferences.
+"The conferences' Zookeepr database will then be archived and stored on a separate server, and the database deleted from the Zookeepr server," said Hesketh.

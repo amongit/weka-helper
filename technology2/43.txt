@@ -1,0 +1,41 @@
+http://techrepublic.com.feedsportal.com/c/35463/f/670841/s/455a8696/sc/15/l/0L0Stechrepublic0N0Carticle0Cthree0Eways0Eto0Ereturn0Ethe0Eaverage0Eage0Efor0Ea0Egroup0Eusing0Eexcel0C0Tftag0FRSS56d97e7/story01.htm
+Three ways to return the average age for a group using Excel
+
+If you have three or more rows of data, chances are, you'll need to summarize those values in some way. Summarizing is one of the most common tasks we perform in Excel. The term summarize implies a group. That group can be the entire dataset or several groups, but the concept is the same. Summarizing the entire dataset as a single group is easy, and you probably don't need help to implement that. Summarizing multiple groups takes a little more work.
+In this article, I'll show you three summarizing methods: using the Filter feature, using the Subtotal feature, and generating a PivotTable. I'll add a multiple group requirement to complicate things. Specifically, we'll use these tools to return the average age by groups of the records shown in Figure A.
+Figure A
+
+For your convenience, you can download the example demonstration .xls or .xlsx file. Instructions are for Excel 2013, but I'll include instructions for other versions when significantly different.
+We'll start with Excel's built-in filtering feature. For better or worse, you can filter for only one group at a time. The first thing you need is an averaging function. You might consider using AVERAGE(), but don't. It'll work great to evaluate your entire dataset, but it won't update when you filter that dataset. Instead, use the SUBTOTAL() function, which will update as you filter records.
+This function uses an argument to determine how to mathematically evaluate the referenced values using the syntax
+SUBTOTAL(functionnumber, ref1, ref2, ...)
+where functionnumber is one of the values in Table A.
+Figure B shows the result of inserting a few rows above the dataset and adding the function =SUBTOTAL(1,B4:B13).
+Figure B
+
+Table A
+
+There are a few behaviors you'll need to know when applying SUBTOTAL() to your work:
+After inserting the SUBTOTAL() function, you're ready to filter as follows:
+Filtering is easy to implement, but you have to filter for each group each time you need it. On the other hand, it shines when you're asked for unexpected details. For instance, the next time you're in a meeting and the boss asks, "What's the average for the 20-29 group?" you'll have the answer in only a few clicks. Impressive!
+Filtering is fine for quick views of a single group. If you want to see all groups evaluated at once, use Excel's Subtotal feature. You'll have to sort the dataset first, and that can be problematic for some. Also, this feature needs an anchor--a value to determine where a group begins and ends. Right now, there's nothing to group the data by; we haven't defined the groups yet. In keeping with the filter example, we'll base our age groups on 10, beginning with 0: 0-9, 10-19, 20-19, and so on.
+At this point, we need a way to relate each age to its respective group. To this end, add the group data table shown in Figure F, and use LOOKUP() to return the appropriate age group label for each record.
+Figure F
+
+The values in column E represent the lowest age in each group, which LOOKUP() accommodates nicely. The labels in column F include the lowest and the highest age, as text. You'll have to generate this table manually, although after entering 0 and 10 in column E, you can use AutoFill to complete that column. In Excel 2013, you can use Flash Fill to help complete column F. To learn more about Flash Fill, read "Excel 2013 Flash Fill anticipates needs on the fly." (Don't expect perfection, but it's helpful.)
+To add the grouping labels (column C) to the dataset, enter the following expression for the first record (C4) and copy it to the remaining records:
+=LOOKUP(B4,$E$3:$F$13)
+This function references the age values in column B and reviews the first column (column E) in the group data table (columns E and F) for the first value that matches or is less than the age value. Then, it returns the corresponding value in column F. For example, 3 is the first age value. The second value in column E is 10, so LOOKUP() evaluates the preceding value of 0 and thereby returns the group label 0-9. To work properly, the lookup values in column E must be in numeric order. As mentioned earlier, the grouping values must also be sorted.
+Now let's evaluate the data by the new grouping values using Excel's Subtotal feature as follow:
+To see only the summary rows, as shown in Figure I, click 2 in the Subtotal pane to the left. Click 1 to display the total row, and click 3 to display everything. I purposely left a blank age value, so you could see the error in B20. In this case, it's harmless. To remove the subtotaling rows, click inside the dataset. Click Subtotal on the Data tab, and then click Remove All in the resulting dialog.
+Figure I
+
+Inserting a PivotTable is another way to evaluate grouped averages. A PivotTable lets you reorganize and summarize data in a meaningful and visual way, without changing the structure of the underlying data. To generate a PivotTable using the .xlsx format, do the following:
+Using Excel 2003, engage the wizard by choosing PivotTable and PivotTable Charts from the Data menu, and then click Finish. Using the PivotTable Field List, add Age to the Data Area. Right-click the resulting field, choose Field Settings, select Average, and then click OK. Next, Add the Group field to the Row Area.
+At this point, you might be done. However, you could add the detail records to the table by dragging the Name field to the Row Labels list as shown in Figure N.
+Figure N
+
+The PivotTable might seem like the most efficient route. You can position it on another sheet and use it separately from the data. You can easily display, or not, the detail records. On the other hand, if you update values in the dataset, you must remember to refresh the PivotTable to evaluate those new values. That's the main disadvantage--people simply forget to update the PivotTable after changing the underlying data.
+Three built-in features give you quick results when summarizing data by multiple groups: you can filter, use the Subtotal feature, and generate a PivotTable. They all have their pros and cons. The data and how you want to evaluate and report it should guide your choice. You could also use formulas, which I haven't shown in this article.
+I answer readers' questions about Microsoft Office when I can, but there's no guarantee. When contacting me, be as specific as possible. For example, "Please troubleshoot my workbook and fix what's wrong" probably won't get a response, but "Can you tell me why this formula isn't returning the expected results?" might. Please mention the app and version that you're using. I'm not reimbursed by TechRepublic for my time or expertise, nor do I ask for a fee from readers. You can contact me at susansalesharkins@gmail.com.
+

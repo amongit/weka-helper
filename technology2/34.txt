@@ -1,0 +1,23 @@
+http://techrepublic.com.feedsportal.com/c/35463/f/670841/s/45633a01/sc/33/l/0L0Stechrepublic0N0Carticle0Cfunctional0Eprogramming0Eis0Eabout0Eto0Ego0Emainstream0C0Tftag0FRSS56d97e7/story01.htm
+Functional programming is about to go mainstream
+
+If you want to know how well a technology is doing, just look at who's lining up to learn it. In the case of Reactive programming, online education trends point to a mainstreaming of the erstwhile outlier.
+Coursera is the big pioneer of massive open online courses (MOOC), with more than 12 million users from more than 190 countries enrolled since its inception in 2012. Started by Stanford computer science professors Andrew Ng and Daphne Koller, students can take courses in Arabic, English, French, German, Hebrew, Italian, Portuguese, Russian, Spanish Turkish, and even Ukrainian.
+Technical courses are overwhelmingly popular, and a course on Scala taught by the functional programming language's original author, Martin Odersky, has been particularly well received--more than 100,000 participants in the first two online classes. (I interviewed Martin last year when Java 8 was released.)
+I recently spoke with Odersky about teaching hundreds of thousands of students and trends in Reactive programming.
+TechRepublic: Has the Reactive movement crossed the point where people view it as Scala or functional programming-specific? Do you think the industry is starting to appreciate that these are modern application attributes that should be embraced independent of any specific languages or platforms under the covers?
+Odersky: Reactive never was Scala-specifc. It embraced from the start different technologies such as Rx, Erlang, and Node.js. And its scope has become ever more general.
+It's true that Reactive is close to functional programming, simply because global state modifications are a major liability in a reactive setting. So, Reactive programming naturally promotes a predominantly functional programming style. I expect that trend to continue.
+In fact, Andy Piper recently tweeted that all academic papers he is currently reviewing reference the Reactive Manifesto, which clearly signals that Reactive has become much larger than any single paradigm or market niche.
+TechRepublic: What's the hardest thing for a Reactive newcomer to embrace, philosophically?
+Odersky: From my experience, it is raising the level of abstraction. If you try to understand Reactive programming by tracing callback sequences, you get lost in the details. To make progress, you need to let go of this low-level view and think in higher-level concepts such as monads.
+For most, this takes some getting used to.
+TechRepublic: Is functional programming crossing over into mainstream? If so, how much of a driver were the functional attributes of Java 8?
+Odersky: I think functional programming is about to become mainstream. It won't happen overnight, but the trend towards it is hard to miss.
+Java 8's lambdas were a validation of this trend.
+Before, Java was one of the last mainstream languages, where functional programming was intolerably awkward due to the lack of function values. Now that Java has added lambdas, there is hardly a mainstream high-level language left that does not support functional programming to some degree.
+But lambdas are just the start; there are many other important concepts in functional programming that are yet to be discovered by the mainstream.
+TechRepublic: You're offering a new course on "Principles of Reactive Programming." I noticed that you're co-teaching it with former Microsoft engineer Erik Meijer and Typesafe colleague Roland Kuhn, technical lead on AKKA. Anything you'd like to mention about the course?
+Odersky: I was very happy to collaborate in this effort with Erik Meijer and Roland Kuhn. It was great to discuss and reconcile the viewpoints of us three. When running the course, I was impressed by the high level of expertise and professionalism of the participants.
+
+
